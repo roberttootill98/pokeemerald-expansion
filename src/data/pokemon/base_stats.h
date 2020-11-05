@@ -1000,10 +1000,6 @@ const struct BaseStats gBaseStats[] =
         #else
             .baseSpAttack  = 85,
         #endif
-        #if P_UPDATED_TYPES >= GEN_6
-            .type1 = TYPE_FAIRY,
-            .type2 = TYPE_FAIRY,
-        #else
         .type1 = TYPE_FAIRY,
         .type2 = TYPE_FAIRY,
         .catchRate = 25,
