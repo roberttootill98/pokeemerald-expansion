@@ -196,6 +196,17 @@
 #define METATILE_Fortree_WoodBridge1_Bottom                0x29F
 #define METATILE_Fortree_WoodBridge1_Top                   0x297
 
+// gTileset_General
+#define METATILE_General_Grass                0x001
+#define METATILE_General_Grass_TreeLeft       0x00B
+#define METATILE_General_Grass_TreeRight      0x00C
+#define METATILE_General_Grass_TreeUp         0x00F
+#define METATILE_General_LongGrass            0x00A
+#define METATILE_General_TallGrass            0x002
+#define METATILE_General_TallGrass_TreeLeft   0x003
+#define METATILE_General_TallGrass_TreeRight  0x004
+#define METATILE_General_TallGrass_TreeUp     0x007
+
 // gTileset_GenericBuilding
 #define METATILE_GenericBuilding_TableEdge               0x2F1
 #define METATILE_GenericBuilding_TrickHouse_Door_Closed  0x21B

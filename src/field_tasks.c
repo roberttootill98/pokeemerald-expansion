@@ -105,10 +105,10 @@ static const u16 sSootopolisGymIceRowVars[] =
 };
 
 static const u16 sMuddySlopeMetatiles[] = {
-    METATILE_General_MuddySlope_Frame0,
-    METATILE_General_MuddySlope_Frame3,
-    METATILE_General_MuddySlope_Frame2,
-    METATILE_General_MuddySlope_Frame1
+    // METATILE_General_MuddySlope_Frame0,
+    // METATILE_General_MuddySlope_Frame3,
+    // METATILE_General_MuddySlope_Frame2,
+    // METATILE_General_MuddySlope_Frame1
 };
 
 static void Task_RunPerStepCallback(u8 taskId)
@@ -692,7 +692,7 @@ static void SetMuddySlopeMetatile(s16 *data, s16 x, s16 y)
 
     MapGridSetMetatileIdAt(x, y, tile);
     CurrentMapDrawMetatileAt(x, y);
-    MapGridSetMetatileIdAt(x, y, METATILE_General_MuddySlope_Frame0);
+    // MapGridSetMetatileIdAt(x, y, METATILE_General_MuddySlope_Frame0);
 }
 
 static void Task_MuddySlope(u8 taskId)

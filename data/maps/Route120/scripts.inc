@@ -49,15 +49,11 @@ Route120_OnLoad: @ 81F5474
 	end
 
 Route120_EventScript_CloseAncientTomb:: @ 81F5490
-	setmetatile 7, 54, METATILE_General_RockWall_RockBase, 1
-	setmetatile 7, 55, METATILE_General_RockWall_SandBase, 1
 	return
 
 Route120_EventScript_SetBridgeClearMetatiles:: @ 81F54A3
 	setmetatile 13, 15, METATILE_Fortree_WoodBridge1_Top, 0
 	setmetatile 12, 16, METATILE_Fortree_WoodBridge1_Bottom, 0
-	setmetatile 12, 17, METATILE_General_ReflectiveWater, 0
-	setmetatile 13, 17, METATILE_General_ReflectiveWater, 0
 	return
 
 Route120_EventScript_SetBridgeKecleonMovement:: @ 81F54C8
@@ -255,8 +251,6 @@ Route120_EventScript_StevenGiveDeconScope:: @ 81F572C
 	waitfieldeffect FLDEFF_NPCFLY_OUT
 	setmetatile 13, 15, METATILE_Fortree_WoodBridge1_Top, 0
 	setmetatile 12, 16, METATILE_Fortree_WoodBridge1_Bottom, 0
-	setmetatile 12, 17, METATILE_General_ReflectiveWater, 0
-	setmetatile 13, 17, METATILE_General_ReflectiveWater, 0
 	special DrawWholeMapView
 	release
 	end

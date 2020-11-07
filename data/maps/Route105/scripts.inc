@@ -13,8 +13,6 @@ Route105_OnLoad: @ 81EE1EB
 	end
 
 Route105_CloseRegiEntrance:: @ 81EE20B
-	setmetatile 9, 19, METATILE_General_RockWall_RockBase, 1
-	setmetatile 9, 20, METATILE_General_RockWall_SandBase, 1
 	return
 
 Route105_OnTransition: @ 81EE21E

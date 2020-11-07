@@ -19,8 +19,6 @@ Route111_OnLoad: @ 81F0CBC
 	end
 
 Route111_EventScript_CloseDesertRuins:: @ 81F0CD1
-	setmetatile 29, 86, METATILE_General_RockWall_RockBase, 1
-	setmetatile 29, 87, METATILE_General_RockWall_SandBase, 1
 	return
 
 @ Show Mirage Tower just prior to disintegration. Mirage Tower is otherwise handled by the map layout
