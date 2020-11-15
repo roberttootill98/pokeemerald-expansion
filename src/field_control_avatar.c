@@ -132,34 +132,13 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
     else if (heldKeys & DPAD_RIGHT)
         input->dpadDirection = DIR_EAST;
 
-
-    //DEBUG
-    if (heldKeys & R_BUTTON) 
-    {
-        if(input->pressedSelectButton)
-        {
-            input->input_field_1_0 = TRUE;
-            input->pressedSelectButton = FALSE;
-        }else if(input->pressedStartButton) 
+    #if DEBUG
+        if ((heldKeys & R_BUTTON) && input->pressedStartButton)
         {
             input->input_field_1_2 = TRUE;
             input->pressedStartButton = FALSE;
         }
-    }
-    if (heldKeys & L_BUTTON) 
-    {
-        if(input->pressedSelectButton)
-        {
-            input->input_field_1_1 = TRUE;
-            input->pressedSelectButton = FALSE;
-        }else if(input->pressedStartButton) 
-        {
-            input->input_field_1_3 = TRUE;
-            input->pressedStartButton = FALSE;
-        }
-    }
-    //
-
+    #endif
 }
 
 int ProcessPlayerFieldInput(struct FieldInput *input)
@@ -725,7 +704,7 @@ static bool8 CheckStandardWildEncounter(u16 metatileBehavior)
     }
 
     sPreviousPlayerMetatileBehavior = metatileBehavior;
-    return FALSE;   
+    return FALSE;
 }
 
 static bool8 TryArrowWarp(struct MapPosition *position, u16 metatileBehavior, u8 direction)
