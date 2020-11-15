@@ -250,6 +250,7 @@ ifeq ($(DINFO),1)
 override CFLAGS += -g
 endif
 
+# DebugMenu
 ifeq ($(DDEBUG),1)
 override ASFLAGS += --defsym DEBUG=1
 override CPPFLAGS += -D DEBUG=1
