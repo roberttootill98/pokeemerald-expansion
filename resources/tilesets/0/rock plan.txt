@@ -1,0 +1,27 @@
+for each top type
+-3 top tiles
+-2 corner tiles
+-1 cave entrance tile
+-8 stairs
+total=14
+=========================
+for each rock set:
+-8 tiles basic rock
+-4 stairs
+-2 side edge underneaths
+-2 top corner edge underneats
+-if 2 wide tree -> 6 
+-if 1 wide tree -> 3
+total=14 + (t1x6 + t2x3)
+=========================
+rock types (bottom -> top)
+-grass->grass
+-grass->rock
+-rock->grass
+-rock->rock
+-rock->snow
+-snow->rock
+-snow->snow
+-sand->grass
+-sand->rock
+-sand->sand

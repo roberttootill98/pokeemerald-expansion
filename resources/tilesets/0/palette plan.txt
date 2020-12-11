@@ -1,0 +1,6 @@
+0-grass
+1-rock
+2-
+3-water_light
+4-water_dark
+5-snow
