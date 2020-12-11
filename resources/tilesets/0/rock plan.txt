@@ -19,9 +19,6 @@ rock types (bottom -> top)
 -grass->rock
 -rock->grass
 -rock->rock
--rock->snow
--snow->rock
--snow->snow
 -sand->grass
 -sand->rock
 -sand->sand
