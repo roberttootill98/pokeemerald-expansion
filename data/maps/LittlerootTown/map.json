@@ -15,7 +15,7 @@
   "connections": [
     {
       "direction": "left",
-      "offset": -30,
+      "offset": -18,
       "map": "MAP_ROUTE101"
     }
   ],

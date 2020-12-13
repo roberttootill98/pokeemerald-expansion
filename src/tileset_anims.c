@@ -958,7 +958,7 @@ static void TilesetAnim_BattleFrontierOutsideEast(u16 timer)
 static void QueueAnimTiles_General_LandWaterEdge(u16 timer)
 {
     u16 i = timer % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_LandWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(480)), 0x140);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_LandWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(400)), 0x140);
 }
 
 static void QueueAnimTiles_Lavaridge_Steam(u8 timer)
