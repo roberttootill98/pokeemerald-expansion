@@ -15,7 +15,7 @@
   "connections": [
     {
       "direction": "left",
-      "offset": -18,
+      "offset": -6,
       "map": "MAP_ROUTE101"
     }
   ],
@@ -134,8 +134,8 @@
       "dest_warp_id": 1
     },
     {
-      "x": 5,
-      "y": 8,
+      "x": 68,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
       "dest_warp_id": 1
