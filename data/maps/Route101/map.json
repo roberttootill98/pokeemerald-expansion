@@ -15,7 +15,7 @@
   "connections": [
     {
       "direction": "up",
-      "offset": 0,
+      "offset": -8,
       "map": "MAP_OLDALE_TOWN"
     },
     {

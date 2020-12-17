@@ -15,13 +15,18 @@
   "connections": [
     {
       "direction": "left",
-      "offset": -10,
+      "offset": 0,
       "map": "MAP_PETALBURG_CITY"
     },
     {
       "direction": "right",
-      "offset": 0,
+      "offset": 18,
       "map": "MAP_OLDALE_TOWN"
+    },
+    {
+      "direction": "left",
+      "offset": -34,
+      "map": "MAP_DEWFORD_TOWN"
     }
   ],
   "object_events": [
