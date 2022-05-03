@@ -36,6 +36,20 @@
       "elevation": 0,
       "dest_map": "MAP_DEWFORD_TOWN_HOUSE2",
       "dest_warp_id": 0
+    },
+    {
+      "x": 34,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 37,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": 2
     }
   ],
   "coord_events": [
