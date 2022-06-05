@@ -14,11 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "left",
-      "offset": 0,
-      "map": "MAP_VERDANTURF_TOWN"
-    },
-    {
       "direction": "right",
       "offset": 0,
       "map": "MAP_MAUVILLE_CITY"
@@ -347,7 +342,9 @@
       "dest_warp_id": 0
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
