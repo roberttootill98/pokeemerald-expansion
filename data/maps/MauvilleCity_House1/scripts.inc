@@ -43,4 +43,3 @@ MauvilleCity_House1_Text_MonCanFlyOutOfSmashedRock: @ 820FB67
 	.string "Oh, yes, if you smash a rock, a POKéMON\n"
 	.string "could come flying out of hiding.\p"
 	.string "Woohoo!$"
-

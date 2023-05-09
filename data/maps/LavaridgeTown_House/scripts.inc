@@ -23,4 +23,3 @@ LavaridgeTown_House_Text_WifeWarmingEggInHotSprings: @ 81FF92E
 
 LavaridgeTown_House_Text_Zigzagoon: @ 81FF9BB
 	.string "ZIGZAGOON: Pshoo!$"
-

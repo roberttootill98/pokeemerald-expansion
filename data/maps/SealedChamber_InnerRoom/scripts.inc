@@ -85,4 +85,3 @@ SealedChamber_InnerRoom_EventScript_BrailleStoryPart6:: @ 8239287
 	closebraillemessage
 	releaseall
 	end
-

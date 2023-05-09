@@ -55,4 +55,3 @@ DewfordTown_House2_Text_BrawlySoCool: @ 81FE444
 	.string "heard about BRAWLY?\p"
 	.string "He's so cool…\n"
 	.string "Everyone idolizes him.$"
-

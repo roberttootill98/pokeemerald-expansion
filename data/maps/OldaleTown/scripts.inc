@@ -404,4 +404,3 @@ OldaleTown_Text_BrendanLetsGoBack: @ 81E948A
 OldaleTown_Text_CitySign: @ 81E94DA
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
-

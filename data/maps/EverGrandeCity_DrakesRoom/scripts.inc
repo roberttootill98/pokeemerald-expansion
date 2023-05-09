@@ -90,4 +90,3 @@ EverGrandeCity_DrakesRoom_Text_PostBattleSpeech: @ 82288B0
 	.string "TRAINERS and grow strong.\p"
 	.string "Go! Go onwards!\n"
 	.string "The CHAMPION is waiting!$"
-

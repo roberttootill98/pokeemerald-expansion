@@ -149,4 +149,3 @@ PacifidlogTown_House2_Text_Rururi: @ 8203BCE
 PacifidlogTown_House2_Text_DoesntLikeTrainerVeryMuch: @ 8203BDF
 	.string "It doesn't appear to like the TRAINER\n"
 	.string "very much.$"
-

@@ -75,4 +75,3 @@ MarineCave_End_Movement_KyogreApproach: @ 823B09D
 	delay_16
 	walk_down_affine
 	step_end
-

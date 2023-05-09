@@ -491,4 +491,3 @@ Route116_Text_TrainerTipsBagHasPockets: @ 81F38D4
 	.string "placed in the appropriate POCKETS.\p"
 	.string "No TRAINER can afford to be without\n"
 	.string "a BAG of their own.$"
-

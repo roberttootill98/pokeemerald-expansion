@@ -47,4 +47,3 @@ PacifidlogTown_PokemonCenter_1F_Text_AncestorsLivedOnBoats: @ 820356F
 	.string "I understand that they lived that way\n"
 	.string "because they were searching for\l"
 	.string "something.$"
-

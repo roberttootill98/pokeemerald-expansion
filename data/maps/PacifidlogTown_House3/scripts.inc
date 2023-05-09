@@ -89,4 +89,3 @@ PacifidlogTown_House3_Text_IsThatAPokedex: @ 8203EF1
 	.string "Did you get to meet a lot of different\n"
 	.string "POKéMON?\p"
 	.string "I wish I was like you.$"
-

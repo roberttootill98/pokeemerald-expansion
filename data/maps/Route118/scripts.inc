@@ -310,4 +310,3 @@ Route118_Text_RouteSignMauville: @ 81F43F4
 Route118_Text_RouteSign119: @ 81F440E
 	.string "ROUTE 118\n"
 	.string "{UP_ARROW} ROUTE 119$"
-

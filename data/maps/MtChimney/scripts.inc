@@ -854,4 +854,3 @@ MtChimney_Text_SawyerRematchDefeat: @ 82305E3
 MtChimney_Text_SawyerPostRematch: @ 8230614
 	.string "Actually, it really is hot here.\n"
 	.string "I'm overdressed for these parts.$"
-

@@ -745,4 +745,3 @@ Route111_Text_TrainerHillSign: @ 81F1D61
 	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"
 	.string "“Scale the heights, you hot-blooded\n"
 	.string "TRAINERS!”$"
-

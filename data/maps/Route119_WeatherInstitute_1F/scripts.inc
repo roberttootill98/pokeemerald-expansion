@@ -135,4 +135,3 @@ Route119_WeatherInstitute_1F_Text_WhatWereAquasUpTo: @ 826FE94
 Route119_WeatherInstitute_1F_Text_TakeRestInBed: @ 826FEFC
 	.string "There's a bed…\n"
 	.string "Let's take a rest.$"
-

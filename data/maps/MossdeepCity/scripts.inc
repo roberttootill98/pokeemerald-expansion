@@ -436,4 +436,3 @@ MossdeepCity_Text_SootopolisNewGymLeader: @ 81E5581
 	.string "LEADER come in.\p"
 	.string "People tell me the new LEADER once\n"
 	.string "mentored WALLACE.$"
-

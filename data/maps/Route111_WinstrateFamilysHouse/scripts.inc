@@ -105,4 +105,3 @@ Route111_WinstrateFamilysHouse_Text_GrandsonStrongShort: @ 822A89B
 	.string "POKéMON LEAGUE CHAMPION by now.\p"
 	.string "Knowing my grandson, he could be the\n"
 	.string "CHAMPION already!$"
-

@@ -769,4 +769,3 @@ LilycoveCity_Text_HoneymoonVowToSeeRarePokemon: @ 81E49F4
 	.string "So we were delighted to see a rare\n"
 	.string "POKéMON as soon as we arrived.\p"
 	.string "I mean, we are totally happy!$"
-

@@ -85,4 +85,3 @@ EverGrandeCity_SidneysRoom_Text_PostBattleSpeech: @ 82280EC
 	.string "You've got what it takes to go far.\n"
 	.string "Now, go on to the next room and enjoy\l"
 	.string "your next battle!$"
-

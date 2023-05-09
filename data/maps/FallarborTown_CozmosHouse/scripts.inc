@@ -118,4 +118,3 @@ FallarborTown_CozmosHouse_Text_FeelSorryForCozmo: @ 8201310
 FallarborTown_CozmosHouse_Text_CozmoIsSoHappy: @ 820134B
 	.string "Look at PROF. COZMO…\n"
 	.string "He's so happy! I think it's cute.$"
-

@@ -94,6 +94,7 @@ RAMSCRGEN := tools/ramscrgen/ramscrgen$(EXE)
 FIX := tools/gbafix/gbafix$(EXE)
 MAPJSON := tools/mapjson/mapjson$(EXE)
 JSONPROC := tools/jsonproc/jsonproc$(EXE)
+SCRIPT := tools/poryscript/poryscript$(EXE)
 
 TOOLDIRS := $(filter-out tools/agbcc tools/binutils,$(wildcard tools/*))
 TOOLBASE = $(TOOLDIRS:tools/%=%)
@@ -183,8 +184,9 @@ mostlyclean: tidy
 	rm -f $(DATA_ASM_SUBDIR)/maps/connections.inc $(DATA_ASM_SUBDIR)/maps/events.inc $(DATA_ASM_SUBDIR)/maps/groups.inc $(DATA_ASM_SUBDIR)/maps/headers.inc
 	find $(DATA_ASM_SUBDIR)/maps \( -iname 'connections.inc' -o -iname 'events.inc' -o -iname 'header.inc' \) -exec rm {} +
 	rm -f $(AUTO_GEN_TARGETS)
-	@$(MAKE) clean -C berry_fix
+	@$(MAKE) clean -C berry_fixif
 	@$(MAKE) clean -C libagbsyscall
+	rm -f $(patsubst %.pory,%.inc,$(shell find data/ -type f -name '*.pory'))
 
 tidy:
 	rm -f $(ROM) $(ELF) $(MAP)
@@ -207,6 +209,7 @@ include songs.mk
 %.png: ;
 %.pal: ;
 %.aif: ;
+%.pory: ;
 
 %.1bpp: %.png  ; $(GFX) $< $@
 %.4bpp: %.png  ; $(GFX) $< $@
@@ -219,6 +222,7 @@ include songs.mk
 $(CRY_SUBDIR)/cry_not_%.bin: $(CRY_SUBDIR)/cry_not_%.aif ; $(AIF) $< $@
 $(CRY_SUBDIR)/cry_%.bin: $(CRY_SUBDIR)/cry_%.aif ; $(AIF) $< $@ --compress
 sound/%.bin: sound/%.aif ; $(AIF) $< $@
+data/%.inc: data/%.pory; $(SCRIPT) -i $< -o $@ -fc tools/poryscript/font_config.json
 
 
 ifeq ($(MODERN),0)

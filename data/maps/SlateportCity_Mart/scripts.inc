@@ -44,4 +44,3 @@ SlateportCity_Mart_Text_GreatBallIsBetter: @ 820DCF8
 	.string "at catching POKéMON.\p"
 	.string "With this, I should be able to get that\n"
 	.string "elusive POKéMON…$"
-

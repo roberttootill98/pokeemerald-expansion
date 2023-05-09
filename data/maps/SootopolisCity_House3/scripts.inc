@@ -40,4 +40,3 @@ SootopolisCity_House3_Text_TrainerFanClubWasWild: @ 8226C9C
 	.string "outside of HOENN.\p"
 	.string "It was really wild when I went to the\n"
 	.string "TRAINER FAN CLUB in LILYCOVE.$"
-

@@ -82,4 +82,3 @@ EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech: @ 8228343
 	.string "Yup, I'd like to see how far your bond\n"
 	.string "will carry you.\p"
 	.string "Go ahead, move on to the next room.$"
-

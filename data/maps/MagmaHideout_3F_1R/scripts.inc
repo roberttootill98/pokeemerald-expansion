@@ -40,4 +40,3 @@ MagmaHideout_3F_1R_Text_Grunt16PostBattle: @ 823A37C
 	.string "TEAM MAGMA is right!\p"
 	.string "Don't listen to TEAM AQUA.\n"
 	.string "Don't believe their lies!$"
-

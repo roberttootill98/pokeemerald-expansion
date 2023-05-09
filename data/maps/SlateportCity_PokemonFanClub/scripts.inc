@@ -411,4 +411,3 @@ SlateportCity_PokemonFanClub_Text_Zigzagoon: @ 820AD6E
 
 SlateportCity_PokemonFanClub_Text_Azumarill: @ 820AD80
 	.string "AZUMARILL: Marimari?$"
-

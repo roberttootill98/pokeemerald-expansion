@@ -46,4 +46,3 @@ LavaridgeTown_Gym_B1F_EventScript_CheckHideEli:: @ 81FF903
 	setobjectmovementtype LOCALID_ELI, MOVEMENT_TYPE_HIDDEN
 LavaridgeTown_Gym_B1F_EventScript_EndCheckHideTrainers:: @ 81FF910
 	return
-

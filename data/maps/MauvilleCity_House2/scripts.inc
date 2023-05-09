@@ -65,4 +65,3 @@ MauvilleCity_House2_Text_ThatsDisappointing: @ 8210E16
 	.string "Oh, that's disappointing.\p"
 	.string "A COIN CASE is needed for the\n"
 	.string "GAME CORNER.$"
-

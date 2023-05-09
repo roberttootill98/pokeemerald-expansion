@@ -1020,4 +1020,3 @@ Route110_Text_KeepAnEyeOutForRival: @ 81F0C33
 	.string "… … … … … …\p"
 	.string "Well, I had better get going.\n"
 	.string "See you again, {PLAYER}{KUN}!$"
-

@@ -33,4 +33,3 @@ SootopolisCity_House2_Text_YesTwoOrbsSideBySide: @ 8226AF1
 SootopolisCity_House2_Text_OughtToVisitAndSee: @ 8226B41
 	.string "Is that so?\n"
 	.string "Perhaps you ought to visit and see…$"
-

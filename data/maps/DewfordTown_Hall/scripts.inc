@@ -454,4 +454,3 @@ DewfordTown_Hall_Text_LoveSludgeBombButTrendInToo: @ 81FE1ED
 	.string "But POKéMON with the move\n"
 	.string "“{STR_VAR_1}”\l"
 	.string "are in, too.$"
-

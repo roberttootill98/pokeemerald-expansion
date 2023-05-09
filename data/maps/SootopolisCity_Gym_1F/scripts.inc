@@ -322,4 +322,3 @@ SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons: @ 8225B48
 	.string "You have with you but one POKéMON.\p"
 	.string "I wish that you would return with\n"
 	.string "two, perhaps more, POKéMON, please.$"
-

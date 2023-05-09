@@ -75,4 +75,3 @@ SootopolisCity_Mart_Text_FullRestoreItemOfDreams: @ 82268AF
 SootopolisCity_Mart_Text_DidSomethingAwaken: @ 8226928
 	.string "This weather…\n"
 	.string "Did something awaken?$"
-

@@ -118,4 +118,3 @@ SlateportCity_NameRatersHouse_Text_MagnificentName: @ 8209DF0
 SlateportCity_NameRatersHouse_Text_ThatIsMerelyAnEgg: @ 8209E74
 	.string "Now, now.\n"
 	.string "That is merely an EGG!$"
-

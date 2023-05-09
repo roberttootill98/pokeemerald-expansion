@@ -192,4 +192,3 @@ Route121_Text_MtPyrePierSign: @ 81F60D3
 Route121_Text_SafariZoneSign: @ 81F611E
 	.string "“Filled with rare POKéMON!”\n"
 	.string "SAFARI ZONE$"
-

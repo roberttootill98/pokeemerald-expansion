@@ -355,4 +355,3 @@ Route103_Text_ShortcutToOldale: @ 81ECBB5
 Route103_Text_RouteSign: @ 81ECC1A
 	.string "ROUTE 103\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
-

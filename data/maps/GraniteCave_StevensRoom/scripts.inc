@@ -123,4 +123,3 @@ GraniteCave_StevensRoom_Text_IveGotToHurryAlong: @ 822DF8C
 GraniteCave_StevensRoom_Text_OhBagIsFull: @ 822DFAA
 	.string "Oh, your BAG is full…\n"
 	.string "That's too bad, then.$"
-

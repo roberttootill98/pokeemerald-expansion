@@ -818,4 +818,3 @@ MauvilleCity_GameCorner_Text_HeresSomeSlotsInfo: @ 8210B04
 MauvilleCity_GameCorner_Text_CantPlayWithNoCoinCase: @ 8210C2E
 	.string "You can't play if you don't have\n"
 	.string "a COIN CASE.$"
-

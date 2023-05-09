@@ -92,4 +92,3 @@ SeafloorCavern_Entrance_Text_HearMagmaNearMossdeepShort: @ 82346C8
 	.string "were spotted near MOSSDEEP.\p"
 	.string "That bunch of goons, they sure don't\n"
 	.string "look good near the sea!$"
-

@@ -101,4 +101,3 @@ FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale: @ 8201653
 FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg: @ 8201697
 	.string "Hunh? There isn't a single move that\n"
 	.string "I can teach an EGG.$"
-
