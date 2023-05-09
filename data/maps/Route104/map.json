@@ -15,18 +15,28 @@
   "connections": [
     {
       "direction": "up",
-      "offset": 0,
+      "offset": -10,
       "map": "MAP_RUSTBORO_CITY"
     },
     {
+      "direction": "right",
+      "offset": 6,
+      "map": "MAP_RUSTURF_TUNNEL"
+    },
+    {
+      "direction": "up",
+      "offset": 30,
+      "map": "MAP_ROUTE103"
+    },
+    {
       "direction": "down",
-      "offset": 0,
-      "map": "MAP_ROUTE105"
+      "offset": 16,
+      "map": "MAP_PETALBURG_CITY"
     },
     {
       "direction": "right",
-      "offset": 50,
-      "map": "MAP_PETALBURG_CITY"
+      "offset": 46,
+      "map": "MAP_PETALBURG_WOODS"
     }
   ],
   "object_events": [

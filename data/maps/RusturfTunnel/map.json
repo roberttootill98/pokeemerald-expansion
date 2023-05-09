@@ -12,7 +12,23 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_SLATEPORT_CITY"
+    },
+    {
+      "direction": "left",
+      "offset": -6,
+      "map": "MAP_ROUTE104"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_PETALBURG_WOODS"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
@@ -215,5 +231,7 @@
       "script": "RusturfTunnel_EventScript_TunnelBlockagePos3"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+
+  ]
 }

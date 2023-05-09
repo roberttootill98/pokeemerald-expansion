@@ -1,1 +1,22 @@
 mapscripts ShardMines_Entrance_MapScripts {}
+
+script ShardMines_Entrance_EntryHiker {
+    lockall
+    faceplayer
+    msgbox(format("Hi, welcome to the Shard Mines!"))
+    
+    random(2)
+    
+    switch (var(VAR_RESULT)) {
+        case 0:
+            msgbox(format("you got 0, pokemon center"))
+            warp(MAP_VERDANTURF_TOWN_POKEMON_CENTER_1F, 0, 0, 0)
+        case 1:
+            msgbox(format("you got 1, pokemart"))
+            warp(MAP_VERDANTURF_TOWN_MART, 0, 0, 0)
+    }
+    
+    msgbox(format("done"))
+
+    releaseall
+}

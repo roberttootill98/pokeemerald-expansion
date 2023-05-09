@@ -12,7 +12,28 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "direction": "left",
+      "offset": -46,
+      "map": "MAP_ROUTE104"
+    },
+    {
+      "direction": "down",
+      "offset": -26,
+      "map": "MAP_PETALBURG_CITY"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_RUSTURF_TUNNEL"
+    },
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_ROUTE101"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
