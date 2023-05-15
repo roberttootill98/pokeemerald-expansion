@@ -25,6 +25,7 @@ static void _InitPrimaryTilesetAnimation(void);
 static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
 static void TilesetAnim_Building(u16);
+static void TilesetAnim_Petalburg(u16);
 static void TilesetAnim_Rustboro(u16);
 static void TilesetAnim_Dewford(u16);
 static void TilesetAnim_Slateport(u16);
@@ -60,6 +61,7 @@ static void QueueAnimTiles_BattlePyramid_Torch(u16);
 static void QueueAnimTiles_BattlePyramid_StatueShadow(u16);
 static void BlendAnimPalette_BattleDome_FloorLights(u16);
 static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16);
+static void QueueAnimTiles_Petalburg_Blue_Flower(u8);
 static void QueueAnimTiles_Lavaridge_Steam(u8);
 static void QueueAnimTiles_Lavaridge_Lava(u16);
 static void QueueAnimTiles_EverGrande_Flowers(u16, u8);
@@ -171,6 +173,17 @@ const u16 *const gTilesetAnims_General_LandWaterEdge[] = {
     gTilesetAnims_General_LandWaterEdge_Frame1,
     gTilesetAnims_General_LandWaterEdge_Frame2,
     gTilesetAnims_General_LandWaterEdge_Frame3
+};
+
+const u16 gTilesetAnims_Petalburg_Blue_Flower_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/blue_flower/0.4bpp");
+const u16 gTilesetAnims_Petalburg_Blue_Flower_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/blue_flower/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Blue_Flower_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/blue_flower/2.4bpp");
+
+const u16 *const gTilesetAnims_Petalburg_Blue_Flower[] = {
+    gTilesetAnims_Petalburg_Blue_Flower_Frame0,
+    gTilesetAnims_Petalburg_Blue_Flower_Frame1,
+    gTilesetAnims_Petalburg_Blue_Flower_Frame0,
+    gTilesetAnims_Petalburg_Blue_Flower_Frame2
 };
 
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
@@ -678,7 +691,7 @@ static void TilesetAnim_Building(u16 timer)
 static void QueueAnimTiles_General_Flower(u16 timer)
 {
     u16 i = timer % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 0x80);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(64)), 0x80);
 }
 
 static void QueueAnimTiles_General_Water(u16 timer)
@@ -709,7 +722,7 @@ void InitTilesetAnim_Petalburg(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
-    sSecondaryTilesetAnimCallback = NULL;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Petalburg;
 }
 
 void InitTilesetAnim_Rustboro(void)
@@ -866,6 +879,12 @@ void InitTilesetAnim_BattleDome(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_BattleDome;
 }
 
+static void TilesetAnim_Petalburg(u16 timer)
+{
+    if (timer % 4 == 0)
+        QueueAnimTiles_Petalburg_Blue_Flower(timer >> 4);
+}
+
 static void TilesetAnim_Rustboro(u16 timer)
 {
     if (timer % 8 == 0)
@@ -991,6 +1010,12 @@ static void QueueAnimTiles_General_LandWaterEdge(u16 timer)
 {
     u16 i = timer % 4;
     AppendTilesetAnimToBuffer(gTilesetAnims_General_LandWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(400)), 0x140);
+}
+
+static void QueueAnimTiles_Petalburg_Blue_Flower(u8 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Blue_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 276)), 0x80);
 }
 
 static void QueueAnimTiles_Lavaridge_Steam(u8 timer)

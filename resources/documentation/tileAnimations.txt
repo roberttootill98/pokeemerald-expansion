@@ -1,0 +1,18 @@
+if `tilesetanim_<tileset>` doesnt exist
+-> add `static void TilesetAnim_<tileset>(u16)`;
+-> add assignment of `TilesetAnim_<tileset>` in `InitTilesetAnim_<tileset>`
+-> create `TilesetAnim_<tileset>`
+--> defines when animations are updated
+
+add `static void QueueAnimTiles_<tileset>_<animationName>(u8);`
+
+create frames
+-> load from file
+-> define animation order
+-> create `QueueAnimTiles_<tileset>_<animationName>`
+--> adds animation to buffer
+--> reference tile number as int
+--> reserve tile amount
+---> 8 for each tile
+---> eg. 0x80 for 1x1 metatile for 4 frames
+----> 8 x 4 (for 1x1 metatile) x 4 (for 4 frames) = 128 => 0x80
