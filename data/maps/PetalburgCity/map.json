@@ -20,12 +20,12 @@
     },
     {
       "direction": "up",
-      "offset": -16,
+      "offset": -10,
       "map": "MAP_ROUTE104"
     },
     {
       "direction": "up",
-      "offset": 26,
+      "offset": 32,
       "map": "MAP_PETALBURG_WOODS"
     }
   ],
@@ -34,10 +34,38 @@
   ],
   "warp_events": [
     {
-      "x": 6,
-      "y": 6,
+      "x": 12,
+      "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_PETALBURG_CITY",
+      "dest_map": "MAP_PETALBURG_CITY_WALLYS_HOUSE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 36,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_CITY_HOUSE1",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_CITY_HOUSE2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 19,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_CITY_MART",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 31,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": 0
     }
   ],
