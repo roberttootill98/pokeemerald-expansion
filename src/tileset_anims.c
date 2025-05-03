@@ -51,6 +51,8 @@ static void QueueAnimTiles_General_SandWaterEdge(u16);
 static void QueueAnimTiles_General_Waterfall(u16);
 static void QueueAnimTiles_General_LandWaterEdge(u16);
 static void QueueAnimTiles_Building_TVTurnedOn(u16);
+static void QueueAnimTiles_Petalburg_Blue_Flower(u8);
+static void QueueAnimTiles_Petalburg_Yellow_Flower(u8);
 static void QueueAnimTiles_Rustboro_WindyWater(u16, u8);
 static void QueueAnimTiles_Rustboro_Fountain(u16);
 static void QueueAnimTiles_Dewford_Flag(u16);
@@ -61,7 +63,6 @@ static void QueueAnimTiles_BattlePyramid_Torch(u16);
 static void QueueAnimTiles_BattlePyramid_StatueShadow(u16);
 static void BlendAnimPalette_BattleDome_FloorLights(u16);
 static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16);
-static void QueueAnimTiles_Petalburg_Blue_Flower(u8);
 static void QueueAnimTiles_Lavaridge_Steam(u8);
 static void QueueAnimTiles_Lavaridge_Lava(u16);
 static void QueueAnimTiles_EverGrande_Flowers(u16, u8);
@@ -184,6 +185,17 @@ const u16 *const gTilesetAnims_Petalburg_Blue_Flower[] = {
     gTilesetAnims_Petalburg_Blue_Flower_Frame1,
     gTilesetAnims_Petalburg_Blue_Flower_Frame0,
     gTilesetAnims_Petalburg_Blue_Flower_Frame2
+};
+
+const u16 gTilesetAnims_Petalburg_Yellow_Flower_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/yellow_flower/0.4bpp");
+const u16 gTilesetAnims_Petalburg_Yellow_Flower_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/yellow_flower/1.4bpp");
+const u16 gTilesetAnims_Petalburg_Yellow_Flower_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/yellow_flower/2.4bpp");
+
+const u16 *const gTilesetAnims_Petalburg_Yellow_Flower[] = {
+    gTilesetAnims_Petalburg_Yellow_Flower_Frame0,
+    gTilesetAnims_Petalburg_Yellow_Flower_Frame1,
+    gTilesetAnims_Petalburg_Yellow_Flower_Frame0,
+    gTilesetAnims_Petalburg_Yellow_Flower_Frame2
 };
 
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
@@ -883,6 +895,7 @@ static void TilesetAnim_Petalburg(u16 timer)
 {
     if (timer % 4 == 0)
         QueueAnimTiles_Petalburg_Blue_Flower(timer >> 4);
+        QueueAnimTiles_Petalburg_Yellow_Flower(timer >> 4);
 }
 
 static void TilesetAnim_Rustboro(u16 timer)
@@ -1016,6 +1029,12 @@ static void QueueAnimTiles_Petalburg_Blue_Flower(u8 timer)
 {
     u16 i = timer % 4;
     AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Blue_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 276)), 0x80);
+}
+
+static void QueueAnimTiles_Petalburg_Yellow_Flower(u8 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Petalburg_Yellow_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 292)), 0x80);
 }
 
 static void QueueAnimTiles_Lavaridge_Steam(u8 timer)

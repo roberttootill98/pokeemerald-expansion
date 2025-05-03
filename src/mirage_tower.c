@@ -109,21 +109,21 @@ const struct SpriteSheet gMirageTowerCeilingCrumbleSpriteSheets[] =
 
 static const struct MetatileCoords sInvisibleMirageTowerMetatiles[] =
 {
-    {18, 53, METATILE_Mauville_DeepSand_Center},
-    {19, 53, METATILE_Mauville_DeepSand_Center},
-    {20, 53, METATILE_Mauville_DeepSand_Center},
-    {18, 54, METATILE_Mauville_DeepSand_Center},
-    {19, 54, METATILE_Mauville_DeepSand_Center},
-    {20, 54, METATILE_Mauville_DeepSand_Center},
-    {18, 55, METATILE_Mauville_DeepSand_Center},
-    {19, 55, METATILE_Mauville_DeepSand_Center},
-    {20, 55, METATILE_Mauville_DeepSand_Center},
-    {18, 56, METATILE_Mauville_DeepSand_Center},
-    {19, 56, METATILE_Mauville_DeepSand_Center},
-    {20, 56, METATILE_Mauville_DeepSand_Center},
-    {18, 57, METATILE_Mauville_DeepSand_BottomMid},
-    {19, 57, METATILE_Mauville_DeepSand_BottomMid},
-    {20, 57, METATILE_Mauville_DeepSand_BottomMid},
+    // {18, 53, METATILE_Mauville_DeepSand_Center},
+    // {19, 53, METATILE_Mauville_DeepSand_Center},
+    // {20, 53, METATILE_Mauville_DeepSand_Center},
+    // {18, 54, METATILE_Mauville_DeepSand_Center},
+    // {19, 54, METATILE_Mauville_DeepSand_Center},
+    // {20, 54, METATILE_Mauville_DeepSand_Center},
+    // {18, 55, METATILE_Mauville_DeepSand_Center},
+    // {19, 55, METATILE_Mauville_DeepSand_Center},
+    // {20, 55, METATILE_Mauville_DeepSand_Center},
+    // {18, 56, METATILE_Mauville_DeepSand_Center},
+    // {19, 56, METATILE_Mauville_DeepSand_Center},
+    // {20, 56, METATILE_Mauville_DeepSand_Center},
+    // {18, 57, METATILE_Mauville_DeepSand_BottomMid},
+    // {19, 57, METATILE_Mauville_DeepSand_BottomMid},
+    // {20, 57, METATILE_Mauville_DeepSand_BottomMid},
     // {18, 58, METATILE_General_SandPit_Center},
     // {19, 58, METATILE_General_SandPit_Center},
     // {20, 58, METATILE_General_SandPit_Center},
@@ -460,8 +460,8 @@ static void MoveCeilingCrumbleSprite(struct Sprite* sprite)
 static void SetInvisibleMirageTowerMetatiles(void)
 {
     u8 i;
-    for (i = 0; i < ARRAY_COUNT(sInvisibleMirageTowerMetatiles); i++)
-        MapGridSetMetatileIdAt(sInvisibleMirageTowerMetatiles[i].x + 7, sInvisibleMirageTowerMetatiles[i].y + 7, sInvisibleMirageTowerMetatiles[i].metatileId);
+    // for (i = 0; i < ARRAY_COUNT(sInvisibleMirageTowerMetatiles); i++)
+    //     MapGridSetMetatileIdAt(sInvisibleMirageTowerMetatiles[i].x + 7, sInvisibleMirageTowerMetatiles[i].y + 7, sInvisibleMirageTowerMetatiles[i].metatileId);
     DrawWholeMapView();
 }
 

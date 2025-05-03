@@ -30,7 +30,7 @@ struct PacifidlogMetatileOffsets
 };
 
 static void DummyPerStepCallback(u8 taskId);
-static void AshGrassPerStepCallback(u8 taskId);
+// static void AshGrassPerStepCallback(u8 taskId);
 static void FortreeBridgePerStepCallback(u8 taskId);
 static void PacifidlogBridgePerStepCallback(u8 taskId);
 static void SootopolisGymIcePerStepCallback(u8 taskId);
@@ -40,7 +40,7 @@ static void Task_MuddySlope(u8 taskId);
 static const TaskFunc sPerStepCallbacks[] =
 {
     [STEP_CB_DUMMY]             = DummyPerStepCallback,
-    [STEP_CB_ASH]               = AshGrassPerStepCallback,
+    // [STEP_CB_ASH]               = AshGrassPerStepCallback,
     [STEP_CB_FORTREE_BRIDGE]    = FortreeBridgePerStepCallback,
     [STEP_CB_PACIFIDLOG_BRIDGE] = PacifidlogBridgePerStepCallback,
     [STEP_CB_SOOTOPOLIS_ICE]    = SootopolisGymIcePerStepCallback,
@@ -629,29 +629,7 @@ static void SootopolisGymIcePerStepCallback(u8 taskId)
 
 static void AshGrassPerStepCallback(u8 taskId)
 {
-    s16 x, y;
-    u16 *ashGatherCount;
-    s16 *data = gTasks[taskId].data;
-    PlayerGetDestCoords(&x, &y);
-    if (x != data[1] || y != data[2])
-    {
-        data[1] = x;
-        data[2] = y;
-        if (MetatileBehavior_IsAshGrass(MapGridGetMetatileBehaviorAt(x, y)))
-        {
-            if (MapGridGetMetatileIdAt(x, y) == METATILE_Fallarbor_AshGrass)
-                StartAshFieldEffect(x, y, METATILE_Fallarbor_NormalGrass, 4);
-            else
-                StartAshFieldEffect(x, y, METATILE_Lavaridge_NormalGrass, 4);
-
-            if (CheckBagHasItem(ITEM_SOOT_SACK, 1))
-            {
-                ashGatherCount = GetVarPointer(VAR_ASH_GATHER_COUNT);
-                if (*ashGatherCount < 9999)
-                    (*ashGatherCount)++;
-            }
-        }
-    }
+    return;
 }
 
 static void SetCrackedFloorHoleMetatile(s16 x, s16 y)
