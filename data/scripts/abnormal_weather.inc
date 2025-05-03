@@ -1,21 +1,13 @@
 AbnormalWeather_EventScript_PlaceTilesRoute114North:: @ 8273913
-	setmetatile 7, 3, METATILE_Fallarbor_RedCaveEntrance_Top, 1
-	setmetatile 7, 4, METATILE_Fallarbor_RedCaveEntrance_Bottom, 0
 	return
 
 AbnormalWeather_EventScript_PlaceTilesRoute114South:: @ 8273926
-	setmetatile 6, 45, METATILE_Fallarbor_BrownCaveEntrance_Top, 1
-	setmetatile 6, 46, METATILE_Fallarbor_BrownCaveEntrance_Bottom, 0
 	return
 
 AbnormalWeather_EventScript_PlaceTilesRoute115West:: @ 8273939
-	setmetatile 21, 5, METATILE_Fallarbor_BrownCaveEntrance_Top, 1
-	setmetatile 21, 6, METATILE_Fallarbor_BrownCaveEntrance_Bottom, 0
 	return
 
 AbnormalWeather_EventScript_PlaceTilesRoute115East:: @ 827394C
-	setmetatile 36, 9, METATILE_Fallarbor_BrownCaveEntrance_Top, 1
-	setmetatile 36, 10, METATILE_Fallarbor_BrownCaveEntrance_Bottom, 0
 	return
 
 AbnormalWeather_EventScript_PlaceTilesRoute116North:: @ 827395F
@@ -118,23 +110,15 @@ AbnormalWeather_EventScript_CleanupMapTiles:: @ 8273D6D
 	return
 
 AbnormalWeather_EventScript_CleanupRoute114North:: @ 8273E23
-	setmetatile 7, 3, METATILE_Fallarbor_RedRockWall, 1
-	setmetatile 7, 4, METATILE_Fallarbor_RedRockWall, 1
 	return
 
 AbnormalWeather_EventScript_CleanupRoute114South:: @ 8273E36
-	setmetatile 6, 45, METATILE_Fallarbor_BrownRockWall, 1
-	setmetatile 6, 46, METATILE_Fallarbor_BrownRockWall, 1
 	return
 
 AbnormalWeather_EventScript_CleanupRoute115West:: @ 8273E49
-	setmetatile 21, 5, METATILE_Fallarbor_BrownRockWall, 1
-	setmetatile 21, 6, METATILE_Fallarbor_BrownRockWall, 1
 	return
 
 AbnormalWeather_EventScript_CleanupRoute115East:: @ 8273E5C
-	setmetatile 36, 9, METATILE_Fallarbor_BrownRockWall, 1
-	setmetatile 36, 10, METATILE_Fallarbor_BrownRockWall, 1
 	return
 
 AbnormalWeather_EventScript_CleanupRoute116North:: @ 8273E6F

@@ -30,32 +30,22 @@ LilycoveCity_LilycoveMuseum_2F_EventScript_CheckToughPainting:: @ 8219781
 	end
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_SetCoolPainting:: @ 821978B
-	setmetatile 10, 6, METATILE_LilycoveMuseum_Painting2_Left, 1
-	setmetatile 11, 6, METATILE_LilycoveMuseum_Painting2_Right, 1
 	goto LilycoveCity_LilycoveMuseum_2F_EventScript_CheckBeautyPainting
 	end
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_SetBeautyPainting:: @ 82197A3
-	setmetatile 18, 6, METATILE_LilycoveMuseum_Painting1_Left, 1
-	setmetatile 19, 6, METATILE_LilycoveMuseum_Painting1_Right, 1
 	goto LilycoveCity_LilycoveMuseum_2F_EventScript_CheckCutePainting
 	end
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_SetCutePainting:: @ 82197BB
-	setmetatile 14, 10, METATILE_LilycoveMuseum_Painting3_Left, 1
-	setmetatile 15, 10, METATILE_LilycoveMuseum_Painting3_Right, 1
 	goto LilycoveCity_LilycoveMuseum_2F_EventScript_CheckSmartPainting
 	end
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_SetSmartPainting:: @ 82197D3
-	setmetatile 6, 10, METATILE_LilycoveMuseum_Painting0_Left, 1
-	setmetatile 7, 10, METATILE_LilycoveMuseum_Painting0_Right, 1
 	goto LilycoveCity_LilycoveMuseum_2F_EventScript_CheckToughPainting
 	end
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_SetToughPainting:: @ 82197EB
-	setmetatile 2, 6, METATILE_LilycoveMuseum_Painting4_Left, 1
-	setmetatile 3, 6, METATILE_LilycoveMuseum_Painting4_Right, 1
 	end
 
 LilycoveCity_LilycoveMuseum_2F_OnFrame: @ 82197FE

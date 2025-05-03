@@ -19,8 +19,6 @@ Route114_FossilManiacsTunnel_OnLoad: @ 822AF49
 	end
 
 Route114_FossilManiacsTunnel_EventScript_CloseDesertUnderpass:: @ 822AF53
-	setmetatile 6, 1, METATILE_Fallarbor_RedRockWall, 1
-	setmetatile 6, 2, METATILE_Fallarbor_RedRockWall, 1
 	return
 
 Route114_FossilManiacsTunnel_EventScript_ManiacMentionCaveIn:: @ 822AF66
