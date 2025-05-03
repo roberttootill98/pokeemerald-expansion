@@ -5,7 +5,7 @@ SundaraVillage_PlayerHouse_1F_EventScript::
 	waitmovement 1
 	msgbox SundaraVillage_PlayerHouse_1F_EventScript_Text_0
 	closemessage
-	delay 30
+	delay 15
 	applymovement 1, mumMoveToPlayer
 	waitmovement 1
 	msgbox SundaraVillage_PlayerHouse_1F_EventScript_Text_1
