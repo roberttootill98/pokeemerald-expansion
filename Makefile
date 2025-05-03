@@ -256,6 +256,7 @@ endif
 
 # DebugMenu
 ifeq ($(DDEBUG),1)
+$(info Debug mode activated!) 
 override ASFLAGS += --defsym DEBUG=1
 override CPPFLAGS += -D DEBUG=1
 endif
