@@ -154,53 +154,53 @@ PlayersHouse_1F_EventScript_SetWatchedBroadcast:: @ 8292866
 	end
 
 PlayersHouse_1F_EventScript_PetalburgGymReportMale:: @ 829286D
-	applymovement VAR_0x8005, Common_Movement_WalkInPlaceFastestRight
-	waitmovement 0
-	call PlayersHouse_1F_EventScript_MomNoticeGymBroadcast
-	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForGymMale
-	waitmovement 0
-	playbgm MUS_ENCOUNTER_INTERVIEWER, 0
-	msgbox PlayersHouse_1F_Text_MaybeDadWillBeOn, MSGBOX_DEFAULT
-	closemessage
-	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomMakeRoomToSeeTVMale
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerMoveToTVMale
-	waitmovement 0
-	call PlayersHouse_1F_EventScript_WatchGymBroadcast
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestLeft
-	waitmovement 0
-	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
-	msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
-	closemessage
-	setvar VAR_TEMP_1, 1
-	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatMale
-	waitmovement 0
-	goto PlayersHouse_1F_EventScript_SetWatchedBroadcast
+	@ applymovement VAR_0x8005, Common_Movement_WalkInPlaceFastestRight
+	@ waitmovement 0
+	@ call PlayersHouse_1F_EventScript_MomNoticeGymBroadcast
+	@ applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForGymMale
+	@ waitmovement 0
+	@ playbgm MUS_ENCOUNTER_INTERVIEWER, 0
+	@ msgbox PlayersHouse_1F_Text_MaybeDadWillBeOn, MSGBOX_DEFAULT
+	@ closemessage
+	@ applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomMakeRoomToSeeTVMale
+	@ waitmovement 0
+	@ applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerMoveToTVMale
+	@ waitmovement 0
+	@ call PlayersHouse_1F_EventScript_WatchGymBroadcast
+	@ applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestLeft
+	@ waitmovement 0
+	@ msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
+	@ msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
+	@ closemessage
+	@ setvar VAR_TEMP_1, 1
+	@ applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatMale
+	@ waitmovement 0
+	@ goto PlayersHouse_1F_EventScript_SetWatchedBroadcast
 	end
 
 PlayersHouse_1F_EventScript_PetalburgGymReportFemale:: @ 82928DC
-	applymovement VAR_0x8005, Common_Movement_WalkInPlaceFastestLeft
-	waitmovement 0
-	call PlayersHouse_1F_EventScript_MomNoticeGymBroadcast
-	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForGymFemale
-	waitmovement 0
-	playbgm MUS_ENCOUNTER_INTERVIEWER, 0
-	msgbox PlayersHouse_1F_Text_MaybeDadWillBeOn, MSGBOX_DEFAULT
-	closemessage
-	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomMakeRoomToSeeTVFemale
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerMoveToTVFemale
-	waitmovement 0
-	call PlayersHouse_1F_EventScript_WatchGymBroadcast
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestRight
-	waitmovement 0
-	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
-	msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
-	closemessage
-	setvar VAR_TEMP_1, 1
-	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatFemale
-	waitmovement 0
-	goto PlayersHouse_1F_EventScript_SetWatchedBroadcast
+	@ applymovement VAR_0x8005, Common_Movement_WalkInPlaceFastestLeft
+	@ waitmovement 0
+	@ call PlayersHouse_1F_EventScript_MomNoticeGymBroadcast
+	@ applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForGymFemale
+	@ waitmovement 0
+	@ playbgm MUS_ENCOUNTER_INTERVIEWER, 0
+	@ msgbox PlayersHouse_1F_Text_MaybeDadWillBeOn, MSGBOX_DEFAULT
+	@ closemessage
+	@ applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomMakeRoomToSeeTVFemale
+	@ waitmovement 0
+	@ applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerMoveToTVFemale
+	@ waitmovement 0
+	@ call PlayersHouse_1F_EventScript_WatchGymBroadcast
+	@ applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestRight
+	@ waitmovement 0
+	@ msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
+	@ msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
+	@ closemessage
+	@ setvar VAR_TEMP_1, 1
+	@ applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatFemale
+	@ waitmovement 0
+	@ goto PlayersHouse_1F_EventScript_SetWatchedBroadcast
 	end
 
 PlayersHouse_1F_EventScript_MomNoticeGymBroadcast:: @ 829294B

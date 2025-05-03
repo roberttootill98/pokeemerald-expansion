@@ -1,3 +1,79 @@
+const ID_MUM = 1
+
+script SundaraVillage_PlayerHouse_1F_EventScript {
+	lock
+
+	// mum exclamation mark
+	playse(SE_PIN)
+	applymovement(ID_MUM, mumExclamationMark)
+	waitmovement(ID_MUM)
+
+	msgbox(format("Hey {PLAYER}!"))
+	closemessage
+
+	// wait
+	delay(15)
+
+	// move mum to player
+	applymovement(ID_MUM, mumMoveToPlayer)
+	waitmovement(ID_MUM)
+
+	msgbox(format("Isn't today the day <AIDE> arrives with her Pokémon? Don't forget these!"))
+	closemessage
+
+	// give running shoes
+	call(giveRunningShoes)
+
+	// walk mum away a bit
+	applymovement(ID_MUM, mumWalkAwayABit)
+	waitmovement(ID_MUM)
+
+	msgbox(format("Also I think {RIVAL} is outside, you probably ought to say hello."))
+	closemessage
+
+	// move mum back to table
+	applymovement(ID_MUM, mumBackToTable)
+	waitmovement(ID_MUM)
+	
+	release
+	end
+}
+
+movement mumExclamationMark {
+	emote_exclamation_mark
+}
+
+movement mumMoveToPlayer {
+	walk_up
+	walk_right * 6
+	walk_up
+}
+
+movement mumWalkAwayABit {
+	walk_down
+	walk_left
+	face_up
+}
+
+movement mumBackToTable {
+	walk_left * 5
+	walk_down
+	face_right
+}
+
+script giveRunningShoes {
+	playfanfare(MUS_OBTAIN_ITEM)
+
+	msgbox(format("{PLAYER} put on the running shoes!"))
+	closemessage
+
+	waitfanfare()
+
+	setflag(FLAG_RECEIVED_RUNNING_SHOES)
+
+	return
+}
+
 raw `
 .set LOCALID_MOM, 1
 .set LOCALID_RIVAL_MOM, 4
@@ -31,12 +107,6 @@ LittlerootTown_BrendansHouse_1F_EventScript_ShowRunningShoesManual:: @ 81F779A
 	return
 
 LittlerootTown_BrendansHouse_1F_OnTransition: @ 81F77A4
-	compare VAR_LITTLEROOT_INTRO_STATE, 3
-	call_if_eq LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToDoor
-	compare VAR_LITTLEROOT_INTRO_STATE, 5
-	call_if_eq LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToStairs
-	compare VAR_LITTLEROOT_INTRO_STATE, 6
-	call_if_eq LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToTV
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToStairs:: @ 81F77C6
@@ -57,11 +127,6 @@ LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToDoor:: @ 81F77DE
 @ Many of the below scripts have no gender check because they assume youre in the correct house
 @ The below SS Ticket script uses Mays house state by accident(?), but theyre both set identically after the intro
 LittlerootTown_BrendansHouse_1F_OnFrame: @ 81F77EA
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_BrendansHouse_1F_EventScript_EnterHouseMovingIn
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_BrendansHouse_1F_EventScript_GoUpstairsToSetClock
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_BrendansHouse_1F_EventScript_PetalburgGymReport
-	map_script_2 VAR_LITTLEROOT_HOUSES_STATE_MAY, 1, LittlerootTown_BrendansHouse_1F_EventScript_YoureNewNeighbor
-	map_script_2 VAR_LITTLEROOT_HOUSES_STATE_MAY, 3, PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV
 	.2byte 0
 
 LittlerootTown_BrendansHouse_1F_EventScript_GoUpstairsToSetClock:: @ 81F7814
@@ -325,7 +390,7 @@ PlayersHouse_1F_Text_GoSetTheClock: @ 81F7B67
 
 PlayersHouse_1F_Text_OhComeQuickly: @ 81F7B96
 	.string "MOM: Oh! {PLAYER}, {PLAYER}!\n"
-	.string "Quick! Come quickly!$"
+	.string "Quick! Come even slower!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn: @ 81F7BBC
 	.string "MOM: Look! It's PETALBURG GYM!\n"
