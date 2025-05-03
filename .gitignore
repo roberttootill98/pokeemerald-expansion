@@ -35,3 +35,4 @@ porymap.project.cfg
 .fuse_hidden*
 mgba.sh
 tools/poryscript
+data/maps/**/scripts.inc
