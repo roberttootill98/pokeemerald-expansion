@@ -304,4 +304,7 @@
 
 #define SPECIAL_VARS_END              0x8015
 
+// new vars
+#define VAR_SUNDARA_STATE 0x5000
+
 #endif // GUARD_CONSTANTS_VARS_H
