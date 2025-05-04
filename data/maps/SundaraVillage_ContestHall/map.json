@@ -177,7 +177,7 @@
       "elevation": 0,
       "var": "VAR_SUNDARA_STATE",
       "var_value": "3",
-      "script": "NULL"
+      "script": "SundaraVillage_ContestHall_EventScript_Leave_ContestHall"
     }
   ],
   "bg_events": [

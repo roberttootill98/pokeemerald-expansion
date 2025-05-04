@@ -176,6 +176,26 @@ rivalWalkToContentHallPlayerInFrontOfDoor:
 	face_up
 	step_end
 
+SundaraVillage_EventScript_AideStopLeave::
+	lockall
+	applymovement 2, AideStopLeave_FaceLeft
+	waitmovement 2
+	msgbox SundaraVillage_EventScript_AideStopLeave_Text_0
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, AideStopLeave_MovePlayer
+	waitmovement OBJ_EVENT_ID_PLAYER
+	releaseall
+	end
+
+
+AideStopLeave_FaceLeft:
+	face_left
+	step_end
+
+AideStopLeave_MovePlayer:
+	walk_left
+	step_end
+
 SundaraVillage_EventScript_RivalOutsideHouse_Text_0:
 	.string "I wasn't looking at your mum! Anyways!\n"
 	.string "Let's go see if <AIDE> is down at the\l"
@@ -184,3 +204,8 @@ SundaraVillage_EventScript_RivalOutsideHouse_Text_0:
 SundaraVillage_EventScript_RivalOutsideHouse_Text_1:
 	.string "I can see them through the window!\n"
 	.string "Quick! Let's go inside!$"
+
+SundaraVillage_EventScript_AideStopLeave_Text_0:
+	.string "Hey {PLAYER}, have you found that\n"
+	.string "guy yet? I haven't seem him come this\l"
+	.string "way!$"
