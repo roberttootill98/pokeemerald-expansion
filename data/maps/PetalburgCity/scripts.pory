@@ -68,31 +68,32 @@ movement rivalOutsideHouse {
 }
 
 movement rivalWalkToContestHall {
-	walk_down
-	walk_right * 20
-	walk_down
-	walk_right
-	walk_down
-	walk_right
-	walk_down * 9
-	walk_left
-	walk_down
-	walk_left * 14
+	player_run_down
+	player_run_right * 19
+	player_run_down
+	player_run_right * 2
+	player_run_down * 2
+	player_run_right
+	player_run_down * 8
+	player_run_left
+	player_run_down
+	player_run_left * 14
 	face_up
 }
 
 movement rivalWalkToContestHallPlayer {
-	walk_right
-	walk_down
-	walk_right * 20
-	walk_down
-	walk_right
-	walk_down
-	walk_right
-	walk_down * 9
-	walk_left
-	walk_down
-	walk_left * 13
+	player_run_right
+	player_run_down
+	player_run_right * 19
+	player_run_down
+	player_run_right * 2
+	player_run_down * 2
+	player_run_right
+	player_run_down * 8
+	player_run_left
+	player_run_down
+	player_run_left * 13
+	face_left
 }
 
 movement rivalWalkToContestHallLookInside {
