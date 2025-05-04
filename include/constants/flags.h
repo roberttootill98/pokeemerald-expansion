@@ -1649,5 +1649,6 @@
 #define FLAG_SUNDARA_GET_POKEMON_POKEBALL_BULBASAUR                     0x1002
 #define FLAG_SUNDARA_GET_POKEMON_POKEBALL_CHIMCHAR                      0x1003
 #define FLAG_SUNDARA_GET_POKEMON_POKEBALL_MUDKIP                        0x1004
+#define FLAG_SUNDARA_GET_POKEMON_GRUNT                                  0x1005
 
 #endif // GUARD_CONSTANTS_FLAGS_H

@@ -9,6 +9,8 @@ mapscripts LittlerootTown_BrendansHouse_1F_MapScripts {
 script SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs {
 	lock
 
+	call(SetGameStart)
+
 	// mum exclamation mark
 	playse(SE_PIN)
 	applymovement(ID_MUM, mumExclamationMark)
@@ -54,6 +56,11 @@ script SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs {
 	
 	release
 	end
+}
+
+// sets all vars and flags that have non-default value
+script SetGameStart {
+	setflag(FLAG_SUNDARA_GET_POKEMON_GRUNT)
 }
 
 movement mumExclamationMark {

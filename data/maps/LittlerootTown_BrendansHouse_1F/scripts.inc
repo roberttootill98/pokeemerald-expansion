@@ -9,6 +9,7 @@ LittlerootTown_BrendansHouse_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs::
 	lock
+	call SetGameStart
 	playse SE_PIN
 	applymovement 1, mumExclamationMark
 	waitmovement 1
@@ -35,6 +36,11 @@ SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs::
 	setvar VAR_SUNDARA_STATE, 1
 	release
 	end
+
+
+SetGameStart::
+	setflag FLAG_SUNDARA_GET_POKEMON_GRUNT
+	return
 
 
 mumExclamationMark:

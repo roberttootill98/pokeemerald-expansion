@@ -30,7 +30,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_RIVAL_MAY_NORMAL",
       "x": 5,
-      "y": 7,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -108,7 +108,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 5,
-      "y": 8,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -116,20 +116,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_SUNDARA_GET_POKEMON_GRUNT"
     }
   ],
   "warp_events": [
     {
       "x": 4,
-      "y": 8,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_SUNDARA_VILLAGE_CONTEST_HALL",
       "dest_warp_id": 3
     },
     {
       "x": 5,
-      "y": 8,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY",
       "dest_warp_id": 3
@@ -155,7 +155,7 @@
     {
       "type": "trigger",
       "x": 5,
-      "y": 8,
+      "y": 7,
       "elevation": 0,
       "var": "VAR_SUNDARA_STATE",
       "var_value": "3",
@@ -164,11 +164,20 @@
     {
       "type": "trigger",
       "x": 4,
-      "y": 8,
+      "y": 7,
       "elevation": 0,
       "var": "VAR_SUNDARA_STATE",
       "var_value": "3",
       "script": "SundaraVillage_ContestHall_EventScript_Leave_Outside"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_SUNDARA_STATE",
+      "var_value": "3",
+      "script": "NULL"
     }
   ],
   "bg_events": [

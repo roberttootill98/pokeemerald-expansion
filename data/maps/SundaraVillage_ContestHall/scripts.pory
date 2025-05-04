@@ -1,7 +1,12 @@
 const ID_RIVAL = 2
 const ID_AIDE = 3
 const ID_DAD = 4
-const ID_GRUNT = 5
+
+const ID_POKEBALL_BULBASAUR = 5
+const ID_POKEBALL_CHIMCHAR = 6
+const ID_POKEBALL_MUDKIP = 7
+
+const ID_GRUNT = 8
 
 mapscripts SundaraVillage_ContestHall_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
@@ -74,13 +79,13 @@ script SundaraVillage_ContestHall_EventScript_GetPokemon {
 }
 
 movement GetPokemon_RivalWalkToPeople {
-    walk_up * 2
+    walk_up
     walk_right * 7
     face_down
 }
 
 movement GetPokemon_PlayerWalkToPeople {
-    walk_up * 3
+    walk_up * 2
     walk_right * 6
     face_down
 }
@@ -248,22 +253,30 @@ script SundaraVillage_ContestHall_EventScript_PokeBall_Mudkip {
 }
 
 script SundaraVillage_ContestHall_EventScript_ObtainPokemon {
+    setvar(VAR_SUNDARA_STATE, 4)
+
     hidemonpic
 
     playfanfare(MUS_RG_CAUGHT)
 
     switch(var(VAR_STARTER_MON)) {
         case 0:
+            removeobject(ID_POKEBALL_BULBASAUR)
+        
             msgbox(format("{PLAYER} received Bulbasaur!"))
         
             givemon(SPECIES_BULBASAUR, 5, ITEM_NONE)
             setflag(FLAG_SUNDARA_GET_POKEMON_POKEBALL_BULBASAUR)
         case 1:
+            removeobject(ID_POKEBALL_CHIMCHAR)
+        
             msgbox(format("{PLAYER} received Chimchar!"))
 
             givemon(SPECIES_CHIMCHAR, 5, ITEM_NONE)
             setflag(FLAG_SUNDARA_GET_POKEMON_POKEBALL_CHIMCHAR)
         case 2:
+            removeobject(ID_POKEBALL_MUDKIP)
+        
             msgbox(format("{PLAYER} received Mudkip!"))
 
             givemon(SPECIES_MUDKIP, 5, ITEM_NONE)
@@ -271,10 +284,238 @@ script SundaraVillage_ContestHall_EventScript_ObtainPokemon {
     }
 
     closemessage
-    waitfanfare    
+    waitfanfare
 
     // enable pokemon start menu item
     setflag(FLAG_SYS_POKEMON_GET)
 
+    // rival get pokemon
+    switch(var(VAR_STARTER_MON)) {
+        case 0:
+            applymovement(ID_RIVAL, ObtainPokemon_Rival_Bulbasaur)
+            waitmovement(ID_RIVAL)
+
+            removeobject(ID_POKEBALL_CHIMCHAR)
+        case 1:
+            applymovement(ID_RIVAL, ObtainPokemon_Rival_Chimchar)
+            waitmovement(ID_RIVAL)
+
+            removeobject(ID_POKEBALL_MUDKIP)
+        case 2:
+            applymovement(ID_RIVAL, ObtainPokemon_Rival_Mudkip)
+            waitmovement(ID_RIVAL)
+
+            removeobject(ID_POKEBALL_BULBASAUR)
+    }
+
+    msgbox(format("I'll take this one then!"))
+    closemessage
+
+    // give pokedex
+    call(SundaraVillage_ContestHall_EventScript_GivePokedexAndBalls)
+
+    // evil team event
+    call(SundaraVillage_ContentHall_EventScript_Grunt)
+
     return
+}
+
+movement ObtainPokemon_Rival_Bulbasaur {
+    walk_left
+    walk_up * 2
+}
+
+movement ObtainPokemon_Rival_Chimchar {
+    walk_up * 2
+}
+
+movement ObtainPokemon_Rival_Mudkip {
+    walk_left * 2
+    walk_up * 2
+}
+
+script SundaraVillage_ContestHall_EventScript_GivePokedexAndBalls {
+    msgbox(format("<AIDE>: And here's your Pokédexes and Poké balls!"))
+    closemessage
+
+    switch(var(VAR_STARTER_MON)) {
+        case 0:
+            applymovement(ID_AIDE, GivePokedex_Rival_Bulbasaur)
+            waitmovement(ID_AIDE)
+
+            applymovement(ID_RIVAL, GivePokedex_Rival)
+            waitmovement(ID_RIVAL)
+
+            delay(60)
+        case 1:
+            applymovement(ID_AIDE, GivePokedex_Rival_Chimchar)
+            waitmovement(ID_AIDE)
+
+            applymovement(ID_RIVAL, GivePokedex_Rival)
+            waitmovement(ID_RIVAL)
+
+            delay(60)
+    }
+
+    switch(var(VAR_STARTER_MON)) {
+        case 0:
+            applymovement(ID_AIDE, GivePokedex_Bulbasaur)
+            waitmovement(ID_AIDE)
+        case 1:
+            applymovement(ID_AIDE, GivePokedex_Chimchar)
+            waitmovement(ID_AIDE)
+        case 2:
+            applymovement(ID_AIDE, GivePokedex_Mudkip)
+            waitmovement(ID_AIDE)
+    }
+
+    applymovement(OBJ_EVENT_ID_PLAYER, GivePokedex_Player)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    playfanfare(MUS_RG_CAUGHT)
+    msgbox(format("{PLAYER} received the Pokédex!"))
+    closemessage
+    waitfanfare
+
+    setflag(FLAG_SYS_POKEDEX_GET)
+
+    giveitem(ITEM_POKE_BALL, 5)
+    closemessage
+
+    if(var(VAR_STARTER_MON) == 2) {
+        applymovement(ID_AIDE, GivePokedex_Rival_Mudkip)
+        waitmovement(ID_AIDE)
+
+        applymovement(ID_RIVAL, GivePokedex_Rival)
+        waitmovement(ID_RIVAL)
+
+        delay(60)
+    }    
+
+    return
+}
+
+movement GivePokedex_Bulbasaur {
+    walk_left
+    face_up
+}
+
+movement GivePokedex_Chimchar {
+    walk_left
+    face_up
+}
+
+movement GivePokedex_Mudkip {
+    walk_left
+    face_up
+}
+
+movement GivePokedex_Player {
+    face_down
+}
+
+movement GivePokedex_Rival_Bulbasaur {
+    walk_left * 2
+    face_up
+}
+
+movement GivePokedex_Rival_Chimchar {
+    walk_left
+    face_up
+}
+
+movement GivePokedex_Rival_Mudkip {
+    walk_left * 2
+    face_up
+}
+
+movement GivePokedex_Rival {
+    face_down
+}
+
+script SundaraVillage_ContentHall_EventScript_Grunt {
+    // unhide grunt
+    addobject(ID_GRUNT)
+
+    // play music
+    playbgm(MUS_ENCOUNTER_AQUA, 0)
+
+    // grunt looks around
+    applymovement(ID_GRUNT, Grunt_Enter)
+    waitmovement(ID_GRUNT)
+
+    playse(SE_PIN)
+    applymovement(ID_GRUNT, Grunt_Enter_Question)
+    waitmovement(ID_GRUNT)
+    waitse
+
+    msgbox(format("Hey what's going on here!"))
+    closemessage
+
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Grunt_AllFace)
+    applymovement(ID_RIVAL, Grunt_AllFace)
+    applymovement(ID_AIDE, Grunt_AllFace)
+    applymovement(ID_DAD, Grunt_AllFace)
+    waitse
+
+    applymovement(ID_GRUNT, Grunt_LookAround)
+    waitmovement(ID_GRUNT)
+
+    delay(15)
+    applymovement(ID_GRUNT, Grunt_LookUp)
+    waitmovement(ID_GRUNT)
+
+    delay(15)
+    applymovement(ID_GRUNT, Grunt_LookDown)
+    waitmovement(ID_GRUNT)
+
+    delay(15)
+    playse(SE_PIN)
+    applymovement(ID_GRUNT, Grunt_Exclame)
+    waitmovement(ID_GRUNT)
+    waitse
+
+    msgbox(format("Are you giving out Pokémon?\nI'll just take this one then!"))
+    closemessage
+
+    msgbox(format("<AIDE>: Hey that's not yours!"))
+    closemessage
+
+    return
+}
+
+movement Grunt_Enter {
+    walk_up
+    walk_right
+}
+
+movement Grunt_Enter_Question {
+    emote_question_mark
+}
+
+movement Grunt_AllFace {
+    face_left
+}
+
+movement Grunt_LookAround {
+    walk_up
+    walk_right * 2
+}
+
+movement Grunt_LookUp {
+    face_up
+}
+
+movement Grunt_LookDown {
+    face_down
+}
+
+movement Grunt_Exclame {
+    face_right
+    emote_exclamation_mark
+}
+
+movement Aide_Exclame {
+
 }
