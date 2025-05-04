@@ -1,3 +1,4 @@
+const ID_ATTENDEE = 1
 const ID_RIVAL = 2
 const ID_AIDE = 3
 const ID_DAD = 4
@@ -454,6 +455,7 @@ script SundaraVillage_ContentHall_EventScript_Grunt {
 
     playse(SE_PIN)
 
+    applymovement(ID_ATTENDEE, Attendee_Exclame)
     applymovement(OBJ_EVENT_ID_PLAYER, Grunt_AllFace)
     applymovement(ID_RIVAL, Grunt_AllFace)
     applymovement(ID_AIDE, Grunt_AllFace)
@@ -566,6 +568,7 @@ script SundaraVillage_ContentHall_EventScript_Grunt {
     waitmovement(ID_DAD)
     waitmovement(ID_GRUNT)
 
+    delay(15)
     playse(SE_SLIDING_DOOR)
     removeobject(ID_GRUNT)
 	waitse
@@ -582,6 +585,10 @@ movement Grunt_Enter {
 
 movement Grunt_Enter_Question {
     emote_question_mark
+}
+
+movement Attendee_Exclame {
+    emote_exclamation_mark
 }
 
 movement Grunt_AllFace {
