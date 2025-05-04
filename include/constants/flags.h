@@ -1644,6 +1644,7 @@
 #define SPECIAL_FLAGS_END                       (SPECIAL_FLAGS_START + 0x7F)
 
 // new flags
+// sundara village
 #define FLAG_SUNDARA_RIVAL_OUTISDE_HOUSE                                0x1000
 #define FLAG_SUNDARA_GET_POKEMON_PEOPLE                                 0x1001
 #define FLAG_SUNDARA_GET_POKEMON_POKEBALL_BULBASAUR                     0x1002
@@ -1651,5 +1652,8 @@
 #define FLAG_SUNDARA_GET_POKEMON_POKEBALL_MUDKIP                        0x1004
 #define FLAG_SUNDARA_GET_POKEMON_GRUNT                                  0x1005
 #define FLAG_SUNDARA_AIDE_GRUNT_STOP                                    0x1006
+// route 4
+#define FLAG_ROUTE4_GRUNT                                               0x1007
+#define FLAG_ROUTE4_LOST_POKEMON                                        0x1008
 
 #endif // GUARD_CONSTANTS_FLAGS_H

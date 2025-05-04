@@ -40,6 +40,7 @@ SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs::
 
 SetGameStart::
 	setflag FLAG_SUNDARA_GET_POKEMON_GRUNT
+	setflag FLAG_ROUTE4_LOST_POKEMON
 	return
 
 

@@ -13,21 +13,21 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = NULL},
     },
 
-    [TRAINER_SAWYER_1] =
+    [TRAINER_ROUTE4_GRUNT_BULBASAUR] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_HIKER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_HIKER,
-        .trainerName = _("SAWYER"),
+        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
+        .trainerName = _("GRUNT"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Sawyer1),
-        .party = {.NoItemDefaultMoves = sParty_Sawyer1},
+        .partySize = ARRAY_COUNT(sParty_Route4_Grunt_Bulbasaur),
+        .party = {.NoItemDefaultMoves = sParty_Route4_Grunt_Bulbasaur},
     },
 
-    [TRAINER_GRUNT_AQUA_HIDEOUT_1] =
+    [TRAINER_ROUTE4_GRUNT_CHIMCHAR] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_TEAM_AQUA,
@@ -36,12 +36,12 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("GRUNT"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntAquaHideout1),
-        .party = {.NoItemDefaultMoves = sParty_GruntAquaHideout1},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Route4_Grunt_Chimchar),
+        .party = {.NoItemDefaultMoves = sParty_Route4_Grunt_Chimchar},
     },
 
-    [TRAINER_GRUNT_AQUA_HIDEOUT_2] =
+    [TRAINER_ROUTE4_GRUNT_MUDKIP] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_TEAM_AQUA,
@@ -50,9 +50,9 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("GRUNT"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntAquaHideout2),
-        .party = {.NoItemDefaultMoves = sParty_GruntAquaHideout2},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Route4_Grunt_Mudkip),
+        .party = {.NoItemDefaultMoves = sParty_Route4_Grunt_Mudkip},
     },
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_3] =

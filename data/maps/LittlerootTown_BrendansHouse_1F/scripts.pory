@@ -61,6 +61,7 @@ script SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs {
 // sets all vars and flags that have non-default value
 script SetGameStart {
 	setflag(FLAG_SUNDARA_GET_POKEMON_GRUNT)
+	setflag(FLAG_ROUTE4_LOST_POKEMON)
 }
 
 movement mumExclamationMark {

@@ -615,7 +615,7 @@ movement Grunt_LookDown {
     face_down
 }
 
-movement Grunt_Exclame {
+movement(local) Grunt_Exclame {
     face_right
     emote_exclamation_mark
 }
