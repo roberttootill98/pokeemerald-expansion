@@ -144,9 +144,13 @@ script SundaraVillage_ContestHall_EventScript_Dad {
     lock
     faceplayer
 
-    if(var(VAR_SUNDARA_STATE) == 3) {
-        msgbox(format("You could also pick a cool, clever, smart or beautiful Pokémon, but cute Pokémon are the best!"))
-        closemessage
+    switch(var(VAR_SUNDARA_STATE)) {
+        case 3:
+            msgbox(format("You could also pick a cool, clever, smart or beautiful Pokémon, but cute Pokémon are the best!"))
+            closemessage
+        case 4:
+            msgbox(format("Have you and {RIVAL} found anything at the Jagged Plains yet? That's north of Sundara Village."))
+            closemessage
     }
 
     release
@@ -315,8 +319,11 @@ script SundaraVillage_ContestHall_EventScript_ObtainPokemon {
     // give pokedex
     call(SundaraVillage_ContestHall_EventScript_GivePokedexAndBalls)
 
-    // evil team event
+    // grunt event
     call(SundaraVillage_ContentHall_EventScript_Grunt)
+
+    // after grunt event
+    call(SundaraVillage_ContestHall_EventScript_AfterGrunt)
 
     return
 }
@@ -685,4 +692,179 @@ movement Grunt_TakePokemon_Leave_End {
 
 movement Grunt_TakePokemon_Leave_AllFace {
     face_left
+}
+
+script SundaraVillage_ContestHall_EventScript_AfterGrunt {
+    applymovement(OBJ_EVENT_ID_PLAYER, AfterGrunt_FaceDown)
+    applymovement(ID_RIVAL, AfterGrunt_FaceDown)
+    applymovement(ID_AIDE, AfterGrunt_FaceDown)
+    applymovement(ID_DAD, AfterGrunt_FaceUp)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    waitmovement(ID_RIVAL)
+    waitmovement(ID_AIDE)
+    waitmovement(ID_DAD)
+
+    msgbox(format("<AIDE>: What are we going to do? I was supposed to be getting my first Pokémon today too..."))
+    closemessage
+
+    msgbox(format("Dad: Come sit down guys."))
+    closemessage
+
+    applymovement(ID_DAD, AfterGrunt_FaceRight)
+    waitmovement(ID_DAD)
+    
+    switch(var(VAR_STARTER_MON)) {
+        case 0:
+            applymovement(OBJ_EVENT_ID_PLAYER, AfterGrunt_Sit_Player_Bulbasaur)
+            applymovement(ID_RIVAL, AfterGrunt_Sit_Rival_Bulbasaur)
+            applymovement(ID_AIDE, AfterGrunt_Sit_Aide_Bulbasaur)
+        case 1:
+            applymovement(OBJ_EVENT_ID_PLAYER, AfterGrunt_Sit_Player_Chimchar)
+            applymovement(ID_RIVAL, AfterGrunt_Sit_Rival_Chimchar)
+            applymovement(ID_AIDE, AfterGrunt_Sit_Aide_Chimchar)
+        case 2:
+            applymovement(OBJ_EVENT_ID_PLAYER, AfterGrunt_Sit_Player_Mudkip)
+            applymovement(ID_RIVAL, AfterGrunt_Sit_Rival_Mudkip)
+            applymovement(ID_AIDE, AfterGrunt_Sit_Aide_Mudkip)
+    }
+
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    waitmovement(ID_RIVAL)
+    waitmovement(ID_AIDE)
+
+    playse(MUS_ABANDONED_SHIP)
+    waitse
+
+    msgbox(format("Dad: If we act quickly we can stop that guy from getting away!"))
+    closemessage
+    msgbox(format("<AIDE>, since you don't have a Pokémon you stay in town and stop anyone going into Ferre Grasslands to the east."))
+    closemessage
+    msgbox(format("{RIVAL} and {PLAYER} you guys take your new Pokémon and check out (route 4) to the north! We can do this everyone!"))
+    closemessage
+
+    msgbox(format("<AIDE>: Thanks sir, let's go everyone!"))
+    closemessage
+
+    // people leave
+    applymovement(ID_RIVAL, AfterGrunt_Leave_Rival)
+    applymovement(ID_AIDE, AfterGrunt_Leave_Aide)
+    waitmovement(ID_RIVAL)
+    waitmovement(ID_AIDE)
+
+    delay(15)
+    playse(SE_SLIDING_DOOR)
+    removeobject(ID_RIVAL)
+	waitse
+
+    applymovement(ID_AIDE, AfterGrunt_Leave_Aide_Exit)
+    waitmovement(ID_AIDE)
+
+    delay(15)
+    playse(SE_SLIDING_DOOR)
+    removeobject(ID_AIDE)
+	waitse
+
+    return
+}
+
+movement AfterGrunt_FaceDown {
+    face_down
+}
+
+movement AfterGrunt_FaceUp {
+    face_up
+}
+
+movement AfterGrunt_FaceRight {
+    face_right
+}
+
+movement AfterGrunt_Sit_Player_Bulbasaur {
+    walk_down * 3
+    walk_left
+    face_right
+}
+
+movement AfterGrunt_Sit_Rival_Bulbasaur {
+    walk_down
+    walk_right
+    walk_down * 2
+    walk_right
+    face_left
+}
+
+movement AfterGrunt_Sit_Aide_Bulbasaur {
+    walk_down
+    walk_right * 2
+    walk_down
+    walk_right
+    face_left
+}
+
+movement AfterGrunt_Sit_Player_Chimchar {
+    walk_left
+    walk_down * 3
+    walk_left
+    face_right
+}
+
+movement AfterGrunt_Sit_Rival_Chimchar {
+    walk_down
+    walk_right
+    walk_down * 2
+    face_left
+}
+
+movement AfterGrunt_Sit_Aide_Chimchar {
+    walk_down * 2
+    walk_right
+    walk_down
+    walk_right
+    face_left
+}
+
+movement AfterGrunt_Sit_Player_Mudkip {
+    walk_left * 2
+    walk_down * 3
+    walk_left
+    face_left
+}
+
+movement AfterGrunt_Sit_Rival_Mudkip {
+    walk_down
+    walk_right * 2
+    walk_down * 2
+    walk_right
+    face_left
+}
+
+movement AfterGrunt_Sit_Aide_Mudkip {
+    walk_down
+    walk_right * 2
+    walk_down
+    walk_right
+    face_left
+}
+
+movement AfterGrunt_Leave_Rival {
+    walk_left
+    walk_up
+    walk_left * 5
+    walk_down
+    walk_left * 2
+    walk_down
+}
+
+movement AfterGrunt_Leave_Aide {
+    walk_up
+    walk_left
+    walk_up
+    walk_left * 5
+    walk_down
+    walk_left * 2
+    face_down
+}
+
+movement AfterGrunt_Leave_Aide_Exit {
+    walk_down
 }
