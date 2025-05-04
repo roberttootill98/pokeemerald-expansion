@@ -1,6 +1,110 @@
-raw `
+const ID_RIVAL = 1
 
-PetalburgCity_MapScripts::
-	.byte 0
+mapscripts PetalburgCity_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_SUNDARA_STATE, 1: SundaraVillage_EventScript_RivalOutsideHouse
+	]
+}
 
-`
+script SundaraVillage_EventScript_RivalOutsideHouse {
+	lock
+	
+	setvar(VAR_SUNDARA_STATE, 2)
+	setflag(FLAG_SUNDARA_RIVAL_OUTISDE_HOUSE)
+
+	applymovement(OBJ_EVENT_ID_PLAYER, rivalOutsideHousePlayer)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+
+	playse(SE_PIN)
+	applymovement(ID_RIVAL, rivalOutsideHouse)
+	waitmovement(ID_RIVAL)
+	waitse
+
+	msgbox(format("I wasn't looking at your mum! Anyways! Let's go see if <AIDE> is down at the content hall yet!"))
+	closemessage
+
+	// walk to contest hall
+	applymovement(ID_RIVAL, rivalWalkToContestHall)
+	applymovement(OBJ_EVENT_ID_PLAYER, rivalWalkToContestHallPlayer)
+	waitmovement(ID_RIVAL)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+
+	// exclamation mark
+	playse(SE_PIN)
+	applymovement(ID_RIVAL, rivalWalkToContestHallLookInside)
+	waitmovement(ID_RIVAL)
+	waitse
+
+	msgbox(format("I can see them through the window! Quick! Let's go inside!"))
+	closemessage
+
+	// rival enter contest hall
+	applymovement(ID_RIVAL, rivalWalkToContentHallRivalInFrontOfDoor)
+	waitmovement(ID_RIVAL)
+
+	opendoor(21, 17)
+	playse(SE_SLIDING_DOOR)
+	waitdooranim()
+	waitse
+
+	hideobjectat(ID_RIVAL, 0)
+	playse(SE_EXIT)
+	waitse
+
+	// player enter contest hall
+	applymovement(OBJ_EVENT_ID_PLAYER, rivalWalkToContentHallPlayerInFrontOfDoor)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+
+	warp(MAP_PETALBURG_CITY_WALLYS_HOUSE, 0, 0, 0)
+}
+
+movement rivalOutsideHousePlayer {
+	face_right
+}
+
+movement rivalOutsideHouse {
+	emote_exclamation_mark
+	face_left
+}
+
+movement rivalWalkToContestHall {
+	walk_down
+	walk_right * 20
+	walk_down
+	walk_right
+	walk_down
+	walk_right
+	walk_down * 9
+	walk_left
+	walk_down
+	walk_left * 14
+	face_up
+}
+
+movement rivalWalkToContestHallPlayer {
+	walk_right
+	walk_down
+	walk_right * 20
+	walk_down
+	walk_right
+	walk_down
+	walk_right
+	walk_down * 9
+	walk_left
+	walk_down
+	walk_left * 13
+}
+
+movement rivalWalkToContestHallLookInside {
+	emote_exclamation_mark
+}
+
+movement rivalWalkToContentHallRivalInFrontOfDoor {
+	walk_left
+	face_up
+}
+
+movement rivalWalkToContentHallPlayerInFrontOfDoor {
+	walk_left * 2
+	face_up
+}

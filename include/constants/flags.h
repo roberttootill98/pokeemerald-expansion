@@ -1643,4 +1643,7 @@
 // FLAG_SPECIAL_FLAG_0x4005 - 0x407F also exist and are unused
 #define SPECIAL_FLAGS_END                       (SPECIAL_FLAGS_START + 0x7F)
 
+// new flags
+#define FLAG_SUNDARA_RIVAL_OUTISDE_HOUSE        0x1000
+
 #endif // GUARD_CONSTANTS_FLAGS_H

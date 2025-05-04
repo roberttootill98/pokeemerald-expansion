@@ -8,10 +8,11 @@ LittlerootTown_BrendansHouse_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 
 SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs::
-	lockall
+	lock
 	playse SE_PIN
 	applymovement 1, mumExclamationMark
 	waitmovement 1
+	waitse
 	msgbox SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_0
 	closemessage
 	delay 15
@@ -27,7 +28,7 @@ SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs::
 	applymovement 1, mumBackToTable
 	waitmovement 1
 	setvar VAR_SUNDARA_STATE, 1
-	releaseall
+	release
 	end
 
 

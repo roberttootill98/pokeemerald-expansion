@@ -7,12 +7,13 @@ mapscripts LittlerootTown_BrendansHouse_1F_MapScripts {
 }
 
 script SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs {
-	lockall
+	lock
 
 	// mum exclamation mark
 	playse(SE_PIN)
 	applymovement(ID_MUM, mumExclamationMark)
 	waitmovement(ID_MUM)
+	waitse
 
 	msgbox(format("Hey {PLAYER}!"))
 	closemessage
@@ -43,7 +44,7 @@ script SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs {
 
 	setvar(VAR_SUNDARA_STATE, 1)
 	
-	releaseall
+	release
 	end
 }
 
