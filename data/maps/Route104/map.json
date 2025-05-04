@@ -42,8 +42,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 16,
-      "y": 29,
+      "x": 15,
+      "y": 30,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,

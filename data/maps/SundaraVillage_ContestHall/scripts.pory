@@ -827,7 +827,7 @@ movement AfterGrunt_Sit_Player_Mudkip {
     walk_left * 2
     walk_down * 3
     walk_left
-    face_left
+    face_right
 }
 
 movement AfterGrunt_Sit_Rival_Mudkip {
