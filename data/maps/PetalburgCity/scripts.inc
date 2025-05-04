@@ -40,7 +40,7 @@ SundaraVillage_EventScript_RivalOutsideHouse::
 	waitse
 	applymovement OBJ_EVENT_ID_PLAYER, rivalWalkToContentHallPlayerInFrontOfDoor
 	waitmovement OBJ_EVENT_ID_PLAYER
-	warp MAP_PETALBURG_CITY_WALLYS_HOUSE, 0, 0, 0
+	warp MAP_SUNDARA_VILLAGE_CONTEST_HALL, 0, 0, 0
 	return
 
 
