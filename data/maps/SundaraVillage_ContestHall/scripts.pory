@@ -1,1 +1,280 @@
-mapscripts SundaraVillage_ContestHall_MapScripts {}
+const ID_RIVAL = 2
+const ID_AIDE = 3
+const ID_DAD = 4
+const ID_GRUNT = 5
+
+mapscripts SundaraVillage_ContestHall_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_SUNDARA_STATE, 2: SundaraVillage_ContestHall_EventScript_GetPokemon
+    ]
+}
+
+script SundaraVillage_ContestHall_EventScript_GetPokemon {
+    lock
+
+    setvar(VAR_SUNDARA_STATE, 3)
+
+    // walk to aide and dad
+    applymovement(ID_RIVAL, GetPokemon_RivalWalkToPeople)
+    applymovement(OBJ_EVENT_ID_PLAYER, GetPokemon_PlayerWalkToPeople)
+    waitmovement(ID_RIVAL)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    msgbox(format("{RIVAL}: Don't worry guys I got them out of bed in time."))
+    closemessage
+
+    // aide and dad look up
+    playse(SE_PIN)
+    applymovement(ID_AIDE, GetPokemon_FaceUp)
+    applymovement(ID_DAD, GetPokemon_FaceUp)
+    waitmovement(ID_AIDE)
+    waitmovement(ID_DAD)
+	waitse
+    
+    msgbox(format("<AIDE>: Thanks mate, you got here just in time, I don't know how many more stories about cute Shuckles I could take."))
+    closemessage
+
+    playse(SE_PIN)
+    applymovement(ID_DAD, GetPokemon_DadAnnoyed)
+    waitmovement(ID_DAD)
+	waitse
+
+    msgbox(format("Dad: Hey, I hadn't even gotten to the one about that time in Larost Harbour yet!"))
+    closemessage
+
+    msgbox(format("<AIDE>: Are you ready to pick your first Pokémon?"))
+    closemessage
+
+    applymovement(ID_DAD, GetPokemon_DadAnnoyedDone)
+    waitmovement(ID_DAD)
+    
+    msgbox(format("Dad: Make sure you pick something cute!"))
+    closemessage
+
+    playse(SE_PIN)
+    applymovement(ID_DAD, GetPokemon_DadHeart)
+    waitmovement(ID_DAD)
+    waitse
+
+    // walk aide to desk
+    applymovement(ID_AIDE, GetPokemon_WorkAideToDesk)
+    waitmovement(ID_AIDE)
+
+    // player and rival face up
+    applymovement(ID_RIVAL, GetPokemon_PeopleFaceUp)
+    applymovement(OBJ_EVENT_ID_PLAYER, GetPokemon_PeopleFaceUp)
+    waitmovement(ID_RIVAL)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    msgbox(format("<AIDE>: Please have a look inside each Poké ball and choose carefully."))
+    closemessage
+
+    release
+    end
+}
+
+movement GetPokemon_RivalWalkToPeople {
+    walk_up * 2
+    walk_right * 7
+    face_down
+}
+
+movement GetPokemon_PlayerWalkToPeople {
+    walk_up * 3
+    walk_right * 6
+    face_down
+}
+
+movement GetPokemon_FaceUp {
+    face_up
+    emote_exclamation_mark
+}
+
+movement GetPokemon_DadAnnoyed {
+    face_right
+    emote_exclamation_mark
+}
+
+movement GetPokemon_DadAnnoyedDone {
+    face_up
+}
+
+movement GetPokemon_DadHeart {
+    emote_heart
+}
+
+movement GetPokemon_WorkAideToDesk {
+    walk_up * 3
+    face_left
+}
+
+movement GetPokemon_PeopleFaceUp {
+    face_up
+}
+
+script SundaraVillage_ContestHall_EventScript_Rival {
+    lock
+    faceplayer
+
+    msgbox(format("I'm sure I'll train mine better, so you can pick first!"))
+    closemessage
+
+    release
+    end
+}
+
+script SundaraVillage_ContestHall_EventScript_Aide {
+    lock
+    faceplayer
+
+    msgbox(format("Please have a look inside each Poké ball and choose carefully."))
+    closemessage
+
+    release
+    end
+}
+
+script SundaraVillage_ContestHall_EventScript_Dad {
+    lock
+    faceplayer
+
+    if(var(VAR_SUNDARA_STATE) == 3) {
+        msgbox(format("You could also pick a cool, clever, smart or beautiful Pokémon, but cute Pokémon are the best!"))
+        closemessage
+    }
+
+    release
+    end
+}
+
+script SundaraVillage_ContestHall_EventScript_Leave_Outside {
+    lock
+
+    msgbox(format("{RIVAL}: Hey {PLAYER}, where do you think you're going?"))
+    closemessage
+
+    applymovement(OBJ_EVENT_ID_PLAYER, GetPokemon_Leave_Outside)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    release
+    end
+}
+
+movement GetPokemon_Leave_Outside {
+    walk_up
+}
+
+script SundaraVillage_ContestHall_EventScript_Leave_ContestHall {
+    lock
+
+    msgbox(format("{RIVAL}: Hey {PLAYER}, where do you think you're going?"))
+    closemessage
+
+    applymovement(OBJ_EVENT_ID_PLAYER, GetPokemon_Leave_ContestHall)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    release
+    end
+}
+
+movement GetPokemon_Leave_ContestHall {
+    walk_down
+}
+
+script SundaraVillage_ContestHall_EventScript_PokeBall_Bulbasaur {
+    lock
+
+    showmonpic(SPECIES_BULBASAUR, 10, 3)
+    playmoncry(SPECIES_BULBASAUR, 0)
+
+    msgbox(format("It's Bulbasaur, the nefarious tyke!"))
+    closemessage
+
+    msgbox(format("Do you want to choose Bulbasaur?"), MSGBOX_YESNO)
+    
+    if(var(VAR_RESULT)) {
+        setvar(VAR_STARTER_MON, 0)
+        call(SundaraVillage_ContestHall_EventScript_ObtainPokemon)
+    } else {
+        hidemonpic
+    }
+
+    release
+    end
+}
+
+script SundaraVillage_ContestHall_EventScript_PokeBall_Chimchar {
+    lock
+
+    showmonpic(SPECIES_CHIMCHAR, 10, 3)
+    playmoncry(SPECIES_CHIMCHAR, 0)
+
+    msgbox(format("It's Chimchar, the nefarious tyke!"))
+    closemessage
+
+    msgbox(format("Do you want to choose Chimchar?"), MSGBOX_YESNO)
+    
+    if(var(VAR_RESULT)) {
+        setvar(VAR_STARTER_MON, 1)
+        call(SundaraVillage_ContestHall_EventScript_ObtainPokemon)
+    } else {
+        hidemonpic
+    }
+
+    release
+    end
+}
+
+script SundaraVillage_ContestHall_EventScript_PokeBall_Mudkip {
+    lock
+
+    showmonpic(SPECIES_MUDKIP, 10, 3)
+    playmoncry(SPECIES_MUDKIP, 0)
+
+    msgbox(format("It's Mudkip, the nefarious tyke!"))
+    closemessage
+
+    msgbox(format("Do you want to choose Mudkip?"), MSGBOX_YESNO)
+    
+    if(var(VAR_RESULT)) {
+        setvar(VAR_STARTER_MON, 2)        
+        call(SundaraVillage_ContestHall_EventScript_ObtainPokemon)
+    } else {
+        hidemonpic
+    }
+
+    release
+    end
+}
+
+script SundaraVillage_ContestHall_EventScript_ObtainPokemon {
+    hidemonpic
+
+    playfanfare(MUS_RG_CAUGHT)
+
+    switch(var(VAR_STARTER_MON)) {
+        case 0:
+            msgbox(format("{PLAYER} received Bulbasaur!"))
+        
+            givemon(SPECIES_BULBASAUR, 5, ITEM_NONE)
+            setflag(FLAG_SUNDARA_GET_POKEMON_POKEBALL_BULBASAUR)
+        case 1:
+            msgbox(format("{PLAYER} received Chimchar!"))
+
+            givemon(SPECIES_CHIMCHAR, 5, ITEM_NONE)
+            setflag(FLAG_SUNDARA_GET_POKEMON_POKEBALL_CHIMCHAR)
+        case 2:
+            msgbox(format("{PLAYER} received Mudkip!"))
+
+            givemon(SPECIES_MUDKIP, 5, ITEM_NONE)
+            setflag(FLAG_SUNDARA_GET_POKEMON_POKEBALL_MUDKIP)
+    }
+
+    closemessage
+    waitfanfare    
+
+    // enable pokemon start menu item
+    setflag(FLAG_SYS_POKEMON_GET)
+
+    return
+}

@@ -37,11 +37,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "SundaraVillage_ContestHall_EventScript_Rival",
+      "flag": "FLAG_SUNDARA_GET_POKEMON_PEOPLE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "graphics_id": "OBJ_EVENT_GFX_LEAF",
       "x": 13,
       "y": 7,
       "elevation": 3,
@@ -50,8 +50,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "SundaraVillage_ContestHall_EventScript_Aide",
+      "flag": "FLAG_SUNDARA_GET_POKEMON_PEOPLE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NORMAN",
@@ -63,8 +63,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "SundaraVillage_ContestHall_EventScript_Dad",
+      "flag": "NULL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -76,8 +76,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "SundaraVillage_ContestHall_EventScript_PokeBall_Bulbasaur",
+      "flag": "FLAG_SUNDARA_GET_POKEMON_POKEBALL_BULBASAUR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -89,8 +89,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "SundaraVillage_ContestHall_EventScript_PokeBall_Chimchar",
+      "flag": "FLAG_SUNDARA_GET_POKEMON_POKEBALL_CHIMCHAR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -98,6 +98,19 @@
       "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SundaraVillage_ContestHall_EventScript_PokeBall_Mudkip",
+      "flag": "FLAG_SUNDARA_GET_POKEMON_POKEBALL_MUDKIP"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 5,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -120,10 +133,43 @@
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY",
       "dest_warp_id": 3
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_SUNDARA_VILLAGE_CONTEST_HALL",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_SUNDARA_STATE",
+      "var_value": "3",
+      "script": "SundaraVillage_ContestHall_EventScript_Leave_ContestHall"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_SUNDARA_STATE",
+      "var_value": "3",
+      "script": "SundaraVillage_ContestHall_EventScript_Leave_Outside"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_SUNDARA_STATE",
+      "var_value": "3",
+      "script": "SundaraVillage_ContestHall_EventScript_Leave_Outside"
+    }
   ],
   "bg_events": [
 
