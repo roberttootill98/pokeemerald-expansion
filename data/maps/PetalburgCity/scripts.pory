@@ -1,9 +1,13 @@
 const ID_RIVAL = 1
-const ID_AIDE = 2
+const ID_AIDE_EXIT = 2
+const ID_AIDE_RETURN_STOLEN_POKEMON = 3
+const ID_DAD_RETURN_STOLEN_POKEMON = 4
+const ID_RIVAL_RETURN_STOLEN_POKEMON = 5
 
 mapscripts PetalburgCity_MapScripts {
 	MAP_SCRIPT_ON_FRAME_TABLE [
 		VAR_SUNDARA_STATE, 1: SundaraVillage_EventScript_RivalOutsideHouse
+		VAR_SUNDARA_STATE, 5: SundaraVillage_EventScript_ReturnStolenPokemon
 	]
 }
 
@@ -114,8 +118,8 @@ movement rivalWalkToContentHallPlayerInFrontOfDoor {
 script SundaraVillage_EventScript_AideStopLeave {
 	lockall
 	
-	applymovement(ID_AIDE, AideStopLeave_FaceLeft)
-	waitmovement(ID_AIDE)
+	applymovement(ID_AIDE_EXIT, AideStopLeave_FaceLeft)
+	waitmovement(ID_AIDE_EXIT)
 
 	msgbox(format("Hey {PLAYER}, have you found that guy yet? I haven't seem him come this way!"))
 	closemessage
@@ -133,4 +137,77 @@ movement AideStopLeave_FaceLeft {
 
 movement AideStopLeave_MovePlayer {
 	walk_left
+}
+
+script SundaraVillage_EventScript_ReturnStolenPokemon {
+	lockall
+
+	setvar(VAR_SUNDARA_STATE, 6)
+
+	switch(var(VAR_STARTER_MON)) {
+        case 0:
+			msgbox(format("<AIDE>: Thank you so much for saving Mudkip!"))
+        case 1:
+			msgbox(format("<AIDE>: Thank you so much for saving Bulbasaur!"))
+        case 2:
+			msgbox(format("<AIDE>: Thank you so much for saving Chimchar!"))
+    }
+
+	closemessage
+
+	msgbox(format("Dad: What are you guys going to do now?"))
+	closemessage
+
+	msgbox(format("{RIVAL}: I'm off to find the strongest Pokémon!"))
+	closemessage
+
+	applymovement(ID_RIVAL_RETURN_STOLEN_POKEMON, SundaraVillage_ReturnStolenPokemon_RivalLeave)
+	waitmovement(ID_RIVAL_RETURN_STOLEN_POKEMON)
+	removeobject(ID_RIVAL_RETURN_STOLEN_POKEMON)
+
+	msgbox(format("<AIDE>: I'm going to find my way back to the capital to share my findings with <PROFESSOR>"))
+	closemessage
+
+	applymovement(ID_AIDE_RETURN_STOLEN_POKEMON, SundaraVillage_ReturnStolenPokemon_AideLeave)
+	waitmovement(ID_AIDE_RETURN_STOLEN_POKEMON)
+	removeobject(ID_AIDE_RETURN_STOLEN_POKEMON)
+
+	playse(SE_PIN)
+	applymovement(ID_DAD_RETURN_STOLEN_POKEMON, SundaraVillage_ReturnStolenPokemon_DadHeart)
+	waitmovement(ID_DAD_RETURN_STOLEN_POKEMON)
+	waitse
+	
+	msgbox(format("Dad: Well done today {PLAYER}."))
+	closemessage
+
+	applymovement(ID_DAD_RETURN_STOLEN_POKEMON, SundaraVillage_ReturnStolenPokemon_DadLeave)
+	waitmovement(ID_DAD_RETURN_STOLEN_POKEMON)
+	removeobject(ID_DAD_RETURN_STOLEN_POKEMON)
+
+	setflag(FLAG_SUNDARA_RETURN_STOLEN_POKEMON)
+
+	releaseall
+	end
+}
+
+movement SundaraVillage_ReturnStolenPokemon_RivalLeave {
+	player_run_right * 2
+	player_run_up
+	player_run_right * 5
+}
+
+movement SundaraVillage_ReturnStolenPokemon_AideLeave {
+	walk_right * 2
+	walk_up
+	walk_right * 2
+	walk_up
+	walk_right * 4
+}
+
+movement SundaraVillage_ReturnStolenPokemon_DadHeart {
+	emote_heart
+}
+
+movement SundaraVillage_ReturnStolenPokemon_DadLeave {
+	walk_left * 8
 }

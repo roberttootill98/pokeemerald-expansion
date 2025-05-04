@@ -49,7 +49,7 @@ movement Route4_Grunt_Exclame {
 }
 
 script Route4_EventScript_LostPokemon {
-	lock
+	lockall
 
 	setvar(VAR_SUNDARA_STATE, 5)
 
@@ -60,6 +60,9 @@ script Route4_EventScript_LostPokemon {
 	closemessage
 	removeobject(ID_LOST_POKEMON)
 	waitse
+
+	setflag(FLAG_SUNDARA_AIDE_GRUNT_STOP)
+	clearflag(FLAG_SUNDARA_RETURN_STOLEN_POKEMON)
 
 	warp(MAP_PETALBURG_CITY, 5, 0, 0)
 }

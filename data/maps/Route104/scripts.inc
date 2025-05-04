@@ -48,14 +48,17 @@ Route4_Grunt_Exclame:
 	step_end
 
 Route4_EventScript_LostPokemon::
-	lock
+	lockall
 	setvar VAR_SUNDARA_STATE, 5
+	removeobject 2
 	playse MUS_OBTAIN_ITEM
 	msgbox Route4_EventScript_LostPokemon_Text_0
 	closemessage
 	removeobject 2
 	waitse
-	warp MAP_PETALBURG_CITY, 1, 38, 18
+	setflag FLAG_SUNDARA_AIDE_GRUNT_STOP
+	clearflag FLAG_SUNDARA_RETURN_STOLEN_POKEMON
+	warp MAP_PETALBURG_CITY, 5, 0, 0
 	return
 
 
