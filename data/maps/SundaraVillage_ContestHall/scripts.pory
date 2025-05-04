@@ -292,17 +292,17 @@ script SundaraVillage_ContestHall_EventScript_ObtainPokemon {
     // rival get pokemon
     switch(var(VAR_STARTER_MON)) {
         case 0:
-            applymovement(ID_RIVAL, ObtainPokemon_Rival_Bulbasaur)
+            applymovement(ID_RIVAL, ObtainPokemon_Rival_Chimchar)
             waitmovement(ID_RIVAL)
 
             removeobject(ID_POKEBALL_CHIMCHAR)
         case 1:
-            applymovement(ID_RIVAL, ObtainPokemon_Rival_Chimchar)
+            applymovement(ID_RIVAL, ObtainPokemon_Rival_Mudkip)
             waitmovement(ID_RIVAL)
 
             removeobject(ID_POKEBALL_MUDKIP)
         case 2:
-            applymovement(ID_RIVAL, ObtainPokemon_Rival_Mudkip)
+            applymovement(ID_RIVAL, ObtainPokemon_Rival_Bulbasaur)
             waitmovement(ID_RIVAL)
 
             removeobject(ID_POKEBALL_BULBASAUR)
@@ -320,16 +320,16 @@ script SundaraVillage_ContestHall_EventScript_ObtainPokemon {
     return
 }
 
-movement ObtainPokemon_Rival_Bulbasaur {
+movement ObtainPokemon_Rival_Chimchar {
     walk_left
     walk_up * 2
 }
 
-movement ObtainPokemon_Rival_Chimchar {
+movement ObtainPokemon_Rival_Mudkip {
     walk_up * 2
 }
 
-movement ObtainPokemon_Rival_Mudkip {
+movement ObtainPokemon_Rival_Bulbasaur {
     walk_left * 2
     walk_up * 2
 }
@@ -414,17 +414,17 @@ movement GivePokedex_Player {
     face_down
 }
 
-movement GivePokedex_Rival_Bulbasaur {
-    walk_left * 2
-    face_up
-}
-
 movement GivePokedex_Rival_Chimchar {
     walk_left
     face_up
 }
 
 movement GivePokedex_Rival_Mudkip {
+    walk_left * 2
+    face_up
+}
+
+movement GivePokedex_Rival_Bulbasaur {
     walk_left * 2
     face_up
 }
@@ -453,10 +453,16 @@ script SundaraVillage_ContentHall_EventScript_Grunt {
     closemessage
 
     playse(SE_PIN)
+
     applymovement(OBJ_EVENT_ID_PLAYER, Grunt_AllFace)
     applymovement(ID_RIVAL, Grunt_AllFace)
     applymovement(ID_AIDE, Grunt_AllFace)
     applymovement(ID_DAD, Grunt_AllFace)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    waitmovement(ID_RIVAL)
+    waitmovement(ID_AIDE)
+    waitmovement(ID_DAD)
+
     waitse
 
     applymovement(ID_GRUNT, Grunt_LookAround)
@@ -479,14 +485,98 @@ script SundaraVillage_ContentHall_EventScript_Grunt {
     msgbox(format("Are you giving out Pokémon?\nI'll just take this one then!"))
     closemessage
 
+    applymovement(ID_GRUNT, Grunt_TakePokemon_DadFaceUp)
+    waitmovement(ID_GRUNT)
+
+    // take pokemon
+    switch(var(VAR_STARTER_MON)) {
+        case 0:
+            applymovement(ID_GRUNT, Grunt_TakePokemon_Mudkip_Start)
+            waitmovement(ID_GRUNT)
+
+            msgbox(format("Get out of my way!"))
+            closemessage
+
+            playse(SE_WALL_HIT)
+
+            applymovement(ID_GRUNT, Grunt_TakePokemon_Mudkip_Shove)
+            applymovement(ID_AIDE, Grunt_TakePokemon_Shove_Aide)
+            waitmovement(ID_GRUNT)
+            waitmovement(ID_AIDE)
+
+            waitse
+
+            applymovement(ID_GRUNT, Grunt_TakePokemon_Mudkip_End)
+            waitmovement(ID_GRUNT)
+
+            removeobject(ID_POKEBALL_MUDKIP)
+        case 1:
+            applymovement(ID_GRUNT, Grunt_TakePokemon_Bulbasaur)
+            waitmovement(ID_GRUNT)
+
+            removeobject(ID_POKEBALL_BULBASAUR)
+        case 2:
+            applymovement(ID_GRUNT, Grunt_TakePokemon_Chimchar_Start)
+            waitmovement(ID_GRUNT)
+
+            msgbox(format("Get out of my way!"))
+            closemessage
+
+            playse(SE_WALL_HIT)
+
+            applymovement(ID_GRUNT, Grunt_TakePokemon_Chimchar_Shove)
+            applymovement(ID_AIDE, Grunt_TakePokemon_Shove_Aide)
+            waitmovement(ID_GRUNT)
+            waitmovement(ID_AIDE)
+
+            waitse
+
+            applymovement(ID_GRUNT, Grunt_TakePokemon_Chimchar_End)
+            waitmovement(ID_GRUNT)
+
+            removeobject(ID_POKEBALL_CHIMCHAR)
+    }
+
+    applymovement(ID_AIDE, Aide_Exclame)
+    waitmovement(ID_AIDE)
+
     msgbox(format("<AIDE>: Hey that's not yours!"))
     closemessage
+
+    msgbox(format("See ya later losers!"))
+    closemessage
+
+    // grunt leave
+    switch(var(VAR_STARTER_MON)) {
+        case 0:
+            applymovement(ID_GRUNT, Grunt_TakePokemon_Leave_Mudkip)
+            waitmovement(ID_GRUNT)
+        case 1:
+            applymovement(ID_GRUNT, Grunt_TakePokemon_Leave_Bulbasaur)
+            waitmovement(ID_GRUNT)
+        case 2:
+            applymovement(ID_GRUNT, Grunt_TakePokemon_Leave_Chimchar)
+            waitmovement(ID_GRUNT)
+    }
+
+    applymovement(ID_GRUNT, Grunt_TakePokemon_Leave_End)
+    applymovement(ID_AIDE, Grunt_TakePokemon_Leave_AllFace)
+    applymovement(ID_DAD, Grunt_TakePokemon_Leave_AllFace)
+    waitmovement(ID_AIDE)
+    waitmovement(ID_DAD)
+    waitmovement(ID_GRUNT)
+
+    playse(SE_SLIDING_DOOR)
+    removeobject(ID_GRUNT)
+	waitse
+
+    playbgm(MUS_VERDANTURF, 0)
 
     return
 }
 
 movement Grunt_Enter {
-    walk_up
+    walk_up * 2
     walk_right
 }
 
@@ -496,10 +586,10 @@ movement Grunt_Enter_Question {
 
 movement Grunt_AllFace {
     face_left
+    emote_exclamation_mark
 }
 
 movement Grunt_LookAround {
-    walk_up
     walk_right * 2
 }
 
@@ -516,6 +606,76 @@ movement Grunt_Exclame {
     emote_exclamation_mark
 }
 
-movement Aide_Exclame {
+movement Grunt_TakePokemon_Mudkip_Start {
+    walk_up
+    walk_right
+}
 
+movement Grunt_TakePokemon_Mudkip_Shove {
+    walk_right
+}
+
+movement Grunt_TakePokemon_Mudkip_End {
+    walk_right * 2
+    walk_up
+}
+
+movement Grunt_TakePokemon_Bulbasaur {
+    walk_up
+    walk_right * 2
+    walk_up
+}
+
+movement Grunt_TakePokemon_Chimchar_Start {
+    walk_up
+    walk_right
+}
+
+movement Grunt_TakePokemon_Chimchar_Shove {
+    walk_right
+}
+
+movement Grunt_TakePokemon_Chimchar_End {
+    walk_right
+    walk_up
+}
+
+movement Grunt_TakePokemon_Shove_Aide {
+    walk_down
+    face_up
+}
+
+movement Aide_Exclame {
+    emote_exclamation_mark
+}
+
+movement Grunt_TakePokemon_DadFaceUp {
+    face_up
+}
+
+movement Grunt_TakePokemon_Leave_Mudkip {
+    walk_down
+    walk_left * 3
+}
+
+movement Grunt_TakePokemon_Leave_Bulbasaur {
+    walk_down
+    walk_left
+}
+
+movement Grunt_TakePokemon_Leave_Chimchar {
+    walk_down
+    walk_left * 2
+}
+
+movement Grunt_TakePokemon_Leave_End {
+    walk_down
+    walk_left * 2
+    walk_down
+    walk_left * 2
+    walk_down
+}
+
+movement Grunt_TakePokemon_Leave_AllFace {
+    face_left
 }

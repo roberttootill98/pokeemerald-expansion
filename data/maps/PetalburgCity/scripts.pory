@@ -47,7 +47,7 @@ script SundaraVillage_EventScript_RivalOutsideHouse {
 	waitdooranim()
 	waitse
 
-	hideobjectat(ID_RIVAL, 0)
+	removeobject(ID_RIVAL)
 	playse(SE_EXIT)
 	waitse
 

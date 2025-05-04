@@ -35,7 +35,7 @@ SundaraVillage_EventScript_RivalOutsideHouse::
 	playse SE_SLIDING_DOOR
 	waitdooranim
 	waitse
-	hideobjectat 1, 0
+	removeobject 1
 	playse SE_EXIT
 	waitse
 	applymovement OBJ_EVENT_ID_PLAYER, rivalWalkToContentHallPlayerInFrontOfDoor
