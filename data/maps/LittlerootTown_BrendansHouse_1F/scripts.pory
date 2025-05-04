@@ -25,6 +25,14 @@ script SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs {
 	applymovement(ID_MUM, mumMoveToPlayer)
 	waitmovement(ID_MUM)
 
+	msgbox(format("You're up late, what time do you call this?"))
+	closemessage
+
+	// set clock event
+	fadescreen(FADE_TO_BLACK)
+	special(StartWallClock)
+	waitstate
+
 	msgbox(format("Isn't today the day <AIDE> arrives with her Pokémon? Don't forget these!"))
 	closemessage
 

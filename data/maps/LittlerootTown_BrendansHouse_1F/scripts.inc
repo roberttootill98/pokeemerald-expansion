@@ -20,10 +20,15 @@ SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs::
 	waitmovement 1
 	msgbox SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_1
 	closemessage
+	fadescreen FADE_TO_BLACK
+	special StartWallClock
+	waitstate
+	msgbox SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_2
+	closemessage
 	call giveRunningShoes
 	applymovement 1, mumWalkAwayABit
 	waitmovement 1
-	msgbox SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_2
+	msgbox SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_3
 	closemessage
 	applymovement 1, mumBackToTable
 	waitmovement 1
@@ -76,10 +81,14 @@ SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_0:
 	.string "Hey {PLAYER}!$"
 
 SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_1:
+	.string "You're up late, what time do you call\n"
+	.string "this?$"
+
+SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_2:
 	.string "Isn't today the day <AIDE> arrives with\n"
 	.string "her Pokémon? Don't forget these!$"
 
-SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_2:
+SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_3:
 	.string "Also I think {RIVAL} is outside, you\n"
 	.string "probably ought to say hello.$"
 
