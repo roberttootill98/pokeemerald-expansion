@@ -1655,5 +1655,6 @@
 // route 4
 #define FLAG_ROUTE4_GRUNT                                               0x1007
 #define FLAG_ROUTE4_LOST_POKEMON                                        0x1008
+#define FLAG_SUNDARA_RETURN_STOLEN_POKEMON                              0x1009
 
 #endif // GUARD_CONSTANTS_FLAGS_H

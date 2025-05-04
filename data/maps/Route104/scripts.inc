@@ -27,7 +27,6 @@ Route4_EventScript_Grunt_1:
 	waitse
 	fadescreen FADE_FROM_BLACK
 	setflag FLAG_ROUTE4_GRUNT
-	setvar VAR_SUNDARA_STATE, 5
 	releaseall
 	end
 
@@ -48,6 +47,18 @@ Route4_Grunt_Exclame:
 	emote_exclamation_mark
 	step_end
 
+Route4_EventScript_LostPokemon::
+	lock
+	setvar VAR_SUNDARA_STATE, 5
+	playse MUS_OBTAIN_ITEM
+	msgbox Route4_EventScript_LostPokemon_Text_0
+	closemessage
+	removeobject 2
+	waitse
+	warp MAP_PETALBURG_CITY, 1, 38, 18
+	return
+
+
 Route4_EventScript_Grunt_Text_0:
 	.string "Oh boy I never considered that I might\n"
 	.string "have to swim when I joined\l"
@@ -63,3 +74,6 @@ Route4_EventScript_Grunt_Text_2:
 Route4_EventScript_Grunt_Text_3:
 	.string "This Pokémon doesn't seem strong\n"
 	.string "anyway! I gotta zip!$"
+
+Route4_EventScript_LostPokemon_Text_0:
+	.string "{PLAYER} found the stolen Pokémon!$"

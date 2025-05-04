@@ -39,7 +39,6 @@ script Route4_EventScript_Grunt {
 	fadescreen(FADE_FROM_BLACK)
 
 	setflag(FLAG_ROUTE4_GRUNT)
-	setvar(VAR_SUNDARA_STATE, 5)
 
 	releaseall
 	end
@@ -49,3 +48,18 @@ movement Route4_Grunt_Exclame {
 	emote_exclamation_mark
 }
 
+script Route4_EventScript_LostPokemon {
+	lock
+
+	setvar(VAR_SUNDARA_STATE, 5)
+
+	removeobject(ID_LOST_POKEMON)
+
+	playse(MUS_OBTAIN_ITEM)
+	msgbox(format("{PLAYER} found the stolen Pokémon!"))
+	closemessage
+	removeobject(ID_LOST_POKEMON)
+	waitse
+
+	warp(MAP_PETALBURG_CITY, 5, 0, 0)
+}
