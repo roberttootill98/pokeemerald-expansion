@@ -149,7 +149,7 @@ script SundaraVillage_ContestHall_EventScript_Dad {
             msgbox(format("You could also pick a cool, clever, smart or beautiful Pokémon, but cute Pokémon are the best!"))
             closemessage
         case 4:
-            msgbox(format("Have you and {RIVAL} found anything at the Jagged Plains yet? That's north of Sundara Village."))
+            msgbox(format("Have you and {RIVAL} found anything on (route 4) yet? That's north of Sundara Village."))
             closemessage
     }
 
