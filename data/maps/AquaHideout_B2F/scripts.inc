@@ -69,11 +69,6 @@ AquaHideout_B2F_Movement_SumbarineDepartRight: @ 8233E85
 	walk_right
 	step_end
 
-AquaHideout_B2F_EventScript_Grunt4:: @ 8233E8A
-	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_4, AquaHideout_B2F_Text_Grunt4Intro, AquaHideout_B2F_Text_Grunt4Defeat, AquaHideout_B2F_EventScript_Grunt4Defeated
-	msgbox AquaHideout_B2F_Text_Grunt4PostBattle, MSGBOX_AUTOCLOSE
-	end
-
 AquaHideout_B2F_EventScript_Grunt4Defeated:: @ 8233EA5
 	msgbox AquaHideout_B2F_Text_Grunt4PostBattle, MSGBOX_DEFAULT
 	release
