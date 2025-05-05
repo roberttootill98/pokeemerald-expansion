@@ -151,7 +151,11 @@ script SundaraVillage_ContestHall_EventScript_Dad {
         case 4:
             msgbox(format("Have you and {RIVAL} found anything on (route 4) yet? That's north of Sundara Village."))
             closemessage
+        case 6:
+            msgbox(format("Hey ${PLAYER}! Have you found any cute Pokémon yet?"))
     }
+
+    closemessage
 
     release
     end
