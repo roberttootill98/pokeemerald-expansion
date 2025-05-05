@@ -260,6 +260,8 @@ ifeq ($(DDEBUG),1)
 $(info Debug mode activated!) 
 override ASFLAGS += --defsym DEBUG=1
 override CPPFLAGS += -D DEBUG=1
+else
+$(info Debug mode not activated! (do make DDEBUG=1))
 endif
 
 $(C_BUILDDIR)/%.o : $(C_SUBDIR)/%.c $$(c_dep)
