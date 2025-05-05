@@ -101,7 +101,9 @@
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
     "LittlerootTown_ProfessorBirchsLab",
-    "SundaraVillage_ContestHall"
+    "SundaraVillage_ContestHall",
+    "SundaraVillage_RivalsHouse",
+    "SundaraVillage_House"
   ],
   "gMapGroup2": [
     "OldaleTown_House1",

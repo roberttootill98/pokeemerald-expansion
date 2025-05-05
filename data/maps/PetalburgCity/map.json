@@ -113,14 +113,14 @@
       "x": 38,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_PETALBURG_CITY_HOUSE1",
+      "dest_map": "MAP_SUNDARA_VILLAGE_RIVALS_HOUSE",
       "dest_warp_id": 0
     },
     {
       "x": 12,
       "y": 18,
       "elevation": 0,
-      "dest_map": "MAP_PETALBURG_CITY_HOUSE2",
+      "dest_map": "MAP_SUNDARA_VILLAGE_HOUSE",
       "dest_warp_id": 0
     },
     {

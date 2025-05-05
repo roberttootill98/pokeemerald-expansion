@@ -99,3 +99,22 @@ script giveRunningShoes {
 
 	return
 }
+
+script SundaraVillage_PlayerHouse_1F_EventScript_Mum {
+	lock
+	faceplayer
+
+	switch(var(VAR_SUNDARA_STATE)) {
+		case 1:
+			msgbox(format("You really ought to go see {RIVAL}, they're mucking up the window."))
+		case 4:
+			msgbox(format("Are you ok {PLAYER}? I heard about that rotten fella stealing that poor Pokémon. I haven't seen him here at least!"))
+		case 6:
+			msgbox(format("Hey {PLAYER}, how are you? I've been thinking about clouds recently."))
+	}
+
+	closemessage
+
+	release
+	end
+}

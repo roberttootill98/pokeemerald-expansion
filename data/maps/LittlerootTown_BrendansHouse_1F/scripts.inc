@@ -85,6 +85,31 @@ giveRunningShoes::
 	return
 
 
+SundaraVillage_PlayerHouse_1F_EventScript_Mum::
+	lock
+	faceplayer
+	switch VAR_SUNDARA_STATE
+	case 1, SundaraVillage_PlayerHouse_1F_EventScript_Mum_3
+	case 4, SundaraVillage_PlayerHouse_1F_EventScript_Mum_4
+	case 6, SundaraVillage_PlayerHouse_1F_EventScript_Mum_5
+SundaraVillage_PlayerHouse_1F_EventScript_Mum_1:
+	closemessage
+	release
+	end
+
+SundaraVillage_PlayerHouse_1F_EventScript_Mum_3:
+	msgbox SundaraVillage_PlayerHouse_1F_EventScript_Mum_Text_0
+	goto SundaraVillage_PlayerHouse_1F_EventScript_Mum_1
+
+SundaraVillage_PlayerHouse_1F_EventScript_Mum_4:
+	msgbox SundaraVillage_PlayerHouse_1F_EventScript_Mum_Text_1
+	goto SundaraVillage_PlayerHouse_1F_EventScript_Mum_1
+
+SundaraVillage_PlayerHouse_1F_EventScript_Mum_5:
+	msgbox SundaraVillage_PlayerHouse_1F_EventScript_Mum_Text_2
+	goto SundaraVillage_PlayerHouse_1F_EventScript_Mum_1
+
+
 SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_0:
 	.string "Hey {PLAYER}!$"
 
@@ -102,3 +127,17 @@ SundaraVillage_PlayerHouse_1F_EventScript_WalkDownstairs_Text_3:
 
 giveRunningShoes_Text_0:
 	.string "{PLAYER} put on the running shoes!$"
+
+SundaraVillage_PlayerHouse_1F_EventScript_Mum_Text_0:
+	.string "You really ought to go see {RIVAL},\n"
+	.string "they're mucking up the window.$"
+
+SundaraVillage_PlayerHouse_1F_EventScript_Mum_Text_1:
+	.string "Are you ok {PLAYER}? I heard about\n"
+	.string "that rotten fella stealing that poor\l"
+	.string "Pokémon. I haven't seen him here at\l"
+	.string "least!$"
+
+SundaraVillage_PlayerHouse_1F_EventScript_Mum_Text_2:
+	.string "Hey {PLAYER}, how are you? I've been\n"
+	.string "thinking about clouds recently.$"

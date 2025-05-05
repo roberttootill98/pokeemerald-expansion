@@ -1067,3 +1067,7 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/ShardMines_Entrance/scripts.inc"
 
 	.include "data/maps/SundaraVillage_ContestHall/scripts.inc"
+
+	.include "data/maps/SundaraVillage_RivalsHouse/scripts.inc"
+
+	.include "data/maps/SundaraVillage_House/scripts.inc"
