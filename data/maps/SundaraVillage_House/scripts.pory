@@ -1,1 +1,23 @@
 mapscripts SundaraVillage_House_MapScripts {}
+
+script SundaraVillage_House_EventScript_Man {
+    lock
+    faceplayer
+
+    msgbox(format("We could have a much bigger house in <DOCKTOWN>, house prices here are so expensive!"))
+    closemessage
+    
+    release
+    end
+}
+
+script SundaraVillage_House_EventScript_Girl {
+    lock
+    faceplayer
+
+    msgbox(format("I love living here, it's so pretty!"))
+    closemessage
+
+    release
+    end
+}

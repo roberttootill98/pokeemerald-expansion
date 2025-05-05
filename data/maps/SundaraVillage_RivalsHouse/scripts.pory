@@ -1,1 +1,12 @@
 mapscripts SundaraVillage_RivalsHouse_MapScripts {}
+
+script SundaraVillage_RivalsHouse_EventScript_RivalMum {
+    lock
+    faceplayer
+
+    msgbox(format("Hello there {PLAYER}. I do get worried about {RIVAL} and their hothead nature, please keep an eye on them and be a good friend."))
+    closemessage
+    
+    release
+    end
+}
