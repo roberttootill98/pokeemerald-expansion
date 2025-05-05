@@ -27,11 +27,11 @@ static EWRAM_DATA struct {
     u16 currRGBTint[3];
 } sDNSystemControl = {0};
 
-#if DEBUG
+// #if DEBUG
 EWRAM_DATA bool8 gPaletteOverrideDisabled = 0;
 EWRAM_DATA s16 gDNPeriodOverride = 0;
 EWRAM_DATA u16 gDNTintOverride[3] = {0};
-#endif
+// #endif
 
 static const u16 sTimeOfDayTints[][3] = {
     [0] =   {TINT_NIGHT},
@@ -84,17 +84,17 @@ static void LoadPaletteOverrides(void)
     u16* dest;
     s8 hour;
 
-#if DEBUG
-    if (gPaletteOverrideDisabled)
-        return;
-#endif
+// #if DEBUG
+if (gPaletteOverrideDisabled)
+    return;
+// #endif
 
     hour = gLocalTime.hours;
 
-#if DEBUG
-    if (gDNPeriodOverride > 0)
-        hour = (gDNPeriodOverride - 1) / TINT_PERIODS_PER_HOUR;
-#endif
+// #if DEBUG
+if (gDNPeriodOverride > 0)
+    hour = (gDNPeriodOverride - 1) / TINT_PERIODS_PER_HOUR;
+// #endif
 
     for (i = 0; i < ARRAY_COUNT(gPaletteOverrides); i++)
     {
@@ -167,13 +167,13 @@ static void TintPaletteForDayNight(u16 offset, u16 size)
         hour = gLocalTime.hours;
         hourPhase = gLocalTime.minutes / MINUTES_PER_TINT_PERIOD;
 
-#if DEBUG
-        if (gDNPeriodOverride > 0)
-        {
-            hour = (gDNPeriodOverride - 1) / TINT_PERIODS_PER_HOUR;
-            hourPhase = (gDNPeriodOverride - 1) % TINT_PERIODS_PER_HOUR;
-        }
-#endif
+    // #if DEBUG
+    if (gDNPeriodOverride > 0)
+    {
+        hour = (gDNPeriodOverride - 1) / TINT_PERIODS_PER_HOUR;
+        hourPhase = (gDNPeriodOverride - 1) % TINT_PERIODS_PER_HOUR;
+    }
+    // #endif
 
         period = (hour * TINT_PERIODS_PER_HOUR) + hourPhase;
 
@@ -229,7 +229,7 @@ void ProcessImmediateTimeEvents(void)
             hour = gLocalTime.hours;
             hourPhase = gLocalTime.minutes / MINUTES_PER_TINT_PERIOD;
 
-#if DEBUG
+            // #if DEBUG
             if (gDNPeriodOverride > 0)
             {
                 hour = (gDNPeriodOverride - 1) / TINT_PERIODS_PER_HOUR;
@@ -246,7 +246,7 @@ void ProcessImmediateTimeEvents(void)
                     gDNTintOverride[0] = 0;
                 }
             }
-#endif
+            // #endif
 
             period = (hour * TINT_PERIODS_PER_HOUR) + hourPhase;
 
@@ -254,7 +254,7 @@ void ProcessImmediateTimeEvents(void)
             {
                 sDNSystemControl.initialized = TRUE;
                 sDNSystemControl.prevTintPeriod = sDNSystemControl.currTintPeriod = period;
-#if DEBUG
+                // #if DEBUG
                 if (gDNTintOverride[0] > 0 ||
                     gDNTintOverride[1] > 0 ||
                     gDNTintOverride[2] > 0)
@@ -264,11 +264,11 @@ void ProcessImmediateTimeEvents(void)
                     sDNSystemControl.currRGBTint[2] = gDNTintOverride[2];
                 }
                 else
-#endif
                 {
                     nextHour = (hour + 1) % 24;
                     LerpColors(sDNSystemControl.currRGBTint, sTimeOfDayTints[hour], sTimeOfDayTints[nextHour], hourPhase);
                 }
+                // #endif
 
                 TintPalette_CustomToneWithCopy(gPlttBufferPreDN, gPlttBufferUnfaded, BG_PLTT_SIZE / 2, sDNSystemControl.currRGBTint[0], sDNSystemControl.currRGBTint[1], sDNSystemControl.currRGBTint[2], TRUE);
                 sDNSystemControl.retintPhase = 1;

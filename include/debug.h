@@ -1,8 +1,8 @@
-#ifndef GUARD_DEBUG_H
+// #ifndef GUARD_DEBUG_H
 #define GUARD_DEBUG_H
-#if DEBUG
+// #if DEBUG
 
 void Debug_ShowMainMenu(void);
 
-#endif
-#endif // GUARD_DEBUG_H
+// #endif
+// #endif // GUARD_DEBUG_H

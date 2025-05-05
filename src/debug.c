@@ -1,4 +1,4 @@
-#if DEBUG
+// #if DEBUG
 //CREDITS
 //TheXaman:             https://github.com/TheXaman/pokeemerald/tree/tx_debug_system
 //CODE USED FROM:
@@ -175,7 +175,7 @@ enum { // Give
 
 // *******************************
 //Maps per map group COPY FROM /include/constants/map_groups.h
- static const u8 MAP_GROUP_COUNT[] = {57, 5, 5, 6, 7, 8, 9, 7, 7, 14, 8, 17, 10, 23, 13, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 1, 0};
+static const u8 MAP_GROUP_COUNT[] = {57, 5, 5, 6, 7, 8, 9, 7, 7, 14, 8, 17, 10, 23, 13, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 1, 0};
 
 // Text
 // Main Menu
@@ -1986,10 +1986,6 @@ static void DebugAction_Give_CHEAT(u8 taskId)
 //     ScriptContext1_SetupScript(EventScript_PC);
 // }
 
-
-
-
-
 // Additional functions
 /*
 static void DebugAction_OpenSubMenu(u8 taskId, struct ListMenuTemplate LMtemplate)
@@ -2017,5 +2013,4 @@ static void DebugTask_HandleMenuInput(u8 taskId, void (*HandleInput)(u8))
 }
 */
 
-
-#endif
+// #endif
