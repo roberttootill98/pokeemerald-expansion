@@ -20,6 +20,16 @@ FerreGrasslands_Trainer_Nick::
 	end
 
 
+FerreGrasslands_Item_Antidote::
+	finditem ITEM_ANTIDOTE
+	end
+
+
+FerreGrasslands_Item_Potion::
+	finditem ITEM_POTION
+	end
+
+
 FerreGrasslands_Trainer_Michelle_Text_0:
 	.string "Do you have strong Pokémon?$"
 

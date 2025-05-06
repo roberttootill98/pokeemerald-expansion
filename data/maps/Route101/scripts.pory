@@ -34,3 +34,13 @@ script FerreGrasslands_Trainer_Nick {
 
 	end
 }
+
+script FerreGrasslands_Item_Antidote {
+	finditem(ITEM_ANTIDOTE)
+	end
+}
+
+script FerreGrasslands_Item_Potion {
+	finditem(ITEM_POTION)
+	end
+}
