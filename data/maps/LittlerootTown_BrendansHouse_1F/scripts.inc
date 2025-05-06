@@ -81,7 +81,7 @@ giveRunningShoes::
 	msgbox giveRunningShoes_Text_0
 	closemessage
 	waitfanfare
-	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_B_DASH
 	return
 
 
