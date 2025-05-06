@@ -283,6 +283,11 @@ SundaraVillage_ReturnStolenPokemon_DadLeave:
 	walk_left
 	step_end
 
+SundaraVillage_Item_Potion::
+	finditem ITEM_POTION
+	end
+
+
 SundaraVillage_EventScript_RivalOutsideHouse_Text_0:
 	.string "I wasn't looking at your mum! Anyways!\n"
 	.string "Let's go see if <AIDE> is down at the\l"

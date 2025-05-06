@@ -211,3 +211,8 @@ movement SundaraVillage_ReturnStolenPokemon_DadHeart {
 movement SundaraVillage_ReturnStolenPokemon_DadLeave {
 	walk_left * 8
 }
+
+script SundaraVillage_Item_Potion {
+	finditem(ITEM_POTION)
+	end
+}

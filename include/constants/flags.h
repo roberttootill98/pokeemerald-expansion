@@ -1044,7 +1044,8 @@
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7
 
 // Item Ball Flags
-#define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8
+// sundara village
+#define FLAG_ITEM_SUNDARA_POTION                                    0x3E8
 #define FLAG_ITEM_ROUTE_116_X_SPECIAL                               0x3E9
 #define FLAG_ITEM_ROUTE_104_PP_UP                                   0x3EA
 #define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB
@@ -1643,7 +1644,7 @@
 // FLAG_SPECIAL_FLAG_0x4005 - 0x407F also exist and are unused
 #define SPECIAL_FLAGS_END                       (SPECIAL_FLAGS_START + 0x7F)
 
-// new flags
+// new event flags
 // sundara village
 #define FLAG_SUNDARA_RIVAL_OUTISDE_HOUSE                                0x1000
 #define FLAG_SUNDARA_GET_POKEMON_PEOPLE                                 0x1001
