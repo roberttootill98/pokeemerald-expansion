@@ -1073,3 +1073,11 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/SundaraVillage_House/scripts.inc"
 
 	.include "data/maps/ApiseVillage_FlowerShop/scripts.inc"
+
+	.include "data/maps/ApiseVillage_House1/scripts.inc"
+
+	.include "data/maps/ApiseVillage_House2/scripts.inc"
+
+	.include "data/maps/ApiseVillage_House3/scripts.inc"
+
+	.include "data/maps/ApiseVillage_House4/scripts.inc"

@@ -77,6 +77,10 @@
 #define MAP_OLDALE_TOWN_POKEMON_CENTER_2F (3 | (2 << 8))
 #define MAP_OLDALE_TOWN_MART              (4 | (2 << 8))
 #define MAP_APISE_VILLAGE_FLOWER_SHOP     (5 | (2 << 8))
+#define MAP_APISE_VILLAGE_HOUSE1          (6 | (2 << 8))
+#define MAP_APISE_VILLAGE_HOUSE2          (7 | (2 << 8))
+#define MAP_APISE_VILLAGE_HOUSE3          (8 | (2 << 8))
+#define MAP_APISE_VILLAGE_HOUSE4          (9 | (2 << 8))
 
 // Map Group 3
 #define MAP_DEWFORD_TOWN_HOUSE1            (0 | (3 << 8))

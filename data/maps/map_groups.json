@@ -111,7 +111,11 @@
     "OldaleTown_PokemonCenter_1F",
     "OldaleTown_PokemonCenter_2F",
     "OldaleTown_Mart",
-    "ApiseVillage_FlowerShop"
+    "ApiseVillage_FlowerShop",
+    "ApiseVillage_House1",
+    "ApiseVillage_House2",
+    "ApiseVillage_House3",
+    "ApiseVillage_House4"
   ],
   "gMapGroup3": [
     "DewfordTown_House1",
