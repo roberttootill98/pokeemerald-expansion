@@ -61,11 +61,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FerreGrasslands_Nick[] =
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LakeApise_Annabelle[] = {
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
+    .lvl = 4,
+    .species = SPECIES_FLABEBE,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_SNUBBULL,
     }
 };
 

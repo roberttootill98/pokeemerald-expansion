@@ -1048,7 +1048,7 @@
 #define FLAG_ITEM_SUNDARA_POTION                                    0x3E8
 #define FLAG_ITEM_FERREGRASSLANDS_ANTIDOTE                          0x3E9
 #define FLAG_ITEM_FERREGRASSLANDS_POTION                            0x3EA
-#define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB
+#define FLAG_ITEM_LAKE_APISE_NEST_BALL                              0x3EB
 #define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC
 #define FLAG_ITEM_ROUTE_109_PP_UP                                   0x3ED
 #define FLAG_ITEM_ROUTE_109_RARE_CANDY                              0x3EE
@@ -1645,6 +1645,7 @@
 #define SPECIAL_FLAGS_END                       (SPECIAL_FLAGS_START + 0x7F)
 
 // new event flags
+
 // sundara village
 #define FLAG_SUNDARA_RIVAL_OUTISDE_HOUSE                                0x1000
 #define FLAG_SUNDARA_GET_POKEMON_PEOPLE                                 0x1001
@@ -1653,9 +1654,15 @@
 #define FLAG_SUNDARA_GET_POKEMON_POKEBALL_MUDKIP                        0x1004
 #define FLAG_SUNDARA_GET_POKEMON_GRUNT                                  0x1005
 #define FLAG_SUNDARA_AIDE_GRUNT_STOP                                    0x1006
+
 // route 4
 #define FLAG_ROUTE4_GRUNT                                               0x1007
 #define FLAG_ROUTE4_LOST_POKEMON                                        0x1008
 #define FLAG_SUNDARA_RETURN_STOLEN_POKEMON                              0x1009
+
+// lake apise
+#define FLAG_LAKEAPISE_GIVE_SOOTHEBELL                                  0x1010
+
+// #define FLAG_LAKE_APISE
 
 #endif // GUARD_CONSTANTS_FLAGS_H

@@ -1,5 +1,4 @@
 .set LOCALID_BRINEY, 11
-.set LOCALID_WANDAS_BF_OUTSIDE, 21
 
 Route116_MapScripts:: @ 81F2C0C
 	map_script MAP_SCRIPT_ON_TRANSITION, Route116_OnTransition
@@ -8,18 +7,7 @@ Route116_MapScripts:: @ 81F2C0C
 	.byte 0
 
 Route116_OnTransition: @ 81F2C1C
-	call_if_set FLAG_RECOVERED_DEVON_GOODS, Route116_EventScript_SetWandasBoyfriendPos
-	compare VAR_SHOULD_END_ABNORMAL_WEATHER, 1
-	call_if_eq AbnormalWeather_EventScript_HideMapNamePopup
-	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_116_NORTH
-	call_if_eq AbnormalWeather_StartGroudonWeather
-	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_116_SOUTH
-	call_if_eq AbnormalWeather_StartGroudonWeather
 	end
-
-Route116_EventScript_SetWandasBoyfriendPos:: @ 81F2C47
-	setobjectxyperm LOCALID_WANDAS_BF_OUTSIDE, 38, 10
-	return
 
 Route116_OnLoad: @ 81F2C4F
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_116_NORTH
