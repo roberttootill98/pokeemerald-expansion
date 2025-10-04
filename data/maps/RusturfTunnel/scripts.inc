@@ -21,14 +21,20 @@ LakeApise_GiveSootheBell_2:
 
 
 LakeApise_Trainer_Annabelle::
-	trainerbattle_single TRAINER_LAKEAPISE_ANNABELLE, LakeApise_Trainer_Annabelle_Text_0, LakeApise_Trainer_Annabelle_Text_0
-	msgbox LakeApise_Trainer_Annabelle_Text_0, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_LAKEAPISE_ANNABELLE, LakeApise_Trainer_Annabelle_Text_0, LakeApise_Trainer_Annabelle_Text_1
+	msgbox LakeApise_Trainer_Annabelle_Text_1, MSGBOX_AUTOCLOSE
 	end
 
 
 LakeApise_Trainer_Christian::
 	trainerbattle_single TRAINER_LAKEAPISE_CHRISTIAN, LakeApise_Trainer_Christian_Text_0, LakeApise_Trainer_Christian_Text_1
 	msgbox LakeApise_Trainer_Christian_Text_1, MSGBOX_AUTOCLOSE
+	end
+
+
+LakeApise_Trainer_Dunga::
+	trainerbattle_single TRAINER_LAKEAPISE_DUNGA, LakeApise_Trainer_Dunga_Text_0, LakeApise_Trainer_Dunga_Text_1
+	msgbox LakeApise_Trainer_Dunga_Text_1, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -48,7 +54,11 @@ LakeApise_GiveSootheBell_Text_1:
 	.string "Take this.$"
 
 LakeApise_Trainer_Annabelle_Text_0:
-	.string "$"
+	.string "The smell of the breeze is different\n"
+	.string "out here!$"
+
+LakeApise_Trainer_Annabelle_Text_1:
+	.string "You odour is quite unique!$"
 
 LakeApise_Trainer_Christian_Text_0:
 	.string "I've been practising my moves by\n"
@@ -57,3 +67,11 @@ LakeApise_Trainer_Christian_Text_0:
 LakeApise_Trainer_Christian_Text_1:
 	.string "Maybe I would have been better suited\n"
 	.string "practising my battling skills!$"
+
+LakeApise_Trainer_Dunga_Text_0:
+	.string "I've heard there are some extremely\n"
+	.string "rare pokémon here!$"
+
+LakeApise_Trainer_Dunga_Text_1:
+	.string "Your pokémon seem like quite rare\n"
+	.string "specimens!$"

@@ -10,7 +10,7 @@
 #define TRAINER_FERREGRASSLANDS_NICK          6
 #define TRAINER_LAKEAPISE_ANNABELLE           7
 #define TRAINER_LAKEAPISE_CHRISTIAN           8
-#define TRAINER_GABRIELLE_1                   9
+#define TRAINER_LAKEAPISE_DUNGA               9
 #define TRAINER_GRUNT_PETALBURG_WOODS        10
 #define TRAINER_MARCEL                       11
 #define TRAINER_ALBERTO                      12
