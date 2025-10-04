@@ -9,7 +9,7 @@
 #define TRAINER_FERREGRASSLANDS_MIKEY         5
 #define TRAINER_FERREGRASSLANDS_NICK          6
 #define TRAINER_LAKEAPISE_ANNABELLE           7
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
+#define TRAINER_LAKEAPISE_CHRISTIAN           8
 #define TRAINER_GABRIELLE_1                   9
 #define TRAINER_GRUNT_PETALBURG_WOODS        10
 #define TRAINER_MARCEL                       11

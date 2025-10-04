@@ -74,6 +74,19 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LakeApise_Annabelle[] = 
     }
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_LakeApise_Christian[] = {
+    {
+    .iv = 0,
+    .lvl = 3,
+    .species = SPECIES_SHROOMISH,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_MEDITITE,
+    }
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern3[] = {
     {
     .iv = 0,

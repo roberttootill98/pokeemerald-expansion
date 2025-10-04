@@ -33,6 +33,17 @@ script LakeApise_Trainer_Annabelle {
 	end
 }
 
+script LakeApise_Trainer_Christian {
+	trainerbattle_single(TRAINER_LAKEAPISE_CHRISTIAN,
+		format("I've been practising my moves by cutting this grass!"),
+		format("Maybe I would have been better suited practising my battling skills!")
+	)
+
+	msgbox(format("Maybe I would have been better suited practising my battling skills!"), MSGBOX_AUTOCLOSE)
+
+	end
+}
+
 script LakeApise_Item_NestBall {
 	finditem(ITEM_NEST_BALL)
 	end

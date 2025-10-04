@@ -26,6 +26,12 @@ LakeApise_Trainer_Annabelle::
 	end
 
 
+LakeApise_Trainer_Christian::
+	trainerbattle_single TRAINER_LAKEAPISE_CHRISTIAN, LakeApise_Trainer_Christian_Text_0, LakeApise_Trainer_Christian_Text_1
+	msgbox LakeApise_Trainer_Christian_Text_1, MSGBOX_AUTOCLOSE
+	end
+
+
 LakeApise_Item_NestBall::
 	finditem ITEM_NEST_BALL
 	end
@@ -43,3 +49,11 @@ LakeApise_GiveSootheBell_Text_1:
 
 LakeApise_Trainer_Annabelle_Text_0:
 	.string "$"
+
+LakeApise_Trainer_Christian_Text_0:
+	.string "I've been practising my moves by\n"
+	.string "cutting this grass!$"
+
+LakeApise_Trainer_Christian_Text_1:
+	.string "Maybe I would have been better suited\n"
+	.string "practising my battling skills!$"
