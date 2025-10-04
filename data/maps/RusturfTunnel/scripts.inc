@@ -38,6 +38,12 @@ LakeApise_Trainer_Dunga::
 	end
 
 
+LakeApise_Trainer_Fingle::
+	trainerbattle_single TRAINER_LAKEAPISE_FINGLE, LakeApise_Trainer_Fingle_Text_0, LakeApise_Trainer_Fingle_Text_1
+	msgbox LakeApise_Trainer_Fingle_Text_1, MSGBOX_AUTOCLOSE
+	end
+
+
 LakeApise_Item_NestBall::
 	finditem ITEM_NEST_BALL
 	end
@@ -75,3 +81,11 @@ LakeApise_Trainer_Dunga_Text_0:
 LakeApise_Trainer_Dunga_Text_1:
 	.string "Your pokémon seem like quite rare\n"
 	.string "specimens!$"
+
+LakeApise_Trainer_Fingle_Text_0:
+	.string "I ain't finding nothing in this here\n"
+	.string "Lake, fancy a battle?$"
+
+LakeApise_Trainer_Fingle_Text_1:
+	.string "Fishing sure is a grind, got me wonderin'\n"
+	.string "if I'm the one on the hook.$"

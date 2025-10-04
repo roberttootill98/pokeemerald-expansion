@@ -55,6 +55,17 @@ script LakeApise_Trainer_Dunga {
 	end
 }
 
+script LakeApise_Trainer_Fingle {
+	trainerbattle_single(TRAINER_LAKEAPISE_FINGLE,
+		format("I ain't finding nothing in this here Lake, fancy a battle?"),
+		format("Fishing sure is a grind, got me wonderin' if I'm the one on the hook.")
+	)
+
+	msgbox(format("Fishing sure is a grind, got me wonderin' if I'm the one on the hook."), MSGBOX_AUTOCLOSE)
+
+	end
+}
+
 script LakeApise_Item_NestBall {
 	finditem(ITEM_NEST_BALL)
 	end

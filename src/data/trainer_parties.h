@@ -87,7 +87,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LakeApise_Christian[] = 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Dunga[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LakeApise_Dunga[] = {
     {
     .iv = 0,
     .lvl = 3,
@@ -110,11 +110,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Dunga[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntPetalburgWoods[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LakeApise_Fingle[] = {
     {
     .iv = 0,
-    .lvl = 9,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 7,
+    .species = SPECIES_TYMPOLE,
     }
 };
 

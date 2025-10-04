@@ -135,22 +135,22 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Dunga),
-        .party = {.NoItemDefaultMoves = sParty_Dunga},
+        .partySize = ARRAY_COUNT(sParty_LakeApise_Dunga),
+        .party = {.NoItemDefaultMoves = sParty_LakeApise_Dunga},
     },
 
-    [TRAINER_GRUNT_PETALBURG_WOODS] =
+    [TRAINER_LAKEAPISE_FINGLE] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_FISHERMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_FISHERMAN,
+        .trainerName = _("FINGLE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntPetalburgWoods),
-        .party = {.NoItemDefaultMoves = sParty_GruntPetalburgWoods},
+        .partySize = ARRAY_COUNT(sParty_LakeApise_Fingle),
+        .party = {.NoItemDefaultMoves = sParty_LakeApise_Fingle},
     },
 
     [TRAINER_MARCEL] =
