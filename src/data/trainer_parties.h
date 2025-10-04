@@ -118,42 +118,42 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LakeApise_Fingle[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Marcel[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_ApiseVillage_Rival_Bulbasaur[] = {
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_MANECTRIC,
+    .iv = 0,
+    .lvl = 7,
+    .species = SPECIES_PICHU,
     },
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_SHIFTRY,
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_BULBASAUR,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Alberto[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_ApiseVillage_Rival_Chimchar[] = {
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_PELIPPER,
+    .lvl = 7,
+    .species = SPECIES_PICHU,
     },
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_XATU,
+    .lvl = 10,
+    .species = SPECIES_CHIMCHAR,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Ed[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_ApiseVillage_Rival_Mudkip[] = {
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_ZANGOOSE,
+    .lvl = 7,
+    .species = SPECIES_PICHU,
     },
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_SEVIPER,
+    .lvl = 10,
+    .species = SPECIES_MUDKIP,
     }
 };
 

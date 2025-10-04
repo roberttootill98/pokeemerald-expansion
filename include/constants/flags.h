@@ -1663,6 +1663,9 @@
 // lake apise
 #define FLAG_LAKEAPISE_GIVE_SOOTHEBELL                                  0x1010
 
+// apise village
+#define FLAG_APISEVILLAGE_RIVAL                                         0x1011
+
 // #define FLAG_LAKE_APISE
 
 #endif // GUARD_CONSTANTS_FLAGS_H

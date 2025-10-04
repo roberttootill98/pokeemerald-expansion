@@ -1,6 +1,8 @@
 
 mapscripts SlateportCity_MapScripts {}
 
+const ID_RIVAL = 2
+
 script ApiseVillage_EventScript_Grandma {
 	lock
 	faceplayer
@@ -26,4 +28,73 @@ script ApiseVillage_EventScript_HealSpot {
 
 	release
 	end
+}
+
+script ApiseVillage_EventScript_RivalBattle {
+	lock
+
+	// look at player
+	playse(SE_PIN)
+	applymovement(ID_RIVAL, ApiseVillage_Movement_RivalSee)
+	waitmovement(ID_RIVAL)
+	waitse
+
+	// say hello
+	msgbox(format("Hey {PLAYER}!"))
+	closemessage
+
+	// walk to player
+	applymovement(ID_RIVAL, ApiseVillage_Movement_RivalApproach)
+	waitmovement(ID_RIVAL)
+
+	// some something vaguely dumb or shitty
+	msgbox(format("Let's battle you turd!"))
+	closemessage
+
+	// battle
+	switch(var(VAR_APISE_RIVAL)) {
+		case 0:
+			trainerbattle_no_intro(TRAINER_APISEVILLAGE_RIVAL_CHIMCHAR, ApiseVillage_Text_RivalBattle_Lose)
+		case 1:
+			trainerbattle_no_intro(TRAINER_APISEVILLAGE_RIVAL_MUDKIP, ApiseVillage_Text_RivalBattle_Lose)
+		case 2:
+			trainerbattle_no_intro(TRAINER_APISEVILLAGE_RIVAL_BULBASAUR, ApiseVillage_Text_RivalBattle_Lose)
+	}
+
+	// say something salty
+	msgbox(format("Blow me down, you shit me out!"))
+	closemessage
+
+	// leave
+	applymovement(ID_RIVAL, ApiseVillage_Movement_RivalLeave)
+	waitmovement(ID_RIVAL)
+
+	// remove
+	removeobject(ID_RIVAL)
+
+	// set var
+	setvar(VAR_APISE_RIVAL, 1)
+	
+	// set flag
+	setflag(FLAG_APISEVILLAGE_RIVAL)
+
+	release
+	end
+}
+
+movement ApiseVillage_Movement_RivalSee {
+	face_left
+	emote_exclamation_mark
+}
+
+movement ApiseVillage_Movement_RivalApproach {
+	walk_left * 2
+}
+
+movement ApiseVillage_Movement_RivalLeave {
+	player_run_right * 7
+}
+
+text ApiseVillage_Text_RivalBattle_Lose {
+    format("I can't believe it!")
 }

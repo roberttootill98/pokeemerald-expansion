@@ -12,9 +12,9 @@
 #define TRAINER_LAKEAPISE_CHRISTIAN           8
 #define TRAINER_LAKEAPISE_DUNGA               9
 #define TRAINER_LAKEAPISE_FINGLE             10
-#define TRAINER_MARCEL                       11
-#define TRAINER_ALBERTO                      12
-#define TRAINER_ED                           13
+#define TRAINER_APISEVILLAGE_RIVAL_BULBASAUR 11
+#define TRAINER_APISEVILLAGE_RIVAL_CHIMCHAR  12
+#define TRAINER_APISEVILLAGE_RIVAL_MUDKIP    13
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
 #define TRAINER_DECLAN                       15
 #define TRAINER_GRUNT_RUSTURF_TUNNEL         16
