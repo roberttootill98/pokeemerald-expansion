@@ -88,7 +88,7 @@
       "flag": "FLAG_SUNDARA_RETURN_STOLEN_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "graphics_id": "OBJ_EVENT_GFX_RIVAL_MAY_NORMAL",
       "x": 39,
       "y": 19,
       "elevation": 3,
