@@ -52,7 +52,7 @@ script ApiseVillage_EventScript_RivalBattle {
 	closemessage
 
 	// battle
-	switch(var(VAR_APISE_RIVAL)) {
+	switch(var(VAR_STARTER_MON)) {
 		case 0:
 			trainerbattle_no_intro(TRAINER_APISEVILLAGE_RIVAL_CHIMCHAR, ApiseVillage_Text_RivalBattle_Lose)
 		case 1:
