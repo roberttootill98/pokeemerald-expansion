@@ -57,7 +57,7 @@ static void QueueAnimTiles_Rustboro_WindyWater(u16, u8);
 static void QueueAnimTiles_Rustboro_Fountain(u16);
 static void QueueAnimTiles_Dewford_Flag(u16);
 static void QueueAnimTiles_Slateport_Balloons(u16);
-static void QueueAnimTiles_Mauville_Flowers(u16, u8);
+// static void QueueAnimTiles_Mauville_Flowers(u16, u8);
 static void QueueAnimTiles_BikeShop_BlinkingLights(u16);
 static void QueueAnimTiles_BattlePyramid_Torch(u16);
 static void QueueAnimTiles_BattlePyramid_StatueShadow(u16);
@@ -253,83 +253,83 @@ const u16 *const gTilesetAnims_Pacifidlog_WaterCurrents[] = {
     gTilesetAnims_Pacifidlog_WaterCurrents_Frame7
 };
 
-const u16 gTilesetAnims_Mauville_Flower1_Frame0[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/0.4bpp");
-const u16 gTilesetAnims_Mauville_Flower1_Frame1[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/1.4bpp");
-const u16 gTilesetAnims_Mauville_Flower1_Frame2[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/2.4bpp");
-const u16 gTilesetAnims_Mauville_Flower1_Frame3[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/3.4bpp");
-const u16 gTilesetAnims_Mauville_Flower1_Frame4[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/4.4bpp");
-const u16 gTilesetAnims_Mauville_Flower2_Frame0[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/0.4bpp");
-const u16 gTilesetAnims_Mauville_Flower2_Frame1[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/1.4bpp");
-const u16 gTilesetAnims_Mauville_Flower2_Frame2[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/2.4bpp");
-const u16 gTilesetAnims_Mauville_Flower2_Frame3[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/3.4bpp");
-const u16 gTilesetAnims_Mauville_Flower2_Frame4[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/4.4bpp");
+// const u16 gTilesetAnims_Mauville_Flower1_Frame0[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/0.4bpp");
+// const u16 gTilesetAnims_Mauville_Flower1_Frame1[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/1.4bpp");
+// const u16 gTilesetAnims_Mauville_Flower1_Frame2[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/2.4bpp");
+// const u16 gTilesetAnims_Mauville_Flower1_Frame3[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/3.4bpp");
+// const u16 gTilesetAnims_Mauville_Flower1_Frame4[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/4.4bpp");
+// const u16 gTilesetAnims_Mauville_Flower2_Frame0[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/0.4bpp");
+// const u16 gTilesetAnims_Mauville_Flower2_Frame1[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/1.4bpp");
+// const u16 gTilesetAnims_Mauville_Flower2_Frame2[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/2.4bpp");
+// const u16 gTilesetAnims_Mauville_Flower2_Frame3[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/3.4bpp");
+// const u16 gTilesetAnims_Mauville_Flower2_Frame4[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/4.4bpp");
 const u16 tileset_anims_space_1[16] = {};
 
-u16 *const gTilesetAnims_Mauville_Flower1_VDests[] = {
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 96)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 100)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 104)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 108)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 112)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 116)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 120)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 124))
-};
+// u16 *const gTilesetAnims_Mauville_Flower1_VDests[] = {
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 96)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 100)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 104)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 108)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 112)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 116)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 120)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 124))
+// };
 
-u16 *const gTilesetAnims_Mauville_Flower2_VDests[] = {
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 128)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 132)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 136)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 140)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 144)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 148)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 152)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 156))
-};
+// u16 *const gTilesetAnims_Mauville_Flower2_VDests[] = {
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 128)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 132)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 136)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 140)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 144)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 148)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 152)),
+//     (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 156))
+// };
 
-const u16 *const gTilesetAnims_Mauville_Flower1[] = {
-    gTilesetAnims_Mauville_Flower1_Frame0,
-    gTilesetAnims_Mauville_Flower1_Frame0,
-    gTilesetAnims_Mauville_Flower1_Frame1,
-    gTilesetAnims_Mauville_Flower1_Frame2,
-    gTilesetAnims_Mauville_Flower1_Frame3,
-    gTilesetAnims_Mauville_Flower1_Frame3,
-    gTilesetAnims_Mauville_Flower1_Frame3,
-    gTilesetAnims_Mauville_Flower1_Frame3,
-    gTilesetAnims_Mauville_Flower1_Frame3,
-    gTilesetAnims_Mauville_Flower1_Frame3,
-    gTilesetAnims_Mauville_Flower1_Frame2,
-    gTilesetAnims_Mauville_Flower1_Frame1
-};
+// const u16 *const gTilesetAnims_Mauville_Flower1[] = {
+//     gTilesetAnims_Mauville_Flower1_Frame0,
+//     gTilesetAnims_Mauville_Flower1_Frame0,
+//     gTilesetAnims_Mauville_Flower1_Frame1,
+//     gTilesetAnims_Mauville_Flower1_Frame2,
+//     gTilesetAnims_Mauville_Flower1_Frame3,
+//     gTilesetAnims_Mauville_Flower1_Frame3,
+//     gTilesetAnims_Mauville_Flower1_Frame3,
+//     gTilesetAnims_Mauville_Flower1_Frame3,
+//     gTilesetAnims_Mauville_Flower1_Frame3,
+//     gTilesetAnims_Mauville_Flower1_Frame3,
+//     gTilesetAnims_Mauville_Flower1_Frame2,
+//     gTilesetAnims_Mauville_Flower1_Frame1
+// };
 
-const u16 *const gTilesetAnims_Mauville_Flower2[] = {
-    gTilesetAnims_Mauville_Flower2_Frame0,
-    gTilesetAnims_Mauville_Flower2_Frame0,
-    gTilesetAnims_Mauville_Flower2_Frame1,
-    gTilesetAnims_Mauville_Flower2_Frame2,
-    gTilesetAnims_Mauville_Flower2_Frame3,
-    gTilesetAnims_Mauville_Flower2_Frame3,
-    gTilesetAnims_Mauville_Flower2_Frame3,
-    gTilesetAnims_Mauville_Flower2_Frame3,
-    gTilesetAnims_Mauville_Flower2_Frame3,
-    gTilesetAnims_Mauville_Flower2_Frame3,
-    gTilesetAnims_Mauville_Flower2_Frame2,
-    gTilesetAnims_Mauville_Flower2_Frame1
-};
+// const u16 *const gTilesetAnims_Mauville_Flower2[] = {
+//     gTilesetAnims_Mauville_Flower2_Frame0,
+//     gTilesetAnims_Mauville_Flower2_Frame0,
+//     gTilesetAnims_Mauville_Flower2_Frame1,
+//     gTilesetAnims_Mauville_Flower2_Frame2,
+//     gTilesetAnims_Mauville_Flower2_Frame3,
+//     gTilesetAnims_Mauville_Flower2_Frame3,
+//     gTilesetAnims_Mauville_Flower2_Frame3,
+//     gTilesetAnims_Mauville_Flower2_Frame3,
+//     gTilesetAnims_Mauville_Flower2_Frame3,
+//     gTilesetAnims_Mauville_Flower2_Frame3,
+//     gTilesetAnims_Mauville_Flower2_Frame2,
+//     gTilesetAnims_Mauville_Flower2_Frame1
+// };
 
-const u16 *const gTilesetAnims_Mauville_Flower1_B[] = {
-    gTilesetAnims_Mauville_Flower1_Frame0,
-    gTilesetAnims_Mauville_Flower1_Frame0,
-    gTilesetAnims_Mauville_Flower1_Frame4,
-    gTilesetAnims_Mauville_Flower1_Frame4
-};
+// const u16 *const gTilesetAnims_Mauville_Flower1_B[] = {
+//     gTilesetAnims_Mauville_Flower1_Frame0,
+//     gTilesetAnims_Mauville_Flower1_Frame0,
+//     gTilesetAnims_Mauville_Flower1_Frame4,
+//     gTilesetAnims_Mauville_Flower1_Frame4
+// };
 
-const u16 *const gTilesetAnims_Mauville_Flower2_B[] = {
-    gTilesetAnims_Mauville_Flower2_Frame0,
-    gTilesetAnims_Mauville_Flower2_Frame0,
-    gTilesetAnims_Mauville_Flower2_Frame4,
-    gTilesetAnims_Mauville_Flower2_Frame4
-};
+// const u16 *const gTilesetAnims_Mauville_Flower2_B[] = {
+//     gTilesetAnims_Mauville_Flower2_Frame0,
+//     gTilesetAnims_Mauville_Flower2_Frame0,
+//     gTilesetAnims_Mauville_Flower2_Frame4,
+//     gTilesetAnims_Mauville_Flower2_Frame4
+// };
 
 const u16 gTilesetAnims_Rustboro_WindyWater_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/0.4bpp");
 const u16 gTilesetAnims_Rustboro_WindyWater_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/1.4bpp");
@@ -935,22 +935,22 @@ static void TilesetAnim_Slateport(u16 timer)
 
 static void TilesetAnim_Mauville(u16 timer)
 {
-    if (timer % 8 == 0)
-        QueueAnimTiles_Mauville_Flowers(timer >> 3, 0);
-    if (timer % 8 == 1)
-        QueueAnimTiles_Mauville_Flowers(timer >> 3, 1);
-    if (timer % 8 == 2)
-        QueueAnimTiles_Mauville_Flowers(timer >> 3, 2);
-    if (timer % 8 == 3)
-        QueueAnimTiles_Mauville_Flowers(timer >> 3, 3);
-    if (timer % 8 == 4)
-        QueueAnimTiles_Mauville_Flowers(timer >> 3, 4);
-    if (timer % 8 == 5)
-        QueueAnimTiles_Mauville_Flowers(timer >> 3, 5);
-    if (timer % 8 == 6)
-        QueueAnimTiles_Mauville_Flowers(timer >> 3, 6);
-    if (timer % 8 == 7)
-        QueueAnimTiles_Mauville_Flowers(timer >> 3, 7);
+    // if (timer % 8 == 0)
+    //     QueueAnimTiles_Mauville_Flowers(timer >> 3, 0);
+    // if (timer % 8 == 1)
+    //     QueueAnimTiles_Mauville_Flowers(timer >> 3, 1);
+    // if (timer % 8 == 2)
+    //     QueueAnimTiles_Mauville_Flowers(timer >> 3, 2);
+    // if (timer % 8 == 3)
+    //     QueueAnimTiles_Mauville_Flowers(timer >> 3, 3);
+    // if (timer % 8 == 4)
+    //     QueueAnimTiles_Mauville_Flowers(timer >> 3, 4);
+    // if (timer % 8 == 5)
+    //     QueueAnimTiles_Mauville_Flowers(timer >> 3, 5);
+    // if (timer % 8 == 6)
+    //     QueueAnimTiles_Mauville_Flowers(timer >> 3, 6);
+    // if (timer % 8 == 7)
+    //     QueueAnimTiles_Mauville_Flowers(timer >> 3, 7);
 }
 
 static void TilesetAnim_Lavaridge(u16 timer)
@@ -1064,22 +1064,22 @@ static void QueueAnimTiles_Pacifidlog_WaterCurrents(u8 timer)
     AppendTilesetAnimToBuffer(gTilesetAnims_Pacifidlog_WaterCurrents[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 496)), 0x100);
 }
 
-static void QueueAnimTiles_Mauville_Flowers(u16 timer_div, u8 timer_mod)
-{
-    timer_div -= timer_mod;
-    if (timer_div < 12) // almost certainly a typo
-    {
-        timer_div %= 12;
-        AppendTilesetAnimToBuffer(gTilesetAnims_Mauville_Flower1[timer_div], gTilesetAnims_Mauville_Flower1_VDests[timer_mod], 0x80);
-        AppendTilesetAnimToBuffer(gTilesetAnims_Mauville_Flower2[timer_div], gTilesetAnims_Mauville_Flower2_VDests[timer_mod], 0x80);
-    }
-    else
-    {
-        timer_div %= 4;
-        AppendTilesetAnimToBuffer(gTilesetAnims_Mauville_Flower1_B[timer_div], gTilesetAnims_Mauville_Flower1_VDests[timer_mod], 0x80);
-        AppendTilesetAnimToBuffer(gTilesetAnims_Mauville_Flower2_B[timer_div], gTilesetAnims_Mauville_Flower2_VDests[timer_mod], 0x80);
-    }
-}
+// static void QueueAnimTiles_Mauville_Flowers(u16 timer_div, u8 timer_mod)
+// {
+//     timer_div -= timer_mod;
+//     if (timer_div < 12) // almost certainly a typo
+//     {
+//         timer_div %= 12;
+//         AppendTilesetAnimToBuffer(gTilesetAnims_Mauville_Flower1[timer_div], gTilesetAnims_Mauville_Flower1_VDests[timer_mod], 0x80);
+//         AppendTilesetAnimToBuffer(gTilesetAnims_Mauville_Flower2[timer_div], gTilesetAnims_Mauville_Flower2_VDests[timer_mod], 0x80);
+//     }
+//     else
+//     {
+//         timer_div %= 4;
+//         AppendTilesetAnimToBuffer(gTilesetAnims_Mauville_Flower1_B[timer_div], gTilesetAnims_Mauville_Flower1_VDests[timer_mod], 0x80);
+//         AppendTilesetAnimToBuffer(gTilesetAnims_Mauville_Flower2_B[timer_div], gTilesetAnims_Mauville_Flower2_VDests[timer_mod], 0x80);
+//     }
+// }
 
 static void QueueAnimTiles_Rustboro_WindyWater(u16 timer_div, u8 timer_mod)
 {
