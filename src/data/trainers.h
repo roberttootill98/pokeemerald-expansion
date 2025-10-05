@@ -223,18 +223,18 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_WindyMeadow_Steven},
     },
 
-    [TRAINER_GRUNT_RUSTURF_TUNNEL] =
+    [TRAINER_WINDYMEADOW_WINONA] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_TUBER_F,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
+        .trainerPic = TRAINER_PIC_TUBER_F,
+        .trainerName = _("Winona"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntRusturfTunnel),
-        .party = {.NoItemDefaultMoves = sParty_GruntRusturfTunnel},
+        .partySize = ARRAY_COUNT(sParty_WindyMeadow_Winona),
+        .party = {.NoItemDefaultMoves = sParty_WindyMeadow_Winona},
     },
 
     [TRAINER_GRUNT_WEATHER_INST_1] =

@@ -38,3 +38,20 @@ script WindyMeadow_EventScript_Steven {
 text Steven_Lose {
 	format("Do let me know if you need any piperidine opioids produced!")
 }
+
+script WindyMeadow_EventScript_Winona {
+	lock
+	faceplayer
+	
+	trainerbattle_single(TRAINER_WINDYMEADOW_WINONA,
+		format("Help me build up the strength to jump in the water!"),
+		Winona_Lose
+	)
+
+	release
+	end
+}
+
+text Winona_Lose {
+	format("I don't know if I'm feel any more confident...")
+}
