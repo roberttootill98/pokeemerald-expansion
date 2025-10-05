@@ -1,2 +1,24 @@
 
+// guide level 10
+
 mapscripts Route102_MapScripts {}
+
+script WindyMeadow_EventScript_Angela {
+	lock
+	faceplayer
+
+	trainerbattle_single(TRAINER_WINDYMEADOW_ANGELA,
+		format("Shot in the dark here, but are you ignored in large crowds?"),
+		Angela_Lose
+	)
+
+	msgbox(Angela_Lose, MSGBOX_AUTOCLOSE)
+
+	release
+	end
+}
+
+text Angela_Lose {
+	format("Do you know how to operate a pitman arm?")
+}
+
