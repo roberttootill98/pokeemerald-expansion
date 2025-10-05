@@ -36,7 +36,7 @@ ApiseVillage_EventScript_RivalBattle::
 	waitmovement 2
 	msgbox ApiseVillage_EventScript_RivalBattle_Text_1
 	closemessage
-	switch VAR_APISE_RIVAL
+	switch VAR_STARTER_MON
 	case 0, ApiseVillage_EventScript_RivalBattle_3
 	case 1, ApiseVillage_EventScript_RivalBattle_4
 	case 2, ApiseVillage_EventScript_RivalBattle_5
