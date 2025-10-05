@@ -11,10 +11,26 @@ WindyMeadow_EventScript_Angela::
 	end
 
 
+WindyMeadow_EventScript_Steven::
+	lock
+	faceplayer
+	trainerbattle_single TRAINER_WINDYMEADOW_STEVEN, WindyMeadow_EventScript_Steven_Text_0, Steven_Lose
+	release
+	end
+
+
 WindyMeadow_EventScript_Angela_Text_0:
 	.string "Shot in the dark here, but are you\n"
 	.string "ignored in large crowds?$"
 
+WindyMeadow_EventScript_Steven_Text_0:
+	.string "I've just completed my bachelor's in\n"
+	.string "piperidine opioids!$"
+
 Angela_Lose::
 	.string "Do you know how to operate a pitman\n"
 	.string "arm?$"
+
+Steven_Lose::
+	.string "Do let me know if you need any\n"
+	.string "piperidine opioids produced!$"

@@ -22,3 +22,19 @@ text Angela_Lose {
 	format("Do you know how to operate a pitman arm?")
 }
 
+script WindyMeadow_EventScript_Steven {
+	lock
+	faceplayer
+	
+	trainerbattle_single(TRAINER_WINDYMEADOW_STEVEN,
+		format("I've just completed my bachelor's in piperidine opioids!"),
+		Steven_Lose
+	)
+
+	release
+	end
+}
+
+text Steven_Lose {
+	format("Do let me know if you need any piperidine opioids produced!")
+}
