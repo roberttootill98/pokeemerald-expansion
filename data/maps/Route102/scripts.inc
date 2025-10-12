@@ -35,6 +35,14 @@ WindyMeadow_EventScript_Halston::
 	end
 
 
+WindyMeadow_EventScript_Jake::
+	lock
+	faceplayer
+	trainerbattle_single TRAINER_WINDYMEADOW_JAKE, WindyMeadow_EventScript_Jake_Text_0, Jake_Lose
+	release
+	end
+
+
 WindyMeadow_EventScript_Angela_Text_0:
 	.string "Shot in the dark here, but are you\n"
 	.string "ignored in large crowds?$"
@@ -49,6 +57,9 @@ WindyMeadow_EventScript_Winona_Text_0:
 
 WindyMeadow_EventScript_Halston_Text_0:
 	.string "Bug pokémon are kinda like land fish!$"
+
+WindyMeadow_EventScript_Jake_Text_0:
+	.string "I'm looking to get a new job.$"
 
 Angela_Lose::
 	.string "Do you know how to operate a pitman\n"
@@ -65,3 +76,7 @@ Winona_Lose::
 Halston_Lose::
 	.string "I'm not sure what land fish means if I'm\n"
 	.string "being honest.$"
+
+Jake_Lose::
+	.string "The job market for Poochyena trainers\n"
+	.string "isn't so good right now.$"

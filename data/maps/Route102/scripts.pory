@@ -72,3 +72,20 @@ script WindyMeadow_EventScript_Halston {
 text Halston_Lose {
 	format("I'm not sure what land fish means if I'm being honest.")
 }
+
+script WindyMeadow_EventScript_Jake {
+	lock
+	faceplayer
+	
+	trainerbattle_single(TRAINER_WINDYMEADOW_JAKE,
+		format("I'm looking to get a new job."),
+		Jake_Lose
+	)
+
+	release
+	end
+}
+
+text Jake_Lose {
+	format("The job market for Poochyena trainers isn't so good right now.")
+}

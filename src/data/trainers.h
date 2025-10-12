@@ -240,29 +240,29 @@ const struct Trainer gTrainers[] = {
     [TRAINER_WINDYMEADOW_HALSTON] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerName = _("Halston"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_WindoyMeadow_Halston),
-        .party = {.NoItemDefaultMoves = sParty_WindoyMeadow_Halston},
+        .partySize = ARRAY_COUNT(sParty_WindyMeadow_Halston),
+        .party = {.NoItemDefaultMoves = sParty_WindyMeadow_Halston},
     },
 
-    [TRAINER_GRUNT_WEATHER_INST_2] =
+    [TRAINER_WINDYMEADOW_JAKE] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .trainerClass = TRAINER_CLASS_POKEFAN,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerPic = TRAINER_PIC_POKEFAN_M,
+        .trainerName = _("Jake"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntWeatherInst2),
-        .party = {.NoItemDefaultMoves = sParty_GruntWeatherInst2},
+        .partySize = ARRAY_COUNT(sParty_WindyMeadow_Jake),
+        .party = {.NoItemDefaultMoves = sParty_WindyMeadow_Jake},
     },
 
     [TRAINER_GRUNT_WEATHER_INST_3] =
