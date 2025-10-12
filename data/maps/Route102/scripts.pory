@@ -55,3 +55,20 @@ script WindyMeadow_EventScript_Winona {
 text Winona_Lose {
 	format("I don't know if I'm feel any more confident...")
 }
+
+script WindyMeadow_EventScript_Halston {
+	lock
+	faceplayer
+	
+	trainerbattle_single(TRAINER_WINDYMEADOW_HALSTON,
+		format("Bug pokémon are kinda like land fish!"),
+		Halston_Lose
+	)
+
+	release
+	end
+}
+
+text Halston_Lose {
+	format("I'm not sure what land fish means if I'm being honest.")
+}

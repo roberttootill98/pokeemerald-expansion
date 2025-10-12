@@ -27,6 +27,14 @@ WindyMeadow_EventScript_Winona::
 	end
 
 
+WindyMeadow_EventScript_Halston::
+	lock
+	faceplayer
+	trainerbattle_single TRAINER_WINDYMEADOW_HALSTON, WindyMeadow_EventScript_Halston_Text_0, Halston_Lose
+	release
+	end
+
+
 WindyMeadow_EventScript_Angela_Text_0:
 	.string "Shot in the dark here, but are you\n"
 	.string "ignored in large crowds?$"
@@ -39,6 +47,9 @@ WindyMeadow_EventScript_Winona_Text_0:
 	.string "Help me build up the strength to jump in\n"
 	.string "the water!$"
 
+WindyMeadow_EventScript_Halston_Text_0:
+	.string "Bug pokémon are kinda like land fish!$"
+
 Angela_Lose::
 	.string "Do you know how to operate a pitman\n"
 	.string "arm?$"
@@ -50,3 +61,7 @@ Steven_Lose::
 Winona_Lose::
 	.string "I don't know if I'm feel any more\n"
 	.string "confident...$"
+
+Halston_Lose::
+	.string "I'm not sure what land fish means if I'm\n"
+	.string "being honest.$"

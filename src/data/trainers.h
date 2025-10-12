@@ -237,7 +237,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_WindyMeadow_Winona},
     },
 
-    [TRAINER_GRUNT_WEATHER_INST_1] =
+    [TRAINER_WINDYMEADOW_HALSTON] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_TEAM_AQUA,
@@ -247,8 +247,8 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntWeatherInst1),
-        .party = {.NoItemDefaultMoves = sParty_GruntWeatherInst1},
+        .partySize = ARRAY_COUNT(sParty_WindoyMeadow_Halston),
+        .party = {.NoItemDefaultMoves = sParty_WindoyMeadow_Halston},
     },
 
     [TRAINER_GRUNT_WEATHER_INST_2] =
