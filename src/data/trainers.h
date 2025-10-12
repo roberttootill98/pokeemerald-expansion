@@ -212,9 +212,9 @@ const struct Trainer gTrainers[] = {
     [TRAINER_WINDYMEADOW_STEVEN] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
+        .trainerClass = TRAINER_CLASS_COLLECTOR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
+        .trainerPic = TRAINER_PIC_COLLECTOR,
         .trainerName = _("Steven"),
         .items = {},
         .doubleBattle = FALSE,

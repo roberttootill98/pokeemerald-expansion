@@ -3,10 +3,7 @@
 
 mapscripts Route102_MapScripts {}
 
-script WindyMeadow_EventScript_Angela {
-	lock
-	faceplayer
-
+script WindyMeadow_Trainer_Angela {
 	trainerbattle_single(TRAINER_WINDYMEADOW_ANGELA,
 		format("Shot in the dark here, but are you ignored in large crowds?"),
 		Angela_Lose
@@ -22,14 +19,13 @@ text Angela_Lose {
 	format("Do you know how to operate a pitman arm?")
 }
 
-script WindyMeadow_EventScript_Steven {
-	lock
-	faceplayer
-	
+script WindyMeadow_Trainer_Steven {
 	trainerbattle_single(TRAINER_WINDYMEADOW_STEVEN,
 		format("I've just completed my bachelor's in piperidine opioids!"),
 		Steven_Lose
 	)
+
+	msgbox(Steven_Lose, MSGBOX_AUTOCLOSE)
 
 	release
 	end
@@ -39,14 +35,13 @@ text Steven_Lose {
 	format("Do let me know if you need any piperidine opioids produced!")
 }
 
-script WindyMeadow_EventScript_Winona {
-	lock
-	faceplayer
-	
+script WindyMeadow_Trainer_Winona {
 	trainerbattle_single(TRAINER_WINDYMEADOW_WINONA,
 		format("Help me build up the strength to jump in the water!"),
 		Winona_Lose
 	)
+
+	msgbox(Winona_Lose, MSGBOX_AUTOCLOSE)
 
 	release
 	end
@@ -56,14 +51,13 @@ text Winona_Lose {
 	format("I don't know if I'm feel any more confident...")
 }
 
-script WindyMeadow_EventScript_Halston {
-	lock
-	faceplayer
-	
+script WindyMeadow_Trainer_Halston {
 	trainerbattle_single(TRAINER_WINDYMEADOW_HALSTON,
 		format("Bug pokémon are kinda like land fish!"),
 		Halston_Lose
 	)
+
+	msgbox(Halston_Lose, MSGBOX_AUTOCLOSE)
 
 	release
 	end
@@ -73,14 +67,13 @@ text Halston_Lose {
 	format("I'm not sure what land fish means if I'm being honest.")
 }
 
-script WindyMeadow_EventScript_Jake {
-	lock
-	faceplayer
-	
+script WindyMeadow_Trainer_Jake {
 	trainerbattle_single(TRAINER_WINDYMEADOW_JAKE,
 		format("I'm looking to get a new job."),
 		Jake_Lose
 	)
+
+	msgbox(Jake_Lose, MSGBOX_AUTOCLOSE)
 
 	release
 	end
