@@ -255,7 +255,7 @@ const struct Trainer gTrainers[] = {
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_POKEFAN,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_POKEFAN_M,
         .trainerName = _("Jake"),
         .items = {},
