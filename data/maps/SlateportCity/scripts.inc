@@ -84,6 +84,15 @@ ApiseVillage_Movement_RivalLeave:
 	player_run_right
 	step_end
 
+ApiseVillage_HoneyShopGuy::
+	lock
+	faceplayer
+	msgbox ApiseVillage_HoneyShopGuy_Text_0
+	closemessage
+	release
+	end
+
+
 ApiseVillage_EventScript_Grandma_Text_0:
 	.string "Grandma: Hello my dear {PLAYER}. Here\n"
 	.string "in Apise Village, we have honey gardens,\l"
@@ -104,6 +113,10 @@ ApiseVillage_EventScript_RivalBattle_Text_1:
 
 ApiseVillage_EventScript_RivalBattle_Text_2:
 	.string "Blow me down, you shit me out!$"
+
+ApiseVillage_HoneyShopGuy_Text_0:
+	.string "Hey there! Sorry the Honey Café (tm) is\n"
+	.string "closed for now!$"
 
 ApiseVillage_Text_RivalBattle_Lose::
 	.string "I can't believe it!$"

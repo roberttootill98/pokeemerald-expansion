@@ -98,3 +98,15 @@ movement ApiseVillage_Movement_RivalLeave {
 text ApiseVillage_Text_RivalBattle_Lose {
     format("I can't believe it!")
 }
+
+// temp
+script ApiseVillage_HoneyShopGuy {
+	lock
+	faceplayer
+
+	msgbox(format("Hey there! Sorry the Honey Café (tm) is closed for now!"))
+	closemessage
+
+	release
+	end
+}
