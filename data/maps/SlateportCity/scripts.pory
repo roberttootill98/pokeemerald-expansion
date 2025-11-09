@@ -110,3 +110,23 @@ script ApiseVillage_HoneyShopGuy {
 	release
 	end
 }
+
+script ApiseVillage_SweetHeart {
+	lock
+	faceplayer
+
+	if(flag(FLAG_APISEVILLAGE_SWEETHEART)) {
+		msgbox(format("I hope her cat is well."))
+		closemessage
+	} else {
+		msgbox(format("I've just had my heart broken, you might as well have this."))
+		closemessage
+
+		giveitem(ITEM_SWEET_HEART)
+
+		setflag(FLAG_APISEVILLAGE_SWEETHEART)
+	}
+
+	release
+	end
+}

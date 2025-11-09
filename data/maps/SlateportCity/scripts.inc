@@ -93,6 +93,24 @@ ApiseVillage_HoneyShopGuy::
 	end
 
 
+ApiseVillage_SweetHeart::
+	lock
+	faceplayer
+	goto_if_set FLAG_APISEVILLAGE_SWEETHEART, ApiseVillage_SweetHeart_2
+	msgbox ApiseVillage_SweetHeart_Text_1
+	closemessage
+	giveitem ITEM_SWEET_HEART
+	setflag FLAG_APISEVILLAGE_SWEETHEART
+ApiseVillage_SweetHeart_1:
+	release
+	end
+
+ApiseVillage_SweetHeart_2:
+	msgbox ApiseVillage_SweetHeart_Text_0
+	closemessage
+	goto ApiseVillage_SweetHeart_1
+
+
 ApiseVillage_EventScript_Grandma_Text_0:
 	.string "Grandma: Hello my dear {PLAYER}. Here\n"
 	.string "in Apise Village, we have honey gardens,\l"
@@ -117,6 +135,13 @@ ApiseVillage_EventScript_RivalBattle_Text_2:
 ApiseVillage_HoneyShopGuy_Text_0:
 	.string "Hey there! Sorry the Honey Café (tm) is\n"
 	.string "closed for now!$"
+
+ApiseVillage_SweetHeart_Text_0:
+	.string "I hope her cat is well.$"
+
+ApiseVillage_SweetHeart_Text_1:
+	.string "I've just had my heart broken, you might\n"
+	.string "as well have this.$"
 
 ApiseVillage_Text_RivalBattle_Lose::
 	.string "I can't believe it!$"

@@ -1665,6 +1665,7 @@
 
 // apise village
 #define FLAG_APISEVILLAGE_RIVAL                                         0x1011
+#define FLAG_APISEVILLAGE_SWEETHEART                                    0x1012
 
 // #define FLAG_LAKE_APISE
 
