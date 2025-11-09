@@ -130,3 +130,85 @@ script ApiseVillage_SweetHeart {
 	release
 	end
 }
+
+script ApiseVillage_Sneezy {
+	lock
+	faceplayer
+
+	msgbox(format("There must be a lot of pollen in this town, I can't stop sneezing!"))
+	closemessage
+
+	release
+	end
+}
+
+const ID_WOMAN_FLOWERBOX = 6
+
+script ApiseVillage_FlowerBox {
+	lock
+	faceplayer
+
+	msgbox(format("This is one of the flower boxes that our combee use to make the delicious honey for the cafe."))
+	closemessage
+
+	applymovement(ID_WOMAN_FLOWERBOX, ApiseVillage_Movement_FlowerBox)
+	waitmovement(ID_WOMAN_FLOWERBOX)
+	
+	release
+	end
+}
+
+movement ApiseVillage_Movement_FlowerBox {
+	face_right
+}
+
+script ApiseVillage_FenceGuy {
+	lock
+	faceplayer
+
+	msgbox(format("I'm more suited to life inside the fence, if I could get a toilet installed out here it would be perfect."))
+	closemessage
+
+	release
+	end
+}
+
+const ID_BOYFRIEND = 8
+	
+script ApiseVillage_Boyfriend {
+	lock
+	faceplayer
+
+	msgbox(format("My girlfriend is 15 and I'm 20!"))
+	closemessage
+
+	applymovement(ID_BOYFRIEND, ApiseVillage_Movement_Boyfriend)
+	waitmovement(ID_BOYFRIEND)
+
+	release
+	end
+}
+
+movement ApiseVillage_Movement_Boyfriend {
+	face_right
+}
+
+const ID_GIRLFRIEND = 9
+	
+script ApiseVillage_Girlfriend {
+	lock
+	faceplayer
+
+	msgbox(format("My boyfriend thinks there's strong trainers who don't go the honey café and he's wrong!"))
+	closemessage
+
+	applymovement(ID_GIRLFRIEND, ApiseVillage_Movement_Girlfriend)
+	waitmovement(ID_GIRLFRIEND)
+
+	release
+	end
+}
+
+movement ApiseVillage_Movement_Girlfriend {
+	face_left
+}

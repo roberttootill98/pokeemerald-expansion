@@ -111,6 +111,69 @@ ApiseVillage_SweetHeart_2:
 	goto ApiseVillage_SweetHeart_1
 
 
+ApiseVillage_Sneezy::
+	lock
+	faceplayer
+	msgbox ApiseVillage_Sneezy_Text_0
+	closemessage
+	release
+	end
+
+
+ApiseVillage_FlowerBox::
+	lock
+	faceplayer
+	msgbox ApiseVillage_FlowerBox_Text_0
+	closemessage
+	applymovement 6, ApiseVillage_Movement_FlowerBox
+	waitmovement 6
+	release
+	end
+
+
+ApiseVillage_Movement_FlowerBox:
+	face_right
+	step_end
+
+ApiseVillage_FenceGuy::
+	lock
+	faceplayer
+	msgbox ApiseVillage_FenceGuy_Text_0
+	closemessage
+	release
+	end
+
+
+ApiseVillage_Boyfriend::
+	lock
+	faceplayer
+	msgbox ApiseVillage_Boyfriend_Text_0
+	closemessage
+	applymovement 8, ApiseVillage_Movement_Boyfriend
+	waitmovement 8
+	release
+	end
+
+
+ApiseVillage_Movement_Boyfriend:
+	face_right
+	step_end
+
+ApiseVillage_Girlfriend::
+	lock
+	faceplayer
+	msgbox ApiseVillage_Girlfriend_Text_0
+	closemessage
+	applymovement 8, ApiseVillage_Movement_Girlfriend
+	waitmovement 8
+	release
+	end
+
+
+ApiseVillage_Movement_Girlfriend:
+	face_left
+	step_end
+
 ApiseVillage_EventScript_Grandma_Text_0:
 	.string "Grandma: Hello my dear {PLAYER}. Here\n"
 	.string "in Apise Village, we have honey gardens,\l"
@@ -142,6 +205,28 @@ ApiseVillage_SweetHeart_Text_0:
 ApiseVillage_SweetHeart_Text_1:
 	.string "I've just had my heart broken, you might\n"
 	.string "as well have this.$"
+
+ApiseVillage_Sneezy_Text_0:
+	.string "There must be a lot of pollen in this\n"
+	.string "town, I can't stop sneezing!$"
+
+ApiseVillage_FlowerBox_Text_0:
+	.string "This is one of the flower boxes that our\n"
+	.string "combee use to make the delicious honey\l"
+	.string "for the cafe.$"
+
+ApiseVillage_FenceGuy_Text_0:
+	.string "I'm more suited to life inside the fence,\n"
+	.string "if I could get a toilet installed out\l"
+	.string "here it would be perfect.$"
+
+ApiseVillage_Boyfriend_Text_0:
+	.string "My girlfriend is 15 and I'm 20!$"
+
+ApiseVillage_Girlfriend_Text_0:
+	.string "My boyfriend thinks there strong\n"
+	.string "trainers who don't go the honey café\l"
+	.string "and he's wrong!$"
 
 ApiseVillage_Text_RivalBattle_Lose::
 	.string "I can't believe it!$"
