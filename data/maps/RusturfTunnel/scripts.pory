@@ -25,10 +25,10 @@ script LakeApise_GiveSootheBell {
 script LakeApise_Trainer_Annabelle {
 	trainerbattle_single(TRAINER_LAKEAPISE_ANNABELLE,
 		format("The smell of the breeze is different out here!"),
-		format("You odour is quite unique!")
+		format("Your odour is quite unique!")
 	)
 
-	msgbox(format("You odour is quite unique!"), MSGBOX_AUTOCLOSE)
+	msgbox(format("Your odour is quite unique!"), MSGBOX_AUTOCLOSE)
 
 	end
 }
