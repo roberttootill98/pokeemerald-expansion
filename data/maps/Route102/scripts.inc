@@ -37,6 +37,16 @@ WindyMeadow_Trainer_Jake::
 	end
 
 
+WindyMeadow_Item_ParalyzeHeal::
+	finditem ITEM_PARALYZE_HEAL
+	end
+
+
+WindyMeadow_Item_PPUp::
+	finditem ITEM_PP_UP
+	end
+
+
 WindyMeadow_Trainer_Angela_Text_0:
 	.string "Shot in the dark here, but are you\n"
 	.string "ignored in large crowds?$"

@@ -82,3 +82,13 @@ script WindyMeadow_Trainer_Jake {
 text Jake_Lose {
 	format("The job market for Poochyena trainers isn't so good right now.")
 }
+
+script WindyMeadow_Item_ParalyzeHeal {
+	finditem(ITEM_PARALYZE_HEAL)
+	end
+}
+
+script WindyMeadow_Item_PPUp {
+	finditem(ITEM_PP_UP)
+	end
+}

@@ -1044,13 +1044,18 @@
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7
 
 // Item Ball Flags
+
 // sundara village
 #define FLAG_ITEM_SUNDARA_POTION                                    0x3E8
+// ferre grasslands
 #define FLAG_ITEM_FERREGRASSLANDS_ANTIDOTE                          0x3E9
 #define FLAG_ITEM_FERREGRASSLANDS_POTION                            0x3EA
+// lake apise
 #define FLAG_ITEM_LAKE_APISE_NEST_BALL                              0x3EB
-#define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC
-#define FLAG_ITEM_ROUTE_109_PP_UP                                   0x3ED
+#define FLAG_ITEM_WINDYMEADOW_PARALYZEHEAL                          0x3EC
+// windy meadow
+#define FLAG_ITEM_WINDYMEADOW_PP_UP                                 0x3ED
+// rest
 #define FLAG_ITEM_ROUTE_109_RARE_CANDY                              0x3EE
 #define FLAG_ITEM_ROUTE_110_DIRE_HIT                                0x3EF
 #define FLAG_ITEM_ROUTE_111_TM_37                                   0x3F0
