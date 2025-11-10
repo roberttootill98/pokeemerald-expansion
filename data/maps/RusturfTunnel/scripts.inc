@@ -64,7 +64,7 @@ LakeApise_Trainer_Annabelle_Text_0:
 	.string "out here!$"
 
 LakeApise_Trainer_Annabelle_Text_1:
-	.string "You odour is quite unique!$"
+	.string "Your odour is quite unique!$"
 
 LakeApise_Trainer_Christian_Text_0:
 	.string "I've been practising my moves by\n"

@@ -1,1 +1,34 @@
 mapscripts ApiseVillage_House2_MapScripts {}
+
+script ApiseVillage_House2_EventScript_Girl {
+    lock
+    faceplayer
+
+    msgbox(format("I sleep on the floor, the hard boards provide me a lot of support!"))
+    closemessage
+
+    release
+    end
+}
+
+script ApiseVillage_House2_EventScript_Dad {
+    lock
+    faceplayer
+
+    msgbox(format("This family does not believe in beds, big bed tries to sell people the social construct of beds."))
+    closemessage
+
+    release
+    end
+}
+
+script ApiseVillage_House2_EventScript_Mum {
+    lock
+    faceplayer
+
+    msgbox(format("Apise Village is known for the rustic livestyle of the residents."))
+    closemessage
+
+    release
+    end
+}

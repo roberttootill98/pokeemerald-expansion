@@ -164,8 +164,8 @@ ApiseVillage_Girlfriend::
 	faceplayer
 	msgbox ApiseVillage_Girlfriend_Text_0
 	closemessage
-	applymovement 8, ApiseVillage_Movement_Girlfriend
-	waitmovement 8
+	applymovement 9, ApiseVillage_Movement_Girlfriend
+	waitmovement 9
 	release
 	end
 
@@ -224,7 +224,7 @@ ApiseVillage_Boyfriend_Text_0:
 	.string "My girlfriend is 15 and I'm 20!$"
 
 ApiseVillage_Girlfriend_Text_0:
-	.string "My boyfriend thinks there strong\n"
+	.string "My boyfriend thinks there's strong\n"
 	.string "trainers who don't go the honey café\l"
 	.string "and he's wrong!$"
 
