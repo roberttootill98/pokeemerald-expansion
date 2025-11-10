@@ -1,1 +1,23 @@
 mapscripts ApiseVillage_House4_MapScripts {}
+
+script ApiseVillage_House4_EventScript_Woman {
+	lock
+	faceplayer
+
+	msgbox(format("I use the honey from the café to moisturize."))
+	closemessage
+
+	release
+	end
+}
+
+script ApiseVillage_House4_EventScript_Man {
+	lock
+	faceplayer
+
+	msgbox(format("I'm boarding up this window since Combee keep finding their way in!"))
+	closemessage
+
+	release
+	end
+}
