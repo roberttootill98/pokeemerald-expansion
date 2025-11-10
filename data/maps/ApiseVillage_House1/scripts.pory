@@ -1,1 +1,12 @@
 mapscripts ApiseVillage_House1_MapScripts {}
+
+script ApiseVillage_House1_EventScript_Pikachu {
+	lock
+	faceplayer
+
+	msgbox(format("Pika!"))
+	closemessage
+
+	release
+	end
+}
