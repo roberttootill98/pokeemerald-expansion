@@ -1,3 +1,30 @@
+ApiseVillage_PokemonCenter_1F_EventScript_Boy1::
+	lock
+	faceplayer
+	msgbox ApiseVillage_PokemonCenter_1F_EventScript_Boy1_Text_0
+	closemessage
+	release
+	end
+
+
+ApiseVillage_PokemonCenter_1F_EventScript_Boy2::
+	lock
+	faceplayer
+	msgbox ApiseVillage_PokemonCenter_1F_EventScript_Boy2_Text_0
+	closemessage
+	release
+	end
+
+
+ApiseVillage_PokemonCenter_1F_EventScript_Girl::
+	lock
+	faceplayer
+	msgbox ApiseVillage_PokemonCenter_1F_EventScript_Girl_Text_0
+	closemessage
+	release
+	end
+
+
 .set LOCALID_NURSE, 1
 
 SlateportCity_PokemonCenter_1F_MapScripts:: @ 820DABF
@@ -18,24 +45,14 @@ SlateportCity_PokemonCenter_1F_EventScript_Nurse:: @ 820DAD3
 	release
 	end
 
-SlateportCity_PokemonCenter_1F_EventScript_Sailor:: @ 820DAE1
-	msgbox SlateportCity_PokemonCenter_1F_Text_RaiseDifferentTypesOfPokemon, MSGBOX_NPC
-	end
+ApiseVillage_PokemonCenter_1F_EventScript_Boy1_Text_0:
+	.string "I'm preparing my team to take on the\n"
+	.string "honey café!$"
 
-SlateportCity_PokemonCenter_1F_EventScript_Woman:: @ 820DAEA
-	msgbox SlateportCity_PokemonCenter_1F_Text_TradedMonWithFriend, MSGBOX_NPC
-	end
+ApiseVillage_PokemonCenter_1F_EventScript_Boy2_Text_0:
+	.string "What's the best held item to give to my\n"
+	.string "Fletchling...$"
 
-SlateportCity_PokemonCenter_1F_Text_RaiseDifferentTypesOfPokemon: @ 820DAF3
-	.string "Want a tip for battling?\p"
-	.string "I'd say it's raising different kinds\n"
-	.string "of POKéMON in a balanced manner.\p"
-	.string "It's no good to make just one\n"
-	.string "POKéMON strong.\p"
-	.string "If it has a type disadvantage,\n"
-	.string "it might not stand a chance.$"
-
-SlateportCity_PokemonCenter_1F_Text_TradedMonWithFriend: @ 820DBBC
-	.string "I trade POKéMON with my friends.\p"
-	.string "If a traded POKéMON is holding an\n"
-	.string "item, it makes me twice as happy!$"
+ApiseVillage_PokemonCenter_1F_EventScript_Girl_Text_0:
+	.string "I wonder what my legacy will be, who will\n"
+	.string "remember me last?$"
