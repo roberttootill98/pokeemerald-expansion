@@ -288,6 +288,51 @@ SundaraVillage_Item_Potion::
 	end
 
 
+SundaraVillage_EventScript_RiverMan::
+	lock
+	faceplayer
+	msgbox SundaraVillage_EventScript_RiverMan_Text_0
+	closemessage
+	release
+	end
+
+
+SundaraVillage_EventScript_PromiseBoy::
+	lock
+	faceplayer
+	msgbox SundaraVillage_EventScript_PromiseBoy_Text_0
+	closemessage
+	release
+	end
+
+
+SundaraVillage_EventScript_ContestGirl::
+	lock
+	faceplayer
+	msgbox SundaraVillage_EventScript_ContestGirl_Text_0
+	closemessage
+	release
+	end
+
+
+SundaraVillage_EventScript_Fisherman::
+	lock
+	faceplayer
+	msgbox SundaraVillage_EventScript_Fisherman_Text_0
+	closemessage
+	release
+	end
+
+
+SundaraVillage_EventScript_FlowerPatchMan::
+	lock
+	faceplayer
+	msgbox SundaraVillage_EventScript_FlowerPatchMan_Text_0
+	closemessage
+	release
+	end
+
+
 SundaraVillage_EventScript_RivalOutsideHouse_Text_0:
 	.string "I wasn't looking at your mum! Anyways!\n"
 	.string "Let's go see if <AIDE> is down at the\l"
@@ -328,3 +373,27 @@ SundaraVillage_EventScript_ReturnStolenPokemon_Text_5:
 
 SundaraVillage_EventScript_ReturnStolenPokemon_Text_6:
 	.string "Dad: Well done today {PLAYER}.$"
+
+SundaraVillage_EventScript_RiverMan_Text_0:
+	.string "When life seems complicated and\n"
+	.string "difficult, I like to just watch the\l"
+	.string "river flow.$"
+
+SundaraVillage_EventScript_PromiseBoy_Text_0:
+	.string "I made a promise to my mum that I would\n"
+	.string "find the longest strand of grass.$"
+
+SundaraVillage_EventScript_ContestGirl_Text_0:
+	.string "I came to Sundara Village to compete in\n"
+	.string "contests, but I didn't realise I'd have\l"
+	.string "to qualify beforehand.$"
+
+SundaraVillage_EventScript_Fisherman_Text_0:
+	.string "The open ocean has some of the rarest\n"
+	.string "pokémon, or so I've been told, doesn't\l"
+	.string "seem like it so far.$"
+
+SundaraVillage_EventScript_FlowerPatchMan_Text_0:
+	.string "This spot seems to be the best for\n"
+	.string "growing flowers, I wonder if the soil is\l"
+	.string "different here.$"

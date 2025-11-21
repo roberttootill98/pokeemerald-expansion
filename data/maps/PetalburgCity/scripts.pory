@@ -216,3 +216,58 @@ script SundaraVillage_Item_Potion {
 	finditem(ITEM_POTION)
 	end
 }
+
+script SundaraVillage_EventScript_RiverMan {
+	lock
+	faceplayer
+
+	msgbox(format("When life seems complicated and difficult, I like to just watch the river flow."))
+	closemessage
+
+	release
+	end
+}
+
+script SundaraVillage_EventScript_PromiseBoy {
+	lock
+	faceplayer
+
+	msgbox(format("I made a promise to my mum that I would find the longest strand of grass."))
+	closemessage
+
+	release
+	end
+}
+
+script SundaraVillage_EventScript_ContestGirl {
+	lock
+	faceplayer
+
+	msgbox(format("I came to Sundara Village to compete in contests, but I didn't realise I'd have to qualify beforehand."))
+	closemessage
+
+	release
+	end
+}
+
+script SundaraVillage_EventScript_Fisherman {
+	lock
+	faceplayer
+
+	msgbox(format("The open ocean has some of the rarest pokémon, or so I've been told, doesn't seem like it so far."))
+	closemessage
+
+	release
+	end
+}
+
+script SundaraVillage_EventScript_FlowerPatchMan {
+	lock
+	faceplayer
+
+	msgbox(format("This spot seems to be the best for growing flowers, I wonder if the soil is different here."))
+	closemessage
+
+	release
+	end
+}
