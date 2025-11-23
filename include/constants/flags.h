@@ -1650,27 +1650,34 @@
 #define SPECIAL_FLAGS_END                       (SPECIAL_FLAGS_START + 0x7F)
 
 // new event flags
+#define NEW_FLAGS_START                                                 0x1000
 
 // sundara village
-#define FLAG_SUNDARA_RIVAL_OUTISDE_HOUSE                                0x1000
-#define FLAG_SUNDARA_GET_POKEMON_PEOPLE                                 0x1001
-#define FLAG_SUNDARA_GET_POKEMON_POKEBALL_BULBASAUR                     0x1002
-#define FLAG_SUNDARA_GET_POKEMON_POKEBALL_CHIMCHAR                      0x1003
-#define FLAG_SUNDARA_GET_POKEMON_POKEBALL_MUDKIP                        0x1004
-#define FLAG_SUNDARA_GET_POKEMON_GRUNT                                  0x1005
-#define FLAG_SUNDARA_AIDE_GRUNT_STOP                                    0x1006
+#define FLAG_SUNDARA_RIVAL_OUTISDE_HOUSE                                (NEW_FLAGS_START + 0x0)
+#define FLAG_SUNDARA_GET_POKEMON_PEOPLE                                 (NEW_FLAGS_START + 0x1)
+#define FLAG_SUNDARA_GET_POKEMON_POKEBALL_BULBASAUR                     (NEW_FLAGS_START + 0x2)
+#define FLAG_SUNDARA_GET_POKEMON_POKEBALL_CHIMCHAR                      (NEW_FLAGS_START + 0x3)
+#define FLAG_SUNDARA_GET_POKEMON_POKEBALL_MUDKIP                        (NEW_FLAGS_START + 0x4)
+#define FLAG_SUNDARA_GET_POKEMON_GRUNT                                  (NEW_FLAGS_START + 0x5)
+#define FLAG_SUNDARA_AIDE_GRUNT_STOP                                    (NEW_FLAGS_START + 0x6)
 
 // route 4
-#define FLAG_ROUTE4_GRUNT                                               0x1007
-#define FLAG_ROUTE4_LOST_POKEMON                                        0x1008
-#define FLAG_SUNDARA_RETURN_STOLEN_POKEMON                              0x1009
+#define FLAG_ROUTE4_GRUNT                                               (NEW_FLAGS_START + 0x7)
+#define FLAG_ROUTE4_LOST_POKEMON                                        (NEW_FLAGS_START + 0x8)
+#define FLAG_SUNDARA_RETURN_STOLEN_POKEMON                              (NEW_FLAGS_START + 0x9)
 
 // lake apise
-#define FLAG_LAKEAPISE_GIVE_SOOTHEBELL                                  0x1010
+#define FLAG_LAKEAPISE_GIVE_SOOTHEBELL                                  (NEW_FLAGS_START + 0xA)
 
 // apise village
-#define FLAG_APISEVILLAGE_RIVAL                                         0x1011
-#define FLAG_APISEVILLAGE_SWEETHEART                                    0x1012
+#define FLAG_APISEVILLAGE_RIVAL                                         (NEW_FLAGS_START + 0xB)
+#define FLAG_APISEVILLAGE_SWEETHEART                                    (NEW_FLAGS_START + 0xC)
+
+// venarus cove
+#define FLAG_VENARUSCOVE_GOT_FISHERMANS_BADGE                           (NEW_FLAGS_START + 0xD) 
+#define FLAG_VENARUSCOVE_BLOCKING_FISHERMAN_STARTING_PLACE              (NEW_FLAGS_START + 0xE)
+#define FLAG_VENARUSCOVE_BLOCKING_FISHERMAN_NEW_PLACE                   (NEW_FLAGS_START + 0xF)
+#define FLAG_VENARUSCOVE_FISHERMANSCLUB_QUIZ_COMPLETE                   (NEW_FLAGS_START + 0x10)
 
 // #define FLAG_LAKE_APISE
 

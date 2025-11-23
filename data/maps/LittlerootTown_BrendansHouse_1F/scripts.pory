@@ -63,6 +63,7 @@ script SetGameStart {
 	setflag(FLAG_SUNDARA_GET_POKEMON_GRUNT)
 	setflag(FLAG_ROUTE4_LOST_POKEMON)
 	setflag(FLAG_SUNDARA_RETURN_STOLEN_POKEMON)
+	setflag(FLAG_VENARUSCOVE_BLOCKING_FISHERMAN_NEW_PLACE)
 }
 
 movement mumExclamationMark {
