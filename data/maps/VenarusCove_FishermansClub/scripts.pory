@@ -27,12 +27,31 @@ script VenarusCove_FishermansClub_EventScript_QuizFisherman {
 
     msgbox(format("Congratulations! You have passed the fisherman's quiz!"), MSGBOX_AUTOCLOSE)
 
+    //#region leave
+    msgbox(format("Your prize is in the backroom, follow me!"), MSGBOX_AUTOCLOSE)
+    
+    applymovement(ID_VENARUSCOVE_FISHERMANSCLUB_QUIZ_FISHERMAN, VenarusCove_FishermansClub_Movement_QuizFisherman_FaceUp)
+    waitmovement(ID_VENARUSCOVE_FISHERMANSCLUB_QUIZ_FISHERMAN)
+    delay(15)
+    
+    playse(SE_EXIT)
+    removeobject(ID_VENARUSCOVE_FISHERMANSCLUB_QUIZ_FISHERMAN)
+    waitse
+
+    //#endregion leave
+
+    setflag(FLAG_VENARUSCOVE_FISHERMANSCLUB_QUIZ_COMPLETE)
+
 	release
 	end
 }
 
 movement VenarusCove_FishermansClub_Movement_QuizFisherman_Passed {
     emote_exclamation_mark
+}
+
+movement VenarusCove_FishermansClub_Movement_QuizFisherman_FaceUp {
+    face_up
 }
 
 script VenarusCove_FishermansClub_EventScript_QuizFisherman_Failed {
