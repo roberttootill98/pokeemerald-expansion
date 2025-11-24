@@ -4510,6 +4510,16 @@
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/VenarusCove_FishermansClub/border.bin",
       "blockdata_filepath": "data/layouts/VenarusCove_FishermansClub/map.bin"
+    },
+    {
+      "id": "LAYOUT_VENARUS_COVE_FISHERMANS_CLUB_BACKROOM",
+      "name": "VenarusCove_FishermansClub_Backroom_Layout",
+      "width": 6,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/VenarusCove_FishermansClub_Backroom/border.bin",
+      "blockdata_filepath": "data/layouts/VenarusCove_FishermansClub_Backroom/map.bin"
     }
   ]
 }
