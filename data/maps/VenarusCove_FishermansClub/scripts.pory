@@ -32,11 +32,18 @@ script VenarusCove_FishermansClub_EventScript_QuizFisherman {
     
     applymovement(ID_VENARUSCOVE_FISHERMANSCLUB_QUIZ_FISHERMAN, VenarusCove_FishermansClub_Movement_QuizFisherman_FaceUp)
     waitmovement(ID_VENARUSCOVE_FISHERMANSCLUB_QUIZ_FISHERMAN)
+
+    opendoor(8, 4)
+    waitdooranim
+
     delay(15)
     
     playse(SE_EXIT)
     removeobject(ID_VENARUSCOVE_FISHERMANSCLUB_QUIZ_FISHERMAN)
     waitse
+
+    closedoor(8, 4)
+    waitdooranim
 
     //#endregion leave
 
