@@ -1,12 +1,8 @@
 mapscripts VenarusCove_FishermansClub_Backroom_MapScripts {}
 
 script VenarusCove_FishermansClub_Backroom_EventScript_GetRod {
-    lock
-
     finditem(ITEM_OLD_ROD)
     setflag(FLAG_VENARUSCOVE_GOT_FISHERMANS_BADGE)
-
-    release
     end
 }
 

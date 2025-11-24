@@ -588,7 +588,7 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
         }
         if (ShouldDoWallyCall() == TRUE)
         {
-            ScriptContext1_SetupScript(MauvilleCity_EventScript_RegisterWallyCall);
+            // ScriptContext1_SetupScript(MauvilleCity_EventScript_RegisterWallyCall);
             return TRUE;
         }
         if (ShouldDoScottFortreeCall() == TRUE)
