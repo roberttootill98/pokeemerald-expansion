@@ -62,6 +62,92 @@ script VenarusCove_EventScript_BlockingFishermanMoved {
 
 #endregion blocking fisherman
 
+#region gym
+
+const ID_GYMLEADER = 11
+
+script VenarusCove_EventScript_GymLeader {
+	lock
+	faceplayer
+
+	if(flag(FLAG_BADGE01_GET)) {
+		msgbox(format("B-b-b-but you already beat me!"), MSGBOX_AUTOCLOSE)
+	} else {
+		msgbox(format("Hello there {PLAYER}, this is the secret fisherman's beach!"), MSGBOX_AUTOCLOSE)
+		msgbox(format("I heard about your induction into the fishermans guild, so we may do battle now!"), MSGBOX_AUTOCLOSE)
+		msgbox(format("Go stand on your side of the battlefield and our battle can start!"), MSGBOX_AUTOCLOSE)
+	}
+
+	release
+	end
+}
+
+script VenarusCove_Trigger_GymBattle {
+	lock
+
+	applymovement(OBJ_EVENT_ID_PLAYER, VenarusCove_Trigger_GymBattle_PlayerFace)
+	applymovement(ID_GYMLEADER, VenarusCove_Trigger_GymBattle_LeaderFace)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+	waitmovement(ID_GYMLEADER)
+
+	msgbox(format("Fisherman {PLAYER} are you ready to battle!"), MSGBOX_YESNO)
+
+	if(var(VAR_RESULT)) {
+		msgbox(format("Get ready for a shock!"), MSGBOX_AUTOCLOSE)
+
+		switch(var(VAR_BADGE_COUNT)) {
+			case 0:
+				trainerbattle_no_intro(TRAINER_GYMLEADER_ESDEN_0, ApiseVillage_Text_RivalBattle_Lose)
+			case 1:
+				trainerbattle_no_intro(TRAINER_GYMLEADER_ESDEN_1, ApiseVillage_Text_RivalBattle_Lose)
+			case 2:
+				trainerbattle_no_intro(TRAINER_GYMLEADER_ESDEN_2, ApiseVillage_Text_RivalBattle_Lose)
+			case 3:
+				trainerbattle_no_intro(TRAINER_GYMLEADER_ESDEN_3, ApiseVillage_Text_RivalBattle_Lose)
+			case 4:
+				trainerbattle_no_intro(TRAINER_GYMLEADER_ESDEN_4, ApiseVillage_Text_RivalBattle_Lose)
+			case 5:
+				trainerbattle_no_intro(TRAINER_GYMLEADER_ESDEN_5, ApiseVillage_Text_RivalBattle_Lose)
+			case 6:
+				trainerbattle_no_intro(TRAINER_GYMLEADER_ESDEN_6, ApiseVillage_Text_RivalBattle_Lose)
+			case 7:
+				trainerbattle_no_intro(TRAINER_GYMLEADER_ESDEN_7, ApiseVillage_Text_RivalBattle_Lose)
+			case 8:
+				trainerbattle_no_intro(TRAINER_GYMLEADER_ESDEN_8, ApiseVillage_Text_RivalBattle_Lose)
+		}
+
+		msgbox(format("Wow, you are a well grounded trainer fisherman {PLAYER}!"), MSGBOX_AUTOCLOSE)
+
+		if(!flag(FLAG_BADGE01_GET)) {
+			msgbox(format("You are well deserving of this!"), MSGBOX_AUTOCLOSE)
+			
+			//#region give badge
+			playfanfare(MUS_OBTAIN_BADGE)
+			msgbox(format("{PLAYER} received the Shock Badge!"), MSGBOX_AUTOCLOSE)
+			waitfanfare
+
+			setflag(FLAG_BADGE01_GET)
+
+			addvar(VAR_BADGE_COUNT, 1)
+			//#endregion give badge
+		}
+	} else {
+		msgbox(format("You aren't ready for my shock?"), MSGBOX_AUTOCLOSE)
+	}
+
+	end
+}
+
+movement VenarusCove_Trigger_GymBattle_PlayerFace {
+	face_right
+}
+
+movement VenarusCove_Trigger_GymBattle_LeaderFace {
+	face_left
+}
+
+#endregion gym
+
 script VenarusCove_EventScript_PierFisherman {
 	lock
 	faceplayer

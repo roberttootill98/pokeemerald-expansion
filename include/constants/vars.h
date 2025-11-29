@@ -307,5 +307,6 @@
 // new vars
 #define VAR_SUNDARA_STATE             0x5000
 #define VAR_APISE_RIVAL               0x5001
+#define VAR_BADGE_COUNT               0x5002
 
 #endif // GUARD_CONSTANTS_VARS_H
