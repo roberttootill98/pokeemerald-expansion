@@ -20,7 +20,6 @@
 #define TRAINER_WINDYMEADOW_WINONA           16
 #define TRAINER_WINDYMEADOW_HALSTON          17
 #define TRAINER_WINDYMEADOW_JAKE             18
-#define TRAINER_GYMLEADER_ESDEN_0            19
 #define TRAINER_GYMLEADER_ESDEN_1            20
 #define TRAINER_GYMLEADER_ESDEN_2            21
 #define TRAINER_GYMLEADER_ESDEN_3            22

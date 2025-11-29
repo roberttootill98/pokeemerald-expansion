@@ -82,56 +82,52 @@ VenarusCove_Trigger_GymBattle_2:
 	msgbox VenarusCove_Trigger_GymBattle_Text_1, MSGBOX_AUTOCLOSE
 	switch VAR_BADGE_COUNT
 	case 0, VenarusCove_Trigger_GymBattle_7
-	case 1, VenarusCove_Trigger_GymBattle_8
-	case 2, VenarusCove_Trigger_GymBattle_9
-	case 3, VenarusCove_Trigger_GymBattle_10
-	case 4, VenarusCove_Trigger_GymBattle_11
-	case 5, VenarusCove_Trigger_GymBattle_12
-	case 6, VenarusCove_Trigger_GymBattle_13
-	case 7, VenarusCove_Trigger_GymBattle_14
-	case 8, VenarusCove_Trigger_GymBattle_15
+	case 1, VenarusCove_Trigger_GymBattle_7
+	case 2, VenarusCove_Trigger_GymBattle_8
+	case 3, VenarusCove_Trigger_GymBattle_9
+	case 4, VenarusCove_Trigger_GymBattle_10
+	case 5, VenarusCove_Trigger_GymBattle_11
+	case 6, VenarusCove_Trigger_GymBattle_12
+	case 7, VenarusCove_Trigger_GymBattle_13
+	case 8, VenarusCove_Trigger_GymBattle_14
 VenarusCove_Trigger_GymBattle_5:
 	msgbox VenarusCove_Trigger_GymBattle_Text_2, MSGBOX_AUTOCLOSE
-	goto_if_unset FLAG_BADGE01_GET, VenarusCove_Trigger_GymBattle_16
+	goto_if_unset FLAG_BADGE01_GET, VenarusCove_Trigger_GymBattle_15
 	goto VenarusCove_Trigger_GymBattle_1
 
 VenarusCove_Trigger_GymBattle_7:
-	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_0, ApiseVillage_Text_RivalBattle_Lose
-	goto VenarusCove_Trigger_GymBattle_5
-
-VenarusCove_Trigger_GymBattle_8:
 	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_1, ApiseVillage_Text_RivalBattle_Lose
 	goto VenarusCove_Trigger_GymBattle_5
 
-VenarusCove_Trigger_GymBattle_9:
+VenarusCove_Trigger_GymBattle_8:
 	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_2, ApiseVillage_Text_RivalBattle_Lose
 	goto VenarusCove_Trigger_GymBattle_5
 
-VenarusCove_Trigger_GymBattle_10:
+VenarusCove_Trigger_GymBattle_9:
 	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_3, ApiseVillage_Text_RivalBattle_Lose
 	goto VenarusCove_Trigger_GymBattle_5
 
-VenarusCove_Trigger_GymBattle_11:
+VenarusCove_Trigger_GymBattle_10:
 	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_4, ApiseVillage_Text_RivalBattle_Lose
 	goto VenarusCove_Trigger_GymBattle_5
 
-VenarusCove_Trigger_GymBattle_12:
+VenarusCove_Trigger_GymBattle_11:
 	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_5, ApiseVillage_Text_RivalBattle_Lose
 	goto VenarusCove_Trigger_GymBattle_5
 
-VenarusCove_Trigger_GymBattle_13:
+VenarusCove_Trigger_GymBattle_12:
 	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_6, ApiseVillage_Text_RivalBattle_Lose
 	goto VenarusCove_Trigger_GymBattle_5
 
-VenarusCove_Trigger_GymBattle_14:
+VenarusCove_Trigger_GymBattle_13:
 	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_7, ApiseVillage_Text_RivalBattle_Lose
 	goto VenarusCove_Trigger_GymBattle_5
 
-VenarusCove_Trigger_GymBattle_15:
+VenarusCove_Trigger_GymBattle_14:
 	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_8, ApiseVillage_Text_RivalBattle_Lose
 	goto VenarusCove_Trigger_GymBattle_5
 
-VenarusCove_Trigger_GymBattle_16:
+VenarusCove_Trigger_GymBattle_15:
 	msgbox VenarusCove_Trigger_GymBattle_Text_3, MSGBOX_AUTOCLOSE
 	playfanfare MUS_OBTAIN_BADGE
 	msgbox VenarusCove_Trigger_GymBattle_Text_4, MSGBOX_AUTOCLOSE

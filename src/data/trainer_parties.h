@@ -222,90 +222,156 @@ static const struct TrainerMonNoItemDefaultMoves sParty_WindyMeadow_Jake[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Esden0[] = {
+static const struct TrainerMonItemCustomMoves sParty_Esden0[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_QWILFISH,
+    .species = SPECIES_JOLTIK,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ELECTROWEB, MOVE_FURY_CUTTER, MOVE_THUNDER_WAVE, MOVE_SPIDER_WEB}
     },
     {
     .iv = 0,
     .lvl = 17,
     .species = SPECIES_QWILFISH,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_POISON_STING, MOVE_HARDEN, MOVE_SPIKES}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Esden1[] = {
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_QWILFISH,
-    },
+static const struct TrainerMonItemCustomMoves sParty_Esden1[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_QWILFISH,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_Esden2[] = {
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ZUBAT,
+    .species = SPECIES_JOLTIK,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ELECTROWEB, MOVE_FURY_CUTTER, MOVE_THUNDER_WAVE, MOVE_SPIDER_WEB}
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_CARVANHA,
+    .lvl = 17,
+    .species = SPECIES_QWILFISH,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_POISON_STING, MOVE_HARDEN, MOVE_SPIKES}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Esden3[] = {
+static const struct TrainerMonItemCustomMoves sParty_Esden2[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_NUMEL,
+    .lvl = 15,
+    .species = SPECIES_JOLTIK,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ELECTROWEB, MOVE_FURY_CUTTER, MOVE_THUNDER_WAVE, MOVE_SPIDER_WEB}
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_QWILFISH,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_POISON_STING, MOVE_HARDEN, MOVE_SPIKES}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Esden4[] = {
+static const struct TrainerMonItemCustomMoves sParty_Esden3[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .lvl = 15,
+    .species = SPECIES_JOLTIK,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ELECTROWEB, MOVE_FURY_CUTTER, MOVE_THUNDER_WAVE, MOVE_SPIDER_WEB}
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_QWILFISH,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_POISON_STING, MOVE_HARDEN, MOVE_SPIKES}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Esden5[] = {
+static const struct TrainerMonItemCustomMoves sParty_Esden4[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .lvl = 15,
+    .species = SPECIES_JOLTIK,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ELECTROWEB, MOVE_FURY_CUTTER, MOVE_THUNDER_WAVE, MOVE_SPIDER_WEB}
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_QWILFISH,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_POISON_STING, MOVE_HARDEN, MOVE_SPIKES}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Esden6[] = {
+static const struct TrainerMonItemCustomMoves sParty_Esden5[] = {
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_CARVANHA,
+    .lvl = 15,
+    .species = SPECIES_JOLTIK,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ELECTROWEB, MOVE_FURY_CUTTER, MOVE_THUNDER_WAVE, MOVE_SPIDER_WEB}
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_QWILFISH,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_POISON_STING, MOVE_HARDEN, MOVE_SPIKES}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Esden7[] = {
+static const struct TrainerMonItemCustomMoves sParty_Esden6[] = {
     {
     .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_CARVANHA,
+    .lvl = 15,
+    .species = SPECIES_JOLTIK,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ELECTROWEB, MOVE_FURY_CUTTER, MOVE_THUNDER_WAVE, MOVE_SPIDER_WEB}
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_QWILFISH,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_POISON_STING, MOVE_HARDEN, MOVE_SPIKES}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Esden8[] = {
+static const struct TrainerMonItemCustomMoves sParty_Esden7[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .lvl = 15,
+    .species = SPECIES_JOLTIK,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ELECTROWEB, MOVE_FURY_CUTTER, MOVE_THUNDER_WAVE, MOVE_SPIDER_WEB}
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_QWILFISH,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_POISON_STING, MOVE_HARDEN, MOVE_SPIKES}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Esden8[] = {
+    {
+    .iv = 0,
+    .lvl = 15,
+    .species = SPECIES_JOLTIK,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ELECTROWEB, MOVE_FURY_CUTTER, MOVE_THUNDER_WAVE, MOVE_SPIDER_WEB}
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_QWILFISH,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_AQUA_JET, MOVE_POISON_STING, MOVE_HARDEN, MOVE_SPIKES}
     }
 };
 

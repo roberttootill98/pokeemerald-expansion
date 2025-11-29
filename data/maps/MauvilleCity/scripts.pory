@@ -97,7 +97,6 @@ script VenarusCove_Trigger_GymBattle {
 
 		switch(var(VAR_BADGE_COUNT)) {
 			case 0:
-				trainerbattle_no_intro(TRAINER_GYMLEADER_ESDEN_0, ApiseVillage_Text_RivalBattle_Lose)
 			case 1:
 				trainerbattle_no_intro(TRAINER_GYMLEADER_ESDEN_1, ApiseVillage_Text_RivalBattle_Lose)
 			case 2:
