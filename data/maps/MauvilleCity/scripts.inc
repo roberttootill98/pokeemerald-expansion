@@ -53,15 +53,16 @@ VenarusCove_EventScript_GymLeader::
 	lock
 	faceplayer
 	goto_if_set FLAG_BADGE01_GET, VenarusCove_EventScript_GymLeader_2
-	msgbox VenarusCove_EventScript_GymLeader_Text_1, MSGBOX_AUTOCLOSE
 	msgbox VenarusCove_EventScript_GymLeader_Text_2, MSGBOX_AUTOCLOSE
 	msgbox VenarusCove_EventScript_GymLeader_Text_3, MSGBOX_AUTOCLOSE
+	msgbox VenarusCove_EventScript_GymLeader_Text_4, MSGBOX_AUTOCLOSE
 VenarusCove_EventScript_GymLeader_1:
 	release
 	end
 
 VenarusCove_EventScript_GymLeader_2:
 	msgbox VenarusCove_EventScript_GymLeader_Text_0, MSGBOX_AUTOCLOSE
+	msgbox VenarusCove_EventScript_GymLeader_Text_1, MSGBOX_AUTOCLOSE
 	goto VenarusCove_EventScript_GymLeader_1
 
 
@@ -71,70 +72,76 @@ VenarusCove_Trigger_GymBattle::
 	applymovement 11, VenarusCove_Trigger_GymBattle_LeaderFace
 	waitmovement OBJ_EVENT_ID_PLAYER
 	waitmovement 11
-	msgbox VenarusCove_Trigger_GymBattle_Text_0, MSGBOX_YESNO
-	compare VAR_RESULT, 0
-	goto_if_ne VenarusCove_Trigger_GymBattle_2
-	msgbox VenarusCove_Trigger_GymBattle_Text_5, MSGBOX_AUTOCLOSE
+	goto_if_unset FLAG_BADGE01_GET, VenarusCove_Trigger_GymBattle_2
 VenarusCove_Trigger_GymBattle_1:
+	msgbox VenarusCove_Trigger_GymBattle_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne VenarusCove_Trigger_GymBattle_5
+	msgbox VenarusCove_Trigger_GymBattle_Text_6, MSGBOX_AUTOCLOSE
+VenarusCove_Trigger_GymBattle_4:
 	end
 
 VenarusCove_Trigger_GymBattle_2:
-	msgbox VenarusCove_Trigger_GymBattle_Text_1, MSGBOX_AUTOCLOSE
-	switch VAR_BADGE_COUNT
-	case 0, VenarusCove_Trigger_GymBattle_7
-	case 1, VenarusCove_Trigger_GymBattle_7
-	case 2, VenarusCove_Trigger_GymBattle_8
-	case 3, VenarusCove_Trigger_GymBattle_9
-	case 4, VenarusCove_Trigger_GymBattle_10
-	case 5, VenarusCove_Trigger_GymBattle_11
-	case 6, VenarusCove_Trigger_GymBattle_12
-	case 7, VenarusCove_Trigger_GymBattle_13
-	case 8, VenarusCove_Trigger_GymBattle_14
-VenarusCove_Trigger_GymBattle_5:
-	msgbox VenarusCove_Trigger_GymBattle_Text_2, MSGBOX_AUTOCLOSE
-	goto_if_unset FLAG_BADGE01_GET, VenarusCove_Trigger_GymBattle_15
+	msgbox VenarusCove_Trigger_GymBattle_Text_0, MSGBOX_YESNO
 	goto VenarusCove_Trigger_GymBattle_1
 
-VenarusCove_Trigger_GymBattle_7:
-	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_1, ApiseVillage_Text_RivalBattle_Lose
-	goto VenarusCove_Trigger_GymBattle_5
-
+VenarusCove_Trigger_GymBattle_5:
+	msgbox VenarusCove_Trigger_GymBattle_Text_2, MSGBOX_AUTOCLOSE
+	switch VAR_BADGE_COUNT
+	case 0, VenarusCove_Trigger_GymBattle_10
+	case 1, VenarusCove_Trigger_GymBattle_10
+	case 2, VenarusCove_Trigger_GymBattle_11
+	case 3, VenarusCove_Trigger_GymBattle_12
+	case 4, VenarusCove_Trigger_GymBattle_13
+	case 5, VenarusCove_Trigger_GymBattle_14
+	case 6, VenarusCove_Trigger_GymBattle_15
+	case 7, VenarusCove_Trigger_GymBattle_16
+	case 8, VenarusCove_Trigger_GymBattle_17
 VenarusCove_Trigger_GymBattle_8:
-	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_2, ApiseVillage_Text_RivalBattle_Lose
-	goto VenarusCove_Trigger_GymBattle_5
-
-VenarusCove_Trigger_GymBattle_9:
-	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_3, ApiseVillage_Text_RivalBattle_Lose
-	goto VenarusCove_Trigger_GymBattle_5
+	msgbox VenarusCove_Trigger_GymBattle_Text_3, MSGBOX_AUTOCLOSE
+	goto_if_unset FLAG_BADGE01_GET, VenarusCove_Trigger_GymBattle_18
+	goto VenarusCove_Trigger_GymBattle_4
 
 VenarusCove_Trigger_GymBattle_10:
-	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_4, ApiseVillage_Text_RivalBattle_Lose
-	goto VenarusCove_Trigger_GymBattle_5
+	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_1, ApiseVillage_Text_RivalBattle_Lose
+	goto VenarusCove_Trigger_GymBattle_8
 
 VenarusCove_Trigger_GymBattle_11:
-	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_5, ApiseVillage_Text_RivalBattle_Lose
-	goto VenarusCove_Trigger_GymBattle_5
+	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_2, ApiseVillage_Text_RivalBattle_Lose
+	goto VenarusCove_Trigger_GymBattle_8
 
 VenarusCove_Trigger_GymBattle_12:
-	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_6, ApiseVillage_Text_RivalBattle_Lose
-	goto VenarusCove_Trigger_GymBattle_5
+	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_3, ApiseVillage_Text_RivalBattle_Lose
+	goto VenarusCove_Trigger_GymBattle_8
 
 VenarusCove_Trigger_GymBattle_13:
-	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_7, ApiseVillage_Text_RivalBattle_Lose
-	goto VenarusCove_Trigger_GymBattle_5
+	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_4, ApiseVillage_Text_RivalBattle_Lose
+	goto VenarusCove_Trigger_GymBattle_8
 
 VenarusCove_Trigger_GymBattle_14:
-	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_8, ApiseVillage_Text_RivalBattle_Lose
-	goto VenarusCove_Trigger_GymBattle_5
+	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_5, ApiseVillage_Text_RivalBattle_Lose
+	goto VenarusCove_Trigger_GymBattle_8
 
 VenarusCove_Trigger_GymBattle_15:
-	msgbox VenarusCove_Trigger_GymBattle_Text_3, MSGBOX_AUTOCLOSE
-	playfanfare MUS_OBTAIN_BADGE
+	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_6, ApiseVillage_Text_RivalBattle_Lose
+	goto VenarusCove_Trigger_GymBattle_8
+
+VenarusCove_Trigger_GymBattle_16:
+	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_7, ApiseVillage_Text_RivalBattle_Lose
+	goto VenarusCove_Trigger_GymBattle_8
+
+VenarusCove_Trigger_GymBattle_17:
+	trainerbattle_no_intro TRAINER_GYMLEADER_ESDEN_8, ApiseVillage_Text_RivalBattle_Lose
+	goto VenarusCove_Trigger_GymBattle_8
+
+VenarusCove_Trigger_GymBattle_18:
 	msgbox VenarusCove_Trigger_GymBattle_Text_4, MSGBOX_AUTOCLOSE
+	playfanfare MUS_OBTAIN_BADGE
+	msgbox VenarusCove_Trigger_GymBattle_Text_5, MSGBOX_AUTOCLOSE
 	waitfanfare
 	setflag FLAG_BADGE01_GET
 	addvar VAR_BADGE_COUNT, 1
-	goto VenarusCove_Trigger_GymBattle_1
+	goto VenarusCove_Trigger_GymBattle_4
 
 
 VenarusCove_Trigger_GymBattle_PlayerFace:
@@ -144,6 +151,11 @@ VenarusCove_Trigger_GymBattle_PlayerFace:
 VenarusCove_Trigger_GymBattle_LeaderFace:
 	face_left
 	step_end
+
+VenarusCove_Item_ParalyzeHeal::
+	finditem ITEM_PARALYZE_HEAL
+	end
+
 
 VenarusCove_EventScript_PierFisherman::
 	lock
@@ -238,39 +250,51 @@ VenarusCove_EventScript_BlockingFishermanMoved_Text_0:
 	.string "special!$"
 
 VenarusCove_EventScript_GymLeader_Text_0:
-	.string "B-b-b-but you already beat me!$"
+	.string "You are a strong trainer and a good\n"
+	.string "fisherman {PLAYER}!$"
 
 VenarusCove_EventScript_GymLeader_Text_1:
+	.string "If you fancy another battle make your\n"
+	.string "way over to the otherside of the\l"
+	.string "battlefield!$"
+
+VenarusCove_EventScript_GymLeader_Text_2:
 	.string "Hello there {PLAYER}, this is the\n"
 	.string "secret fisherman's beach!$"
 
-VenarusCove_EventScript_GymLeader_Text_2:
+VenarusCove_EventScript_GymLeader_Text_3:
 	.string "I heard about your induction into the\n"
 	.string "fishermans guild, so we may do battle\l"
 	.string "now!$"
 
-VenarusCove_EventScript_GymLeader_Text_3:
+VenarusCove_EventScript_GymLeader_Text_4:
 	.string "Go stand on your side of the\n"
 	.string "battlefield and our battle can start!$"
 
 VenarusCove_Trigger_GymBattle_Text_0:
+	.string "Hello again {PLAYER}, since we have\n"
+	.string "already battled I won't give you\l"
+	.string "another badge, this will just be for the\l"
+	.string "love of the game!$"
+
+VenarusCove_Trigger_GymBattle_Text_1:
 	.string "Fisherman {PLAYER} are you ready to\n"
 	.string "battle!$"
 
-VenarusCove_Trigger_GymBattle_Text_1:
+VenarusCove_Trigger_GymBattle_Text_2:
 	.string "Get ready for a shock!$"
 
-VenarusCove_Trigger_GymBattle_Text_2:
+VenarusCove_Trigger_GymBattle_Text_3:
 	.string "Wow, you are a well grounded trainer\n"
 	.string "fisherman {PLAYER}!$"
 
-VenarusCove_Trigger_GymBattle_Text_3:
+VenarusCove_Trigger_GymBattle_Text_4:
 	.string "You are well deserving of this!$"
 
-VenarusCove_Trigger_GymBattle_Text_4:
+VenarusCove_Trigger_GymBattle_Text_5:
 	.string "{PLAYER} received the Shock Badge!$"
 
-VenarusCove_Trigger_GymBattle_Text_5:
+VenarusCove_Trigger_GymBattle_Text_6:
 	.string "You aren't ready for my shock?$"
 
 VenarusCove_EventScript_PierFisherman_Text_0:
