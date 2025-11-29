@@ -71,7 +71,8 @@ script VenarusCove_EventScript_GymLeader {
 	faceplayer
 
 	if(flag(FLAG_BADGE01_GET)) {
-		msgbox(format("B-b-b-but you already beat me!"), MSGBOX_AUTOCLOSE)
+		msgbox(format("You are a strong trainer and a good fisherman {PLAYER}!"), MSGBOX_AUTOCLOSE)
+		msgbox(format("If you fancy another battle make your way over to the otherside of the battlefield!"), MSGBOX_AUTOCLOSE)
 	} else {
 		msgbox(format("Hello there {PLAYER}, this is the secret fisherman's beach!"), MSGBOX_AUTOCLOSE)
 		msgbox(format("I heard about your induction into the fishermans guild, so we may do battle now!"), MSGBOX_AUTOCLOSE)
@@ -89,6 +90,10 @@ script VenarusCove_Trigger_GymBattle {
 	applymovement(ID_GYMLEADER, VenarusCove_Trigger_GymBattle_LeaderFace)
 	waitmovement(OBJ_EVENT_ID_PLAYER)
 	waitmovement(ID_GYMLEADER)
+
+	if(!flag(FLAG_BADGE01_GET)) {
+		msgbox(format("Hello again {PLAYER}, since we have already battled I won't give you another badge, this will just be for the love of the game!"), MSGBOX_YESNO)
+	}
 
 	msgbox(format("Fisherman {PLAYER} are you ready to battle!"), MSGBOX_YESNO)
 
