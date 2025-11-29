@@ -152,6 +152,11 @@ movement VenarusCove_Trigger_GymBattle_LeaderFace {
 
 #endregion gym
 
+script VenarusCove_Item_ParalyzeHeal {
+	finditem(ITEM_PARALYZE_HEAL)
+	end
+}
+
 script VenarusCove_EventScript_PierFisherman {
 	lock
 	faceplayer
