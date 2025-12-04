@@ -13,3 +13,26 @@ MauvilleCity_PokemonCenter_1F_EventScript_Nurse:: @ 8210E78
 	end
 
 `
+
+script VenarusCove_EventScript_PokeMart {
+	lock
+	faceplayer
+
+	message(gText_HowMayIServeYou)
+	waitmessage
+
+	pokemart(VenarusCove_Mart)
+
+	msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+
+	release
+	end
+}
+
+mart VenarusCove_Mart {
+	ITEM_LAVA_COOKIE
+	ITEM_MOOMOO_MILK
+	ITEM_RARE_CANDY
+	ITEM_LEMONADE
+	ITEM_BERRY_JUICE
+}
