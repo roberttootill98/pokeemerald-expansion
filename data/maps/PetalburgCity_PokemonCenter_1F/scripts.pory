@@ -1,4 +1,47 @@
 
+raw `
+.set LOCALID_NURSE, 1
+
+PetalburgCity_PokemonCenter_1F_MapScripts:: @ 82079E8
+	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_PokemonCenter_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	.byte 0
+
+PetalburgCity_PokemonCenter_1F_OnTransition: @ 82079F3
+	setrespawn HEAL_LOCATION_PETALBURG_CITY
+	call Common_EventScript_UpdateBrineyLocation
+	end
+
+PetalburgCity_PokemonCenter_1F_EventScript_Nurse:: @ 82079FC
+	setvar VAR_0x800B, LOCALID_NURSE
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end
+`
+
+script SundaraVillage_EventScript_PokeMart {
+	lock
+	faceplayer
+
+	message(gText_HowMayIServeYou)
+	waitmessage
+
+	pokemart(SundaraVillage_Mart)
+
+	msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+
+	release
+	end
+}
+
+mart SundaraVillage_Mart {
+	ITEM_POKE_BALL
+	ITEM_POTION
+	ITEM_REPEL
+}
+
 script SundaraVillage_PokemonCenter_1F_EventScript_Gentleman {
 	lock
 	faceplayer
@@ -20,24 +63,3 @@ script SundaraVillage_PokemonCenter_1F_EventScript_Man {
 	release
 	end
 }
-
-raw `
-.set LOCALID_NURSE, 1
-
-PetalburgCity_PokemonCenter_1F_MapScripts:: @ 82079E8
-	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_PokemonCenter_1F_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
-	.byte 0
-
-PetalburgCity_PokemonCenter_1F_OnTransition: @ 82079F3
-	setrespawn HEAL_LOCATION_PETALBURG_CITY
-	call Common_EventScript_UpdateBrineyLocation
-	end
-
-PetalburgCity_PokemonCenter_1F_EventScript_Nurse:: @ 82079FC
-	setvar VAR_0x800B, LOCALID_NURSE
-	call Common_EventScript_PkmnCenterNurse
-	waitmessage
-	waitbuttonpress
-	release
-	end
