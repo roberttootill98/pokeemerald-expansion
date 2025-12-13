@@ -1,4 +1,47 @@
 
+raw `
+.set LOCALID_NURSE, 1
+
+SlateportCity_PokemonCenter_1F_MapScripts:: @ 820DABF
+	map_script MAP_SCRIPT_ON_TRANSITION, SlateportCity_PokemonCenter_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	.byte 0
+
+SlateportCity_PokemonCenter_1F_OnTransition: @ 820DACA
+	setrespawn HEAL_LOCATION_SLATEPORT_CITY
+	call Common_EventScript_UpdateBrineyLocation
+	end
+
+SlateportCity_PokemonCenter_1F_EventScript_Nurse:: @ 820DAD3
+	setvar VAR_0x800B, LOCALID_NURSE
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end
+`
+
+script ApiseVillage_EventScript_PokeMart {
+	lock
+	faceplayer
+
+	message(gText_HowMayIServeYou)
+	waitmessage
+
+	pokemart(ApiseVillage_Mart)
+
+	msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+
+	release
+	end
+}
+
+mart ApiseVillage_Mart {
+	ITEM_POKE_BALL
+	ITEM_POTION
+	ITEM_REPEL
+}
+
 script ApiseVillage_PokemonCenter_1F_EventScript_Boy1 {
 	lock
 	faceplayer
@@ -31,24 +74,3 @@ script ApiseVillage_PokemonCenter_1F_EventScript_Girl {
 	release
 	end
 }
-
-raw `
-.set LOCALID_NURSE, 1
-
-SlateportCity_PokemonCenter_1F_MapScripts:: @ 820DABF
-	map_script MAP_SCRIPT_ON_TRANSITION, SlateportCity_PokemonCenter_1F_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
-	.byte 0
-
-SlateportCity_PokemonCenter_1F_OnTransition: @ 820DACA
-	setrespawn HEAL_LOCATION_SLATEPORT_CITY
-	call Common_EventScript_UpdateBrineyLocation
-	end
-
-SlateportCity_PokemonCenter_1F_EventScript_Nurse:: @ 820DAD3
-	setvar VAR_0x800B, LOCALID_NURSE
-	call Common_EventScript_PkmnCenterNurse
-	waitmessage
-	waitbuttonpress
-	release
-	end
