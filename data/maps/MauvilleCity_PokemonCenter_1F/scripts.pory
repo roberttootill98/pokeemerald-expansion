@@ -36,3 +36,24 @@ mart VenarusCove_Mart {
 	ITEM_PARALYZE_HEAL
 	ITEM_REPEL
 }
+
+script VenarusCove_EventScript_PokemonCenter_1F_Camper {
+	lock
+	faceplayer
+
+	msgbox(format("I heard the mart employee complaining on his break. He said they're losing out to the fishing shop."), MSGBOX_AUTOCLOSE)
+
+	release
+	end
+}
+
+script VenarusCove_EventScript_PokemonCenter_1F_Woman {
+	lock
+	faceplayer
+
+	msgbox(format("I have a really hard time telling what the nurse is saying, I think it's something about the room acoustics."), MSGBOX_AUTOCLOSE)
+
+	release
+	end
+}
+

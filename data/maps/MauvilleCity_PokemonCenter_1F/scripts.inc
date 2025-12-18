@@ -31,3 +31,29 @@ VenarusCove_Mart:
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_REPEL
 	.2byte ITEM_NONE
+
+VenarusCove_EventScript_PokemonCenter_1F_Camper::
+	lock
+	faceplayer
+	msgbox VenarusCove_EventScript_PokemonCenter_1F_Camper_Text_0, MSGBOX_AUTOCLOSE
+	release
+	end
+
+
+VenarusCove_EventScript_PokemonCenter_1F_Woman::
+	lock
+	faceplayer
+	msgbox VenarusCove_EventScript_PokemonCenter_1F_Woman_Text_0, MSGBOX_AUTOCLOSE
+	release
+	end
+
+
+VenarusCove_EventScript_PokemonCenter_1F_Camper_Text_0:
+	.string "I heard the mart employee complaining\n"
+	.string "on his break. He said they're losing out\l"
+	.string "to the fishing shop.$"
+
+VenarusCove_EventScript_PokemonCenter_1F_Woman_Text_0:
+	.string "I have a really hard time telling what\n"
+	.string "the nurse is saying, I think it's\l"
+	.string "something about the room acoustics.$"
