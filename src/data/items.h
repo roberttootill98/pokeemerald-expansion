@@ -116,7 +116,7 @@ const struct Item gItems[] =
     {
         .name = _("Nest Ball"),
         .itemId = ITEM_NEST_BALL,
-        .price = 1000,
+        .price = 750,
         .description = sNestBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = 7,

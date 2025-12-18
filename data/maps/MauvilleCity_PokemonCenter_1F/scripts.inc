@@ -25,9 +25,9 @@ VenarusCove_EventScript_PokeMart::
 
 	.align 2
 VenarusCove_Mart:
-	.2byte ITEM_LAVA_COOKIE
-	.2byte ITEM_MOOMOO_MILK
-	.2byte ITEM_RARE_CANDY
-	.2byte ITEM_LEMONADE
-	.2byte ITEM_BERRY_JUICE
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_REPEL
 	.2byte ITEM_NONE

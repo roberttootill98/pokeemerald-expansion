@@ -32,6 +32,7 @@ ApiseVillage_EventScript_PokeMart::
 	.align 2
 ApiseVillage_Mart:
 	.2byte ITEM_POKE_BALL
+	.2byte ITEM_NEST_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_REPEL
 	.2byte ITEM_NONE

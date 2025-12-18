@@ -38,6 +38,7 @@ script ApiseVillage_EventScript_PokeMart {
 
 mart ApiseVillage_Mart {
 	ITEM_POKE_BALL
+	ITEM_NEST_BALL
 	ITEM_POTION
 	ITEM_REPEL
 }
