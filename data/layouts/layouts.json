@@ -4524,10 +4524,10 @@
     {
       "id": "LAYOUT_VENARUS_COVE_FISHING_SHOP",
       "name": "VenarusCove_FishingShop_Layout",
-      "width": 11,
-      "height": 8,
+      "width": 10,
+      "height": 10,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "secondary_tileset": "gTileset_MossdeepGameCorner",
       "border_filepath": "data/layouts/VenarusCove_FishingShop/border.bin",
       "blockdata_filepath": "data/layouts/VenarusCove_FishingShop/map.bin"
     },
