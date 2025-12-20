@@ -4520,6 +4520,66 @@
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/VenarusCove_FishermansClub_Backroom/border.bin",
       "blockdata_filepath": "data/layouts/VenarusCove_FishermansClub_Backroom/map.bin"
+    },
+    {
+      "id": "LAYOUT_VENARUS_COVE_FISHING_SHOP",
+      "name": "VenarusCove_FishingShop_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VenarusCove_FishingShop/border.bin",
+      "blockdata_filepath": "data/layouts/VenarusCove_FishingShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_VENARUS_COVE_HOUSE1",
+      "name": "VenarusCove_House1_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VenarusCove_House1/border.bin",
+      "blockdata_filepath": "data/layouts/VenarusCove_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_VENARUS_COVE_HOUSE2",
+      "name": "VenarusCove_House2_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VenarusCove_House2/border.bin",
+      "blockdata_filepath": "data/layouts/VenarusCove_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VENARUS_COVE_HOUSE3",
+      "name": "VenarusCove_House3_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VenarusCove_House3/border.bin",
+      "blockdata_filepath": "data/layouts/VenarusCove_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_VENARUS_COVE_HOUSE4",
+      "name": "VenarusCove_House4_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VenarusCove_House4/border.bin",
+      "blockdata_filepath": "data/layouts/VenarusCove_House4/map.bin"
+    },
+    {
+      "id": "LAYOUT_VENARUS_COVE_HOUSE5",
+      "name": "VenarusCove_House5_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VenarusCove_House5/border.bin",
+      "blockdata_filepath": "data/layouts/VenarusCove_House5/map.bin"
     }
   ]
 }

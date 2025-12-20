@@ -212,7 +212,7 @@
       "x": 15,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_MAUVILLE_CITY",
+      "dest_map": "MAP_VENARUS_COVE_FISHING_SHOP",
       "dest_warp_id": 0
     },
     {
@@ -226,35 +226,35 @@
       "x": 6,
       "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_MAUVILLE_CITY",
+      "dest_map": "MAP_VENARUS_COVE_HOUSE1",
       "dest_warp_id": 0
     },
     {
       "x": 11,
       "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_MAUVILLE_CITY",
+      "dest_map": "MAP_VENARUS_COVE_HOUSE2",
       "dest_warp_id": 0
     },
     {
       "x": 16,
       "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_MAUVILLE_CITY",
+      "dest_map": "MAP_VENARUS_COVE_HOUSE3",
       "dest_warp_id": 0
     },
     {
       "x": 11,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_MAUVILLE_CITY",
+      "dest_map": "MAP_VENARUS_COVE_HOUSE4",
       "dest_warp_id": 0
     },
     {
       "x": 13,
       "y": 29,
       "elevation": 0,
-      "dest_map": "MAP_MAUVILLE_CITY",
+      "dest_map": "MAP_VENARUS_COVE_HOUSE5",
       "dest_warp_id": 0
     }
   ],

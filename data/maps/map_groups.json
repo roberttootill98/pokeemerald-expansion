@@ -200,7 +200,13 @@
     "MauvilleCity_PokemonCenter_2F",
     "MauvilleCity_Mart",
     "VenarusCove_FishermansClub",
-    "VenarusCove_FishermansClub_Backroom"
+    "VenarusCove_FishermansClub_Backroom",
+    "VenarusCove_FishingShop",
+    "VenarusCove_House1",
+    "VenarusCove_House2",
+    "VenarusCove_House3",
+    "VenarusCove_House4",
+    "VenarusCove_House5"
   ],
   "gMapGroup11": [
     "RustboroCity_DevonCorp_1F",

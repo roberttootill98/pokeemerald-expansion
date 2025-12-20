@@ -1083,3 +1083,15 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/VenarusCove_FishermansClub/scripts.inc"
 
 	.include "data/maps/VenarusCove_FishermansClub_Backroom/scripts.inc"
+
+	.include "data/maps/VenarusCove_FishingShop/scripts.inc"
+
+	.include "data/maps/VenarusCove_House1/scripts.inc"
+
+	.include "data/maps/VenarusCove_House2/scripts.inc"
+
+	.include "data/maps/VenarusCove_House3/scripts.inc"
+
+	.include "data/maps/VenarusCove_House4/scripts.inc"
+
+	.include "data/maps/VenarusCove_House5/scripts.inc"
