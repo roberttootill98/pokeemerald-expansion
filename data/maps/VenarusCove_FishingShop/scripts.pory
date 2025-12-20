@@ -19,3 +19,13 @@ mart VenarusCove_Mart {
 	ITEM_NET_BALL
     ITEM_LURE_BALL
 }
+
+script VenarusCove_FishingShop_EventScript_Boy {
+	lock
+	faceplayer
+
+	msgbox(format("I'm thinking about getting into fishing, I wonder if they have any good starter rods."), MSGBOX_AUTOCLOSE)
+
+	release
+	end
+}
