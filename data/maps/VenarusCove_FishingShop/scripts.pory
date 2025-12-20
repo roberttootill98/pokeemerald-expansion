@@ -1,1 +1,21 @@
 mapscripts VenarusCove_FishingShop_MapScripts {}
+
+script VenarusCove_FishingShop_EventScript_PokeMart {
+	lock
+	faceplayer
+
+	message(gText_HowMayIServeYou)
+	waitmessage
+
+	pokemart(VenarusCove_Mart)
+
+	msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+
+	release
+	end
+}
+
+mart VenarusCove_Mart {
+	ITEM_NET_BALL
+    ITEM_LURE_BALL
+}
